@@ -50,6 +50,6 @@ print("industry_raw - " + industry_raw())
 print("industry_crafts - " + industry_crafts())
 print("industry_crafts - " + industry_services())
 
-print(settlement_name + " is a " + primary_topology() + " settlement located in the greater " + primary_biome() + " area."
+print("\n" + settlement_name + " is a " + primary_topology() + " settlement located in the greater " + primary_biome() + " area."
       "  The " + industry_raw() + " industry supports the local " + industry_crafts() + ".  With a population of "
       + str(settlement_population) + " there are about " + str(settlement_structures) + " structures in town.")
