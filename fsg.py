@@ -18,6 +18,7 @@ list_industry_raw = ["mining", "farming", "ranching", "forestry", "fishing", "fo
 list_industry_crafts = ["smith", "tanner", "weaver", "mason", "carpenter", "butcher / meat packer"]
 list_industry_services = ["barber", "maidservant"]
 
+
 def industry_raw(lir = list_industry_raw, sp = settlement_population, sw = settlement_wealth):
     return random.choice(lir)
 
