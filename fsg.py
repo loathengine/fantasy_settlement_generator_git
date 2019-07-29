@@ -1,6 +1,23 @@
 
 import random
 
+with open('data/primary_biome.txt') as file:
+    list_primary_biome = file.read().splitlines()
+
+with open('data/primary_topology') as file:
+    list_primary_topology = file.read().splitlines()
+
+with open('data/industry_raw') as file:
+    list_industry_raw = file.read().splitlines()
+
+with open('data/industry_crafts.txt') as file:
+    list_industry_crafts = file.read().splitlines()
+
+with open('data/industry_services.txt') as file:
+    list_industry_services = file.read().splitlines()
+
+
+
 random.seed( 12345 )
 
 settlement_name = "Testberg"
@@ -17,6 +34,9 @@ list_primary_topology = ["coastal", "river", "flat lands", "foot hills", "platea
 list_industry_raw = ["mining", "farming", "ranching", "forestry", "fishing", "foraging"]
 list_industry_crafts = ["smith", "tanner", "weaver", "mason", "carpenter", "butcher / meat packer"]
 list_industry_services = ["barber", "maidservant"]
+
+
+
 
 
 def industry_raw(lir = list_industry_raw, sp = settlement_population, sw = settlement_wealth):
