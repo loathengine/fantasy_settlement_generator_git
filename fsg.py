@@ -1,9 +1,15 @@
-
+import xml.etree.ElementTree as ET
 import random
 random.seed( 12345 )
 
-with open('data/primary_biome.txt') as file:
-    list_primary_biome = file.read().splitlines()
+def parse_xml_biome():
+    tree = ET.parse('data/biome.xml')
+    root = tree.getroot()
+    xml_list = []
+    for biome in root.iter('BIOME'):
+        name = biome.get('name')
+        xml_list.append(biome.get('name'))
+    return xml_list
 
 with open('data/primary_topology.txt') as file:
     list_primary_topology = file.read().splitlines()
@@ -25,9 +31,7 @@ settlement_age = random.randint(1, 6)
 settlement_structures = ((settlement_population << 1) // (settlement_density)) >> 1
 settlement_shops = (settlement_population // 150)
 
-def get_primary_biome(lpb = list_primary_biome):
-    return random.choice(lpb)
-primary_biome = get_primary_biome()
+primary_biome = parse_xml_biome
 
 def get_primary_topology(lpt = list_primary_topology, pb = primary_biome):
     if pb == 'temperate deciduous forest':
@@ -121,4 +125,6 @@ print("industry_services - " + industry_services)
 
 print("\n" + settlement_name + " is a " + primary_topology + " settlement located in the greater " + primary_biome + " area."
       "  The primary industry in the area is " + industry_raw + "." + "industry supports the local " + industry_crafts + ".  With a population of "
-      + str(settlement_population) + " there are about " + str(settlement_structures) + " structures in town.")
+      + str(settlement_population) + " there are about " + str(settlement_structures) + " structures in town.\n\n")
+
+print(parse_xml_biome())
