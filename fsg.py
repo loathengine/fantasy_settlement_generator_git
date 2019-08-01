@@ -7,7 +7,7 @@ def parse_xml_biome():
     root = tree.getroot()
     xml_list = []
     for biome in root.iter('BIOME'):
-        name = biome.get('name')
+        #name = biome.get('name')
         xml_list.append(biome.get('name'))
     return xml_list
 
@@ -30,8 +30,9 @@ settlement_wealth = random.randint(1, 6)
 settlement_age = random.randint(1, 6)
 settlement_structures = ((settlement_population << 1) // (settlement_density)) >> 1
 settlement_shops = (settlement_population // 150)
+primary_biome = random.choice(str(parse_xml_biome))
+primary_biome2 = random.choice(['tundra', 'grassland'])
 
-primary_biome = parse_xml_biome
 
 def get_primary_topology(lpt = list_primary_topology, pb = primary_biome):
     if pb == 'temperate deciduous forest':
