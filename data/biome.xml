@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<ENV>
+    <BIOME>
+        <BNAME>tundra</BNAME>
+        <BDISCRIPTION>...cold?</BDISCRIPTION>
+        <TOPOGRAPHY>
+            <TNAME>costal</TNAME>
+            <TWEIGHT>4</TWEIGHT>
+        </TOPOGRAPHY>
+        <TOPOGRAPHY>
+            <TNAME>mountain</TNAME>
+            <TWEIGHT>1</TWEIGHT>
+        </TOPOGRAPHY>
+    </BIOME>
+    <BIOME>
+        <BNAME>grassland</BNAME>
+        <BDISCRIPTION>....flat?</BDISCRIPTION>
+        <TOPOGRAPHY>
+            <TNAME>mountain</TNAME>
+            <TWEIGHT>0</TWEIGHT>
+        </TOPOGRAPHY>
+    </BIOME>
+</ENV>
