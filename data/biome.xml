@@ -2,19 +2,11 @@
 
 <ENV>
     <BIOME name="tundra" description="...cold?">
-        <TOPOGRAPHY>
-            name=coastal
-            weight=4
-        </TOPOGRAPHY>
-        <TOPOGRAPHY>
-            name=mountain
-            weight=1
-        </TOPOGRAPHY>
+        <TOPOGRAPHY name="coastal" weight="4"></TOPOGRAPHY>
+        <TOPOGRAPHY name="mountain" weight="1"></TOPOGRAPHY>
     </BIOME>
     <BIOME name="grassland" description=".....flat?">
-        <TOPOGRAPHY>
-            name=mountain
-            weight=0
-        </TOPOGRAPHY>
+        <TOPOGRAPHY name="plateau" weight="0" ></TOPOGRAPHY>
+        <TOPOGRAPHY name="flat lands" weight="0" ></TOPOGRAPHY>
     </BIOME>
 </ENV>

@@ -9,17 +9,25 @@ def parse_xml_biome():
     root = tree.getroot()
     xml_list = []
     for biome in root.iter('BIOME'):
-        # name = biome.get('name')
         xml_list.append(biome.get('name'))
     return xml_list
+
 
 def parse_xml_topography():
     tree = ET.parse('data/biome.xml')
     root = tree.getroot()
     xml_list = []
-    for biome in root.iter('BIOME'):
-        # name = biome.get('name')
-        xml_list.append(biome.get('name'))
+
+    for b in root.iter('BIOME'):
+        biome = b.get('name')
+        for topo in b.iter('TOPOGRAPHY'):
+            name_weight = []
+            name = topo.get('name')
+            weight = topo.get('weight')
+            name_weight.append(biome)
+            name_weight.append(name)
+            name_weight.append(weight)
+            xml_list.append(name_weight)
     return xml_list
 
 
@@ -33,59 +41,25 @@ settlement_shops = (settlement_population // 150)
 primary_biome = random.choice(parse_xml_biome())
 
 
-def get_primary_topology(pb=primary_biome):
-    if pb == 'temperate deciduous forest':
-        weighted_random_primary_topology = ['coastal'] * 1 + ['river'] * 1 + ['flat lands'] * 1 + ['foot hills'] * 1 + [
-            'plateau'] * 1 + ['mountain'] * 1
-        return random.choice(weighted_random_primary_topology)
-    elif pb == 'temperate rain forest':
-        weighted_random_primary_topology = ['coastal'] * 1 + ['river'] * 3 + ['flat lands'] * 1 + ['foot hills'] * 2 + [
-            'plateau'] * 2 + ['mountain'] * 2
-        return random.choice(weighted_random_primary_topology)
-    elif pb == 'tropical rain forest':
-        weighted_random_primary_topology = ['coastal'] * 3 + ['river'] * 3 + ['flat lands'] * 1 + ['foot hills'] * 1 + [
-            'plateau'] * 1 + ['mountain'] * 4
-        return random.choice(weighted_random_primary_topology)
-    elif pb == 'tropical seasonal forest':
-        weighted_random_primary_topology = ['coastal'] * 3 + ['river'] * 3 + ['flat lands'] * 1 + ['foot hills'] * 2 + [
-            'plateau'] * 2 + ['mountain'] * 2
-        return random.choice(weighted_random_primary_topology)
-    elif pb == 'grassland':
-        weighted_random_primary_topology = ['coastal'] * 3 + ['river'] * 3 + ['flat lands'] * 4 + ['foot hills'] * 3 + [
-            'plateau'] * 1 + ['mountain'] * 1
-        return random.choice(weighted_random_primary_topology)
-    elif pb == 'savanna':
-        weighted_random_primary_topology = ['coastal'] * 3 + ['river'] * 3 + ['flat lands'] * 4 + ['foot hills'] * 2 + [
-            'plateau'] * 2 + ['mountain'] * 2
-        return random.choice(weighted_random_primary_topology)
-    elif pb == 'taiga':
-        weighted_random_primary_topology = ['coastal'] * 3 + ['river'] * 3 + ['flat lands'] * 1 + ['foot hills'] * 2 + [
-            'plateau'] * 2 + ['mountain'] * 2
-        return random.choice(weighted_random_primary_topology)
-    elif pb == 'cold desert':
-        weighted_random_primary_topology = ['coastal'] * 1 + ['river'] * 1 + ['flat lands'] * 1 + ['foot hills'] * 4 + [
-            'plateau'] * 4 + ['mountain'] * 4
-        return random.choice(weighted_random_primary_topology)
-    elif pb == 'hot desert':
-        weighted_random_primary_topology = ['coastal'] * 3 + ['river'] * 3 + ['flat lands'] * 4 + ['foot hills'] * 1 + [
-            'plateau'] * 4 + ['mountain'] * 1
-        return random.choice(weighted_random_primary_topology)
-    elif pb == 'tundra':
-        weighted_random_primary_topology = ['coastal'] * 1 + ['river'] * 1 + ['flat lands'] * 1 + ['foot hills'] * 2 + [
-            'plateau'] * 2 + ['mountain'] * 2
-        return random.choice(weighted_random_primary_topology)
-    elif pb == 'glacier':
-        weighted_random_primary_topology = ['coastal'] * 3 + ['river'] * 3 + ['flat lands'] * 1 + ['foot hills'] * 2 + [
-            'plateau'] * 2 + ['mountain'] * 2
-        return random.choice(weighted_random_primary_topology)
-    else:
-        return "ERROR40020"
+def get_primary_topology(pb=primary_biome, xml_topo=parse_xml_topography()):
+    length=len(xml_topo)
+    for topo in xml_topo:
+        if topo[0] == pb:
+            print(pb)
+
+
+    i = 0
+    while i < length:
+        print(xml_topo[i])
+        i += 1
+
+    return "ERROR40020"
 
 
 primary_topology = get_primary_topology()
 
 
-def get_industry_raw(pt=primary_topology, lir=None, sp=settlement_population, sw=settlement_wealth):
+def get_industry_raw(pt=primary_topology, sp=settlement_population, sw=settlement_wealth):
     if pt == 'coastal':
         weighted_random_industry_raw = ['mining'] * 1 + ['farming'] * 1 + ['ranching'] * 1 + ['forestry'] * 1 + [
             'fishing'] * 999 + ['foraging'] * 1
@@ -152,9 +126,4 @@ print("industry_raw - " + industry_raw)
 print("industry_crafts - " + industry_crafts)
 print("industry_services - " + industry_services)
 
-print(
-    "\n" + settlement_name + " is a " + primary_topology + " settlement located in the greater " + primary_biome + " area."
-                                                                                                                   "  The primary industry in the area is " + industry_raw + "." + "industry supports the local " + industry_crafts + ".  With a population of "
-    + str(settlement_population) + " there are about " + str(settlement_structures) + " structures in town.\n\n")
-
-print(parse_xml_topography())
+print("\n\n" + str(parse_xml_topography()))
