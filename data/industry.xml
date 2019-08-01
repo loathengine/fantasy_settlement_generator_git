@@ -2,12 +2,12 @@
 
 <IND>
     <RAW name="mining" description="...picks and shovels">
-        <CRAFT name="smith" weight="2"></CRAFT>
-        <CRAFT name="mason" weight="4"></CRAFT>
-        <SERVICE name="barber" weight="1"></SERVICE>
+        <SHOP name="smith" weight="2"></SHOP>
+        <SHOP name="mason" weight="4"></SHOP>
+        <SHOP name="barber" weight="1"></SHOP>
     </RAW>
     <RAW name="farming" description=".....eh ih eh ih oh?">
-        <CRAFT name="tanner" weight="3" ></CRAFT>
-        <CRAFT name="butcher/salt packer" weight="5" ></CRAFT>
+        <SHOP name="tanner" weight="3" ></SHOP>
+        <SHOP name="butcher/salt packer" weight="5" ></SHOP>
     </RAW>
 </IND>
