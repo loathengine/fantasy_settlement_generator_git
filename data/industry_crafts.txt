@@ -3,4 +3,4 @@ tanner
 weaver
 mason
 carpenter
-butcher / meat packer
+butcher/salt packer

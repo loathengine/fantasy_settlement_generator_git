@@ -1,2 +1,9 @@
-barber
 maidservant
+barber
+restaurateur
+water carrier
+laundress
+porter
+doctor
+bather
+copyist

@@ -23,6 +23,7 @@ settlement_density = random.randint(1, 6)
 settlement_wealth = random.randint(1, 6)
 settlement_age = random.randint(1, 6)
 settlement_structures = ((settlement_population << 1) // (settlement_density)) >> 1
+settlement_shops = (settlement_population // 150)
 
 def get_primary_biome(lpb = list_primary_biome):
     return random.choice(lpb)
@@ -89,8 +90,16 @@ def get_industry_raw(pt = primary_topology, lir = list_industry_raw, sp = settle
         return "ERROR40030"
 industry_raw = get_industry_raw()
 
-def get_industry_crafts(lir = industry_raw, lic = list_industry_crafts, sp = settlement_population, sw = settlement_wealth):
-    return random.choice(lic)
+def get_industry_crafts(pt = primary_topology, ir = industry_raw, lic = list_industry_crafts, sp = settlement_population, sw = settlement_wealth):
+    if pt == 'coastal':
+        weighted_random_industry_crafts = ['smith'] * 1 + ['tanner'] * 1 + ['weaver'] * 1 + ['mason'] * 1 + ['carpenter'] * 999 + ['butcher/salt packer'] * 1
+        return random.choice(weighted_random_industry_crafts)
+    elif pt =='river':
+        weighted_random_industry_crafts = ['smith'] * 1 + ['tanner'] * 1 + ['weaver'] * 1 + ['mason'] * 1 + ['carpenter'] * 999 + ['butcher/salt packer'] * 1
+        return random.choice(weighted_random_industry_crafts)
+    else:
+        return random.choice(lic)
+
 industry_crafts = get_industry_crafts()
 
 def get_industry_services(lis = list_industry_services,lir = industry_raw, lic = industry_crafts, sp = settlement_population, sw = settlement_wealth):
@@ -103,6 +112,7 @@ print("settlement_density - " + str(settlement_density))
 print("settlement_wealth - " + str(settlement_wealth))
 print("settlement_age - " + str(settlement_age))
 print("settlement_structures - " + str(settlement_structures))
+print("settlement_shops - " + str(settlement_shops))
 print("primary_biome - " + primary_biome)
 print("primary_topology - " + primary_topology)
 print("industry_raw - " + industry_raw)
