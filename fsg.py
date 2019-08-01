@@ -43,17 +43,15 @@ primary_biome = random.choice(parse_xml_biome())
 
 def get_primary_topology(pb=primary_biome, xml_topo=parse_xml_topography()):
     length=len(xml_topo)
+    topo_list = []
     for topo in xml_topo:
         if topo[0] == pb:
-            print(pb)
-
-
-    i = 0
-    while i < length:
-        print(xml_topo[i])
-        i += 1
-
-    return "ERROR40020"
+            i = int(topo[2])
+            while i > 0:
+                topo_list.append(topo[1])
+                i -= 1
+            print(topo_list)
+    return random.choice(topo_list)
 
 
 primary_topology = get_primary_topology()
