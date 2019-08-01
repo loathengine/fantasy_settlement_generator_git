@@ -31,6 +31,24 @@ def parse_xml_topography():
     return xml_list
 
 
+def parse_xml_industry():
+    tree = ET.parse('data/industry.xml')
+    root = tree.getroot()
+    xml_list = []
+
+    for b in root.iter('BIOME'):
+        biome = b.get('name')
+        for topo in b.iter('TOPOGRAPHY'):
+            name_weight = []
+            name = topo.get('name')
+            weight = topo.get('weight')
+            name_weight.append(biome)
+            name_weight.append(name)
+            name_weight.append(weight)
+            xml_list.append(name_weight)
+    return xml_list
+
+
 settlement_name = "Testberg"
 settlement_population = random.randint(5, 5000)
 settlement_density = random.randint(1, 6)
@@ -50,7 +68,6 @@ def get_primary_topology(pb=primary_biome, xml_topo=parse_xml_topography()):
             while i > 0:
                 topo_list.append(topo[1])
                 i -= 1
-            print(topo_list)
     return random.choice(topo_list)
 
 
@@ -58,32 +75,7 @@ primary_topology = get_primary_topology()
 
 
 def get_industry_raw(pt=primary_topology, sp=settlement_population, sw=settlement_wealth):
-    if pt == 'coastal':
-        weighted_random_industry_raw = ['mining'] * 1 + ['farming'] * 1 + ['ranching'] * 1 + ['forestry'] * 1 + [
-            'fishing'] * 999 + ['foraging'] * 1
-        return random.choice(weighted_random_industry_raw)
-    elif pt == 'river':
-        weighted_random_industry_raw = ['mining'] * 1 + ['farming'] * 4 + ['ranching'] * 4 + ['forestry'] * 1 + [
-            'fishing'] * 4 + ['foraging'] * 1
-        return random.choice(weighted_random_industry_raw)
-    elif pt == 'flat lands':
-        weighted_random_industry_raw = ['mining'] * 1 + ['farming'] * 6 + ['ranching'] * 6 + ['forestry'] * 1 + [
-            'fishing'] * 1 + ['foraging'] * 1
-        return random.choice(weighted_random_industry_raw)
-    elif pt == 'foot hills':
-        weighted_random_industry_raw = ['mining'] * 1 + ['farming'] * 2 + ['ranching'] * 6 + ['forestry'] * 1 + [
-            'fishing'] * 1 + ['foraging'] * 1
-        return random.choice(weighted_random_industry_raw)
-    elif pt == 'plateau':
-        weighted_random_industry_raw = ['mining'] * 2 + ['farming'] * 1 + ['ranching'] * 1 + ['forestry'] * 4 + [
-            'fishing'] * 2 + ['foraging'] * 1
-        return random.choice(weighted_random_industry_raw)
-    elif pt == 'mountain':
-        weighted_random_industry_raw = ['mining'] * 6 + ['farming'] * 1 + ['ranching'] * 1 + ['forestry'] * 6 + [
-            'fishing'] * 2 + ['foraging'] * 2
-        return random.choice(weighted_random_industry_raw)
-    else:
-        return "ERROR40030"
+     return "ERROR40030"
 
 
 industry_raw = get_industry_raw()
@@ -124,4 +116,4 @@ print("industry_raw - " + industry_raw)
 print("industry_crafts - " + industry_crafts)
 print("industry_services - " + industry_services)
 
-print("\n\n" + str(parse_xml_topography()))
+print("\n\n" + str(get_industry_raw()))
