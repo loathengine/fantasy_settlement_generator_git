@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 import random
 
-random.seed(12345)
+random.seed(random.randint(1, 100000))
 
 
 def parse_xml_biome():
@@ -69,7 +69,7 @@ primary_biome = random.choice(parse_xml_biome())
 
 
 def get_primary_topology(pb=primary_biome, xml_topo=parse_xml_topography()):
-    length=len(xml_topo)
+    length = len(xml_topo)
     topo_list = []
     for topo in xml_topo:
         if topo[0] == pb:
@@ -84,39 +84,36 @@ primary_topology = get_primary_topology()
 
 
 def get_industry_raw(ir=parse_xml_raw()):
-     return random.choice(ir)
+    return random.choice(ir)
 
 
 industry_raw = get_industry_raw()
 
 
 def get_settlement_shops(ssn=settlement_shops_num, ir=industry_raw, xml_shop=parse_xml_shop()):
-    length=len(xml_shop)
+    length = len(xml_shop)
     shop_list = []
-    shop_results = []
+    shop_results = ""
     shop_dict = {}
     i = 0
-    while i < ssn:
-        print(i)
-        i += 1
+    x = 0
+    while x < ssn:
+        x += 1
         for shop in xml_shop:
-         if shop[0] == ir:
-             i = int(shop[2])
-             while i > 0:
-                 shop_list.append(shop[1])
-                 i -= 1
-             shop_results = random.choice(shop_list)
-             if shop_results in shop_dict:
-                 shop_dict[shop_results] += 1
-             else:
-                 shop_dict[shop_results] = 1
+            if shop[0] == ir:
+                i = int(shop[2])
+            while i > 0:
+                shop_list.append(shop[1])
+                i -= 1
+        shop_results = random.choice(shop_list)
+        if shop_results in shop_dict:
+            shop_dict[shop_results] += 1
+        else:
+            shop_dict[shop_results] = 1
     return shop_dict
 
 
-
-
-settlement_shops = get_settlement_shops
-
+settlement_shops = get_settlement_shops()
 
 print("settlement_name - " + settlement_name)
 print("settlement_population - " + str(settlement_population))
@@ -129,4 +126,8 @@ print("primary_topology - " + primary_topology)
 print("industry_raw - " + industry_raw)
 print("settlement_shops_num - " + str(settlement_shops_num))
 
-print(get_settlement_shops())
+print('     Shop Type -- Number')
+print('     -------------------')
+for x,y in settlement_shops.items():
+    print('     ' + x + " " + str(y))
+

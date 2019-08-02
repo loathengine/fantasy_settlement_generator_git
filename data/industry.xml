@@ -8,6 +8,6 @@
     </RAW>
     <RAW name="farming" description=".....eh ih eh ih oh?">
         <SHOP name="tanner" weight="3" ></SHOP>
-        <SHOP name="butcher/salt packer" weight="5" ></SHOP>
+        <SHOP name="butcher/salt packer" weight="3" ></SHOP>
     </RAW>
 </IND>
