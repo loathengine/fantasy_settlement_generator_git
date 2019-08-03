@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 
 <ENV>
-    <BIOME name="tundra" description="...cold?">
+    <BIOME name="tundra" weight="3" description="...cold?">
         <TOPOGRAPHY name="coastal" weight="2"></TOPOGRAPHY>
         <TOPOGRAPHY name="mountain" weight="4"></TOPOGRAPHY>
     </BIOME>
-    <BIOME name="grassland" description=".....flat?">
+    <BIOME name="grassland" weight="3" description=".....flat?">
         <TOPOGRAPHY name="plateau" weight="3" ></TOPOGRAPHY>
         <TOPOGRAPHY name="flat lands" weight="5" ></TOPOGRAPHY>
     </BIOME>
+    <BIOME name="tropical rain forest" weight="3" description=".....wet?">
+        <TOPOGRAPHY name="river" weight="3" ></TOPOGRAPHY>
+        <TOPOGRAPHY name="foot hills" weight="5" ></TOPOGRAPHY>
+    </BIOME>
+
 </ENV>
