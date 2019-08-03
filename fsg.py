@@ -13,34 +13,22 @@ def parse_xml_element(xml_file, element, attribute):
     return xml_list
 
 
-
-
-def parse_xml_topography():
-    tree = ET.parse('data/biome.xml')
+def weighted_element_xml(xml_file, element1, element2):
+    tree = ET.parse(xml_file)
     root = tree.getroot()
-    xml_list = []
+    weighted_list = []
+    i=0
 
-    for b in root.iter('BIOME'):
-        biome = b.get('name')
-        for topo in b.iter('TOPOGRAPHY'):
-            name_weight = []
-            name = topo.get('name')
-            weight = topo.get('weight')
-            name_weight.append(biome)
-            name_weight.append(name)
-            name_weight.append(weight)
-            xml_list.append(name_weight)
-    return xml_list
-
-
-def parse_xml_raw():
-    tree = ET.parse('data/industry.xml')
-    root = tree.getroot()
-    xml_list = []
-    for raw in root.iter('RAW'):
-        xml_list.append(raw.get('name'))
-    return xml_list
-
+    for e1 in root.iter(element1):
+        e1_name = e1.get('name')
+        for e2 in e1.iter(element2):
+            name = e2.get('name')
+            weight = e2.get('weight')
+            i = int(weight)
+            while i > 0:
+                weighted_list.append(name)
+                i -= 1
+    return random.choice(weighted_list)
 
 def parse_xml_shop():
     tree = ET.parse('data/industry.xml')
@@ -67,29 +55,10 @@ settlement_wealth = random.randint(1, 6)
 settlement_age = random.randint(1, 6)
 settlement_structures = ((settlement_population << 1) // settlement_density) >> 1
 settlement_shops_num = (settlement_population // 150)
-primary_biome = random.choice(parse_xml_element('data/biome.xml', 'BIOME', 'name'))
+primary_biome = weighted_element_xml('data/biome.xml', 'ENV', 'BIOME')
+primary_topology = weighted_element_xml('data/biome.xml', 'BIOME', 'TOPOGRAPHY')
+industry_raw = weighted_element_xml('data/industry.xml', 'IND', 'RAW')
 
-
-def get_primary_topology(pb=primary_biome, xml_topo=parse_xml_topography()):
-    length = len(xml_topo)
-    topo_list = []
-    for topo in xml_topo:
-        if topo[0] == pb:
-            i = int(topo[2])
-            while i > 0:
-                topo_list.append(topo[1])
-                i -= 1
-    return random.choice(topo_list)
-
-
-primary_topology = get_primary_topology()
-
-
-def get_industry_raw(ir=parse_xml_raw()):
-    return random.choice(ir)
-
-
-industry_raw = get_industry_raw()
 
 
 def get_settlement_shops(ssn=settlement_shops_num, ir=industry_raw, xml_shop=parse_xml_shop()):
@@ -132,7 +101,4 @@ print('     Shop Type -- Number')
 print('     -------------------')
 for x,y in settlement_shops.items():
     print('     ' + x + " " + str(y))
-
-print(parse_xml_topography())
-print(get_primary_topology())
 
