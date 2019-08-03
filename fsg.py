@@ -3,13 +3,13 @@ import random
 
 random.seed(random.randint(1, 100000))
 
-
-def parse_xml_biome():
-    tree = ET.parse('data/biome.xml')
+def parse_xml_element(xml_file, element, attribute):
+    """Takes a file and an element name and returns a list of every instance of that element."""
+    tree = ET.parse(xml_file)
     root = tree.getroot()
     xml_list = []
-    for biome in root.iter('BIOME'):
-        xml_list.append(biome.get('name'))
+    for e in root.iter(element):
+        xml_list.append(e.get(attribute))
     return xml_list
 
 
@@ -65,7 +65,7 @@ settlement_wealth = random.randint(1, 6)
 settlement_age = random.randint(1, 6)
 settlement_structures = ((settlement_population << 1) // settlement_density) >> 1
 settlement_shops_num = (settlement_population // 150)
-primary_biome = random.choice(parse_xml_biome())
+primary_biome = random.choice(parse_xml_element('data/biome.xml', 'BIOME', 'name'))
 
 
 def get_primary_topology(pb=primary_biome, xml_topo=parse_xml_topography()):
@@ -130,4 +130,7 @@ print('     Shop Type -- Number')
 print('     -------------------')
 for x,y in settlement_shops.items():
     print('     ' + x + " " + str(y))
+
+print(parse_xml_topography())
+print(get_primary_topology())
 
