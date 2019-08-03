@@ -10,7 +10,9 @@ def parse_xml_element(xml_file, element, attribute):
     xml_list = []
     for e in root.iter(element):
         xml_list.append(e.get(attribute))
-    return xml_list
+    xml_set = set(xml_list)
+    unique_xml_list = list(xml_set)
+    return unique_xml_list
 
 
 def weighted_element_xml(xml_file, element1, element2):
@@ -30,38 +32,8 @@ def weighted_element_xml(xml_file, element1, element2):
                 i -= 1
     return random.choice(weighted_list)
 
-def parse_xml_shop():
-    tree = ET.parse('data/industry.xml')
-    root = tree.getroot()
-    xml_list = []
 
-    for r in root.iter('RAW'):
-        raw = r.get('name')
-        for shop in r.iter('SHOP'):
-            name_weight = []
-            name = shop.get('name')
-            weight = shop.get('weight')
-            name_weight.append(raw)
-            name_weight.append(name)
-            name_weight.append(weight)
-            xml_list.append(name_weight)
-    return xml_list
-
-
-settlement_name = "Testberg"
-settlement_population = random.randint(5, 5000)
-settlement_density = random.randint(1, 6)
-settlement_wealth = random.randint(1, 6)
-settlement_age = random.randint(1, 6)
-settlement_structures = ((settlement_population << 1) // settlement_density) >> 1
-settlement_shops_num = (settlement_population // 150)
-primary_biome = weighted_element_xml('data/biome.xml', 'ENV', 'BIOME')
-primary_topology = weighted_element_xml('data/biome.xml', 'BIOME', 'TOPOGRAPHY')
-industry_raw = weighted_element_xml('data/industry.xml', 'IND', 'RAW')
-
-
-
-def get_settlement_shops(ssn=settlement_shops_num, ir=industry_raw, xml_shop=parse_xml_shop()):
+def get_settlement_shops(ssn, ir, xml_shop):
     length = len(xml_shop)
     shop_list = []
     shop_results = ""
@@ -84,7 +56,19 @@ def get_settlement_shops(ssn=settlement_shops_num, ir=industry_raw, xml_shop=par
     return shop_dict
 
 
-settlement_shops = get_settlement_shops()
+
+settlement_name = "Testberg"
+settlement_population = random.randint(100, 5000)
+settlement_density = random.randint(1, 6)
+settlement_wealth = random.randint(1, 6)
+settlement_age = random.randint(1, 6)
+settlement_structures = ((settlement_population << 1) // settlement_density) >> 1
+settlement_shops_num = (settlement_population // 150)
+settlement_shops_list = (parse_xml_element('data/biome.xml', 'ENV', 'SHOP'))
+primary_biome = weighted_element_xml('data/biome.xml', 'ENV', 'BIOME')
+primary_topology = weighted_element_xml('data/biome.xml', 'BIOME', 'TOPOGRAPHY')
+industry_raw = weighted_element_xml('data/biome.xml', 'TOPOGRAPHY', 'RAW')
+#settlement_shops = get_settlement_shops(settlement_shops_num, industry_raw, settlement_shops_list)
 
 print("settlement_name - " + settlement_name)
 print("settlement_population - " + str(settlement_population))
@@ -99,6 +83,9 @@ print("settlement_shops_num - " + str(settlement_shops_num))
 
 print('     Shop Type -- Number')
 print('     -------------------')
-for x,y in settlement_shops.items():
-    print('     ' + x + " " + str(y))
+#for x,y in settlement_shops.items():
+#    print('     ' + x + " " + str(y))
+
+
+get_settlement_shops(settlement_shops_num, 'mining', settlement_shops_list)
 
