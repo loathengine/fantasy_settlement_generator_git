@@ -1,75 +1,74 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <ENV name="world">
     <BIOME name="tundra" weight="3" description="...cold?">
         <TOPOGRAPHY name="coastal" weight="3">
             <RAW name="mining" weight="3" description="...picks and shovels">
-                <SHOP name="smith" weight="2"/>
-                <SHOP name="mason" weight="4"/>
-                <SHOP name="barber" weight="1"/>
+                <SHOP name="smith" weight="2" />
+                <SHOP name="mason" weight="4" />
+                <SHOP name="barber" weight="1" />
             </RAW>
             <RAW name="farming" weight="3" description=".....eh ih eh ih oh?">
-                <SHOP name="tanner" weight="3"/>
-                <SHOP name="butcher/salt packer" weight="3"/>
+                <SHOP name="tanner" weight="3" />
+                <SHOP name="butcher/salt packer" weight="3" />
             </RAW>
         </TOPOGRAPHY>
         <TOPOGRAPHY name="mountain" weight="3">
-             <RAW name="mining" weight="2" description="...picks and shovels">
-                <SHOP name="smith" weight="2"/>
-                 <SHOP name="mason" weight="4"/>
-                <SHOP name="barber" weight="1"/>
+            <RAW name="mining" weight="2" description="...picks and shovels">
+                <SHOP name="smith" weight="2" />
+                <SHOP name="mason" weight="4" />
+                <SHOP name="barber" weight="1" />
             </RAW>
             <RAW name="farming" weight="3" description=".....eh ih eh ih oh?">
-                <SHOP name="tanner" weight="3"/>
-                <SHOP name="butcher/salt packer" weight="3"/>
+                <SHOP name="tanner" weight="3" />
+                <SHOP name="butcher/salt packer" weight="3" />
             </RAW>
         </TOPOGRAPHY>
     </BIOME>
     <BIOME name="grassland" weight="4" description=".....flat?">
-        <TOPOGRAPHY name="plateau" weight="3" >
-               <RAW name="mining" weight="2" description="...picks and shovels">
-                <SHOP name="smith" weight="2"/>
-                <SHOP name="mason" weight="4"/>
-                <SHOP name="barber" weight="1"/>
+        <TOPOGRAPHY name="plateau" weight="3">
+            <RAW name="mining" weight="2" description="...picks and shovels">
+                <SHOP name="smith" weight="2" />
+                <SHOP name="mason" weight="4" />
+                <SHOP name="barber" weight="1" />
             </RAW>
             <RAW name="farming" weight="3" description=".....eh ih eh ih oh?">
-                <SHOP name="tanner" weight="3"/>
-                <SHOP name="butcher/salt packer" weight="3"/>
+                <SHOP name="tanner" weight="3" />
+                <SHOP name="butcher/salt packer" weight="3" />
             </RAW>
         </TOPOGRAPHY>
-        <TOPOGRAPHY name="flat lands" weight="3" >
-               <RAW name="mining" weight="2" description="...picks and shovels">
-                <SHOP name="smith" weight="2"/>
-                <SHOP name="mason" weight="4"/>
-                <SHOP name="barber" weight="1"/>
+        <TOPOGRAPHY name="flat lands" weight="3">
+            <RAW name="mining" weight="2" description="...picks and shovels">
+                <SHOP name="smith" weight="2" />
+                <SHOP name="mason" weight="4" />
+                <SHOP name="barber" weight="1" />
             </RAW>
             <RAW name="farming" weight="3" description=".....eh ih eh ih oh?">
-                <SHOP name="tanner" weight="3"/>
-                <SHOP name="butcher/salt packer" weight="3"/>
+                <SHOP name="tanner" weight="3" />
+                <SHOP name="butcher/salt packer" weight="3" />
             </RAW>
         </TOPOGRAPHY>
     </BIOME>
     <BIOME name="tropical rain forest" weight="5" description=".....wet?">
-        <TOPOGRAPHY name="river" weight="3" >
-              <RAW name="mining" weight="2" description="...picks and shovels">
-                <SHOP name="smith" weight="2"/>
-                <SHOP name="mason" weight="4"/>
-                <SHOP name="barber" weight="1"/>
+        <TOPOGRAPHY name="river" weight="3">
+            <RAW name="mining" weight="2" description="...picks and shovels">
+                <SHOP name="smith" weight="2" />
+                <SHOP name="mason" weight="4" />
+                <SHOP name="barber" weight="1" />
             </RAW>
             <RAW name="farming" weight="3" description=".....eh ih eh ih oh?">
-                <SHOP name="tanner" weight="3"/>
-                <SHOP name="butcher/salt packer" weight="3"/>
+                <SHOP name="tanner" weight="3" />
+                <SHOP name="butcher/salt packer" weight="3" />
             </RAW>
         </TOPOGRAPHY>
-        <TOPOGRAPHY name="foot hills" weight="3" >
-              <RAW name="mining" weight="2" description="...picks and shovels">
-                <SHOP name="smith" weight="2"/>
-                <SHOP name="mason" weight="4"/>
-                <SHOP name="barber" weight="1"/>
+        <TOPOGRAPHY name="foot hills" weight="3">
+            <RAW name="mining" weight="2" description="...picks and shovels">
+                <SHOP name="smith" weight="2" />
+                <SHOP name="mason" weight="4" />
+                <SHOP name="barber" weight="1" />
             </RAW>
             <RAW name="farming" weight="3" description=".....eh ih eh ih oh?">
-                <SHOP name="tanner" weight="3"/>
-                <SHOP name="butcher/salt packer" weight="3"/>
+                <SHOP name="tanner" weight="3" />
+                <SHOP name="butcher/salt packer" weight="3" />
             </RAW>
         </TOPOGRAPHY>
     </BIOME>
