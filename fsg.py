@@ -36,26 +36,13 @@ def weighted_element_xml(xml_file, element_root):
             i -= 1
     return random.choice(weighted_list)
 
-def get_settlement_shops(ssn, ir, xml_shop):
-    print('ir is - ' + ir)
-    length = len(xml_shop)
-    shop_list = []
+def get_settlement_shops(ssn, xml_shop):
     shop_results = ""
     shop_dict = {}
-    i = 0
-    x = length
+    x = 0
     while x < ssn:
         x += 1
-        print('xml_shop is - ' + str(xml_shop))
-        for shop in xml_shop:
-            print(shop)
-            print(ir)
-            if shop[0] == ir:
-                i = int(shop[2])
-            while i > 0:
-                shop_list.append(shop[1])
-                i -= 1
-        shop_results = random.choice(shop_list)
+        shop_results = random.choice(xml_shop)
         if shop_results in shop_dict:
             shop_dict[shop_results] += 1
         else:
@@ -74,7 +61,7 @@ settlement_shops_list = (parse_xml_element('data/biome.xml', 'SHOP', 'name'))
 primary_biome = weighted_element_xml('data/biome.xml', "./*")
 primary_topology = weighted_element_xml('data/biome.xml', "./BIOME[@name='" + primary_biome + "']/*")
 industry_raw = weighted_element_xml('data/biome.xml', "./BIOME[@name='" + primary_biome + "']/TOPOGRAPHY[@name='" + primary_topology + "']/*")
-# settlement_shops = get_settlement_shops(settlement_shops_num, industry_raw, settlement_shops_list)
+settlement_shops = get_settlement_shops(settlement_shops_num, settlement_shops_list)
 
 print("settlement_name - " + settlement_name)
 print("settlement_population - " + str(settlement_population))
@@ -89,7 +76,6 @@ print("settlement_shops_num - " + str(settlement_shops_num))
 print("settlement_shop_list - " + str(settlement_shops_list))
 print('     Shop Type -- Number')
 print('     -------------------')
-
-#for x,y in settlement_shops.items():
-#    print('     ' + x + " " + str(y))
+for x,y in settlement_shops.items():
+    print('     ' + x + " -- " + str(y))
 
