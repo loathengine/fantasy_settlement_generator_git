@@ -1,75 +1,530 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ENV name="world">
-    <BIOME name="tundra" weight="3" description="...cold?">
-        <TOPOGRAPHY name="coastal" weight="3">
-            <RAW name="mining" weight="3" description="...picks and shovels">
-                <SHOP name="smith" weight="2" />
-                <SHOP name="mason" weight="4" />
-                <SHOP name="barber" weight="1" />
-            </RAW>
-            <RAW name="farming" weight="3" description=".....eh ih eh ih oh?">
-                <SHOP name="tanner" weight="3" />
-                <SHOP name="butcher/salt packer" weight="3" />
-            </RAW>
-        </TOPOGRAPHY>
-        <TOPOGRAPHY name="mountain" weight="3">
-            <RAW name="mining" weight="2" description="...picks and shovels">
-                <SHOP name="smith" weight="2" />
-                <SHOP name="mason" weight="4" />
-                <SHOP name="barber" weight="1" />
-            </RAW>
-            <RAW name="farming" weight="3" description=".....eh ih eh ih oh?">
-                <SHOP name="tanner" weight="3" />
-                <SHOP name="butcher/salt packer" weight="3" />
-            </RAW>
-        </TOPOGRAPHY>
+<ENV>
+    <BIOME name="temperate deciduous forest" weight="3" >
+        <TOPOLOGY name="coastal" weight="3" >
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="river" weight="3" >
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="flat lands" weight="3" >
+            <RAW name="farming" weight="3" />
+            <RAW name="forestry" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="foot hills" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="plateau" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="mountain" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+        </TOPOLOGY>
     </BIOME>
-    <BIOME name="grassland" weight="4" description=".....flat?">
-        <TOPOGRAPHY name="plateau" weight="3">
-            <RAW name="mining" weight="2" description="...picks and shovels">
-                <SHOP name="smith" weight="2" />
-                <SHOP name="mason" weight="4" />
-                <SHOP name="barber" weight="1" />
-            </RAW>
-            <RAW name="farming" weight="3" description=".....eh ih eh ih oh?">
-                <SHOP name="tanner" weight="3" />
-                <SHOP name="butcher/salt packer" weight="3" />
-            </RAW>
-        </TOPOGRAPHY>
-        <TOPOGRAPHY name="flat lands" weight="3">
-            <RAW name="mining" weight="2" description="...picks and shovels">
-                <SHOP name="smith" weight="2" />
-                <SHOP name="mason" weight="4" />
-                <SHOP name="barber" weight="1" />
-            </RAW>
-            <RAW name="farming" weight="3" description=".....eh ih eh ih oh?">
-                <SHOP name="tanner" weight="3" />
-                <SHOP name="butcher/salt packer" weight="3" />
-            </RAW>
-        </TOPOGRAPHY>
+    <BIOME name="temperate rain forest" weight="3" >
+        <TOPOLOGY name="coastal" weight="3" >
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="river" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="flat lands" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="foot hills" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="plateau" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="mountain" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
     </BIOME>
-    <BIOME name="tropical rain forest" weight="5" description=".....wet?">
-        <TOPOGRAPHY name="river" weight="3">
-            <RAW name="mining" weight="2" description="...picks and shovels">
-                <SHOP name="smith" weight="2" />
-                <SHOP name="mason" weight="4" />
-                <SHOP name="barber" weight="1" />
-            </RAW>
-            <RAW name="farming" weight="3" description=".....eh ih eh ih oh?">
-                <SHOP name="tanner" weight="3" />
-                <SHOP name="butcher/salt packer" weight="3" />
-            </RAW>
-        </TOPOGRAPHY>
-        <TOPOGRAPHY name="foot hills" weight="3">
-            <RAW name="mining" weight="2" description="...picks and shovels">
-                <SHOP name="smith" weight="2" />
-                <SHOP name="mason" weight="4" />
-                <SHOP name="barber" weight="1" />
-            </RAW>
-            <RAW name="farming" weight="3" description=".....eh ih eh ih oh?">
-                <SHOP name="tanner" weight="3" />
-                <SHOP name="butcher/salt packer" weight="3" />
-            </RAW>
-        </TOPOGRAPHY>
+    <BIOME name="tropical rain forest" weight="3" >
+        <TOPOLOGY name="coastal" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="river" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="flat lands" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="foot hills" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="plateau" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="mountain" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+    </BIOME>
+    <BIOME name="tropical seasonal forest" weight="3" >
+        <TOPOLOGY name="coastal" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="river" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="flat lands" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="foot hills" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="plateau" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="mountain" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+    </BIOME>
+    <BIOME name="grassland" weight="3" >
+        <TOPOLOGY name="coastal" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="river" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="flat lands" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="foot hills" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="plateau" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="mountain" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+    </BIOME>
+    <BIOME name="savanna" weight="3" >
+        <TOPOLOGY name="coastal" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="river" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="flat lands" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="foot hills" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="plateau" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="mountain" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+    </BIOME>
+    <BIOME name="taiga" weight="3" >
+        <TOPOLOGY name="coastal" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="river" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="flat lands" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="foot hills" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="plateau" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="mountain" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+    </BIOME>
+    <BIOME name="cold desert" weight="3" >
+        <TOPOLOGY name="coastal" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="river" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="flat lands" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="foot hills" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="plateau" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="mountain" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+    </BIOME>
+    <BIOME name="hot desert" weight="3" >
+        <TOPOLOGY name="coastal" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="river" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="flat lands" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="foot hills" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="plateau" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="mountain" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+    </BIOME>
+    <BIOME name="tundra" weight="3" >
+        <TOPOLOGY name="coastal" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="river" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="flat lands" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="foot hills" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="plateau" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="mountain" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+    </BIOME>
+    <BIOME name="glacier" weight="3" >
+        <TOPOLOGY name="coastal" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="river" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="flat lands" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="foot hills" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="plateau" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
+        <TOPOLOGY name="mountain" weight="3" >
+            <RAW name="mining" weight="3" />
+            <RAW name="farming" weight="3" />
+            <RAW name="ranching" weight="3" />
+            <RAW name="forestry" weight="3" />
+            <RAW name="fishing" weight="3" />
+            <RAW name="foraging" weight="3" />
+        </TOPOLOGY>
     </BIOME>
 </ENV>
