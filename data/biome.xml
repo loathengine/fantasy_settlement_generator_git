@@ -99,6 +99,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="farming" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -107,6 +114,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="ranching" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -115,6 +129,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="forestry" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -123,6 +144,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="fishing" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -131,6 +159,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="foraging" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -139,6 +174,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
     </TOPOGRAPHY>
     <TOPOGRAPHY name="river" weight="3" >
@@ -149,6 +191,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="farming" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -157,6 +206,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="ranching" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -165,6 +221,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="forestry" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -173,6 +236,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="fishing" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -181,6 +251,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="foraging" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -189,6 +266,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
     </TOPOGRAPHY>
     <TOPOGRAPHY name="flat lands" weight="3" >
@@ -199,6 +283,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="farming" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -207,6 +298,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="ranching" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -215,6 +313,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="forestry" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -223,6 +328,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="fishing" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -231,6 +343,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="foraging" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -239,6 +358,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
     </TOPOGRAPHY>
     <TOPOGRAPHY name="foot hills" weight="3" >
@@ -249,6 +375,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="farming" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -257,6 +390,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="ranching" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -265,6 +405,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="forestry" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -273,6 +420,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="fishing" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -281,6 +435,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="foraging" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -289,6 +450,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
     </TOPOGRAPHY>
     <TOPOGRAPHY name="plateau" weight="3" >
@@ -299,6 +467,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="farming" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -307,6 +482,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="ranching" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -315,6 +497,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="forestry" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -323,6 +512,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="fishing" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -331,6 +527,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="foraging" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -339,6 +542,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
     </TOPOGRAPHY>
     <TOPOGRAPHY name="mountain" weight="3" >
@@ -349,6 +559,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="farming" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -357,6 +574,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="ranching" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -365,6 +589,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="forestry" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -373,6 +604,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="fishing" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -381,6 +619,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
       <RAW name="foraging" weight="3" >
         <SHOP name="smith" weight="3" />
@@ -389,6 +634,13 @@
         <SHOP name="mason" weight="3" />
         <SHOP name="carpenter" weight="3" />
         <SHOP name="butcher/salt packer" weight="3" />
+        <SHOP name="maid service" weight="3" />
+        <SHOP name="barber" weight="3" />
+        <SHOP name="food stall" weight="3" />
+        <SHOP name="laundry" weight="3" />
+        <SHOP name="doctor" weight="3" />
+        <SHOP name="bathhouse" weight="3" />
+        <SHOP name="general goods" weight="3" />
       </RAW>
     </TOPOGRAPHY>
   </IND>
