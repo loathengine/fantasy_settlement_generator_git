@@ -21,9 +21,9 @@ def weighted_element_xml(xml_file, element_root):
     tree = ET.parse(xml_file)
     root = tree.getroot()
     weighted_list = []
-    print(element_root)
+    #print(element_root)
     for e in root.findall(element_root):
-        print(e)
+        #print(e)
         #print('    e - ' + str(e.get('name')))
         name = e.get('name')
         #print('    name - ' + name)
@@ -76,25 +76,20 @@ primary_topology = weighted_element_xml('data/biome.xml', "./BIOME[@name='" + pr
 industry_raw = weighted_element_xml('data/biome.xml', "./BIOME[@name='" + primary_biome + "']/TOPOGRAPHY[@name='" + primary_topology + "']/*")
 # settlement_shops = get_settlement_shops(settlement_shops_num, industry_raw, settlement_shops_list)
 
-# print("settlement_name - " + settlement_name)
-# print("settlement_population - " + str(settlement_population))
-# print("settlement_density - " + str(settlement_density))
-# print("settlement_wealth - " + str(settlement_wealth))
-# print("settlement_age - " + str(settlement_age))
-# print("settlement_structures - " + str(settlement_structures))
-# print("primary_biome - " + primary_biome)
-# print("primary_topology - " + primary_topology)
-# print("industry_raw - " + industry_raw)
-# print("settlement_shops_num - " + str(settlement_shops_num))
-# print("settlement_shop_list - " + str(settlement_shops_list))
-# print('     Shop Type -- Number')
-# print('     -------------------')
+print("settlement_name - " + settlement_name)
+print("settlement_population - " + str(settlement_population))
+print("settlement_density - " + str(settlement_density))
+print("settlement_wealth - " + str(settlement_wealth))
+print("settlement_age - " + str(settlement_age))
+print("settlement_structures - " + str(settlement_structures))
+print("primary_biome - " + primary_biome)
+print("primary_topology - " + primary_topology)
+print("industry_raw - " + industry_raw)
+print("settlement_shops_num - " + str(settlement_shops_num))
+print("settlement_shop_list - " + str(settlement_shops_list))
+print('     Shop Type -- Number')
+print('     -------------------')
 
-# for x,y in settlement_shops.items():
+#for x,y in settlement_shops.items():
 #    print('     ' + x + " " + str(y))
 
-i = 0
-while i < 10:
-    i += 1
-#    print(weighted_element_xml('data/biome.xml', "./BIOME[@name='tundra']/TOPOGRAPHY[@name='coastal']/*"))
-print(primary_biome)

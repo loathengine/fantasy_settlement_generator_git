@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 
 <ENV name="world">
-    <BIOME name="tundra" weight="99" description="...cold?">
+    <BIOME name="tundra" weight="3" description="...cold?">
         <TOPOGRAPHY name="coastal" weight="3">
             <RAW name="mining" weight="3" description="...picks and shovels">
                 <SHOP name="smith" weight="2"/>
