@@ -1,7 +1,8 @@
 maid service
 barber
-food stall
+street food stall
 laundry
 doctor
 bathhouse
 general goods
+tavern/inn
