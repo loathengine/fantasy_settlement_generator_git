@@ -16,31 +16,57 @@ def parse_xml_element(xml_file, element, attribute):
     return unique_xml_list
 
 
-def weighted_element_xml(xml_file, element1, element2, primary):
+def weighted_element_xml(xml_file, element_root):
+    print('xml file - ' + xml_file)
+    tree = ET.parse(xml_file)
+    root = tree.getroot()
+    weighted_list = []
+    print(root.findall(element_root))
+    for e in root.findall(element_root):
+        print(e)
+        print('    e - ' + str(e.get('name')))
+        name = e.get('name')
+        print('    name - ' + name)
+        weight = e.get('weight')
+        print('    weight - ' + weight)
+        i = int(weight)
+        while i > 0:
+            print('        adding ' + name + ' to list')
+            weighted_list.append(name)
+            i -= 1
+    return random.choice(weighted_list)
+
+
+
+
+def old_weighted_element_xml(xml_file, element_root, primary):
     tree = ET.parse(xml_file)
     root = tree.getroot()
     weighted_list = []
     i = 0
-    for e1 in root.iter(element1):
-        #print('e1 - ' + str(e1.get('name')))
-        #print(primary)
+    print(root.iter(element_root))
+    for e1 in root.iter(element_root):
+        print('e1 - ' + str(e1.get('name')))
+        print(primary)
         if str(e1.get('name')) == str(primary):
-            #print("    if 1 TRUE")
+            print("    if 1 TRUE")
             for e2 in e1.iter(element2):
-                #print('      e2 - ' + str(e2.get('name')))
+                print('      e2 - ' + str(e2.get('name')))
                 name = e2.get('name')
-                #print('      name - ' + name)
+                print('      name - ' + name)
                 weight = e2.get('weight')
-                #print('      weight - ' + weight)
+                print('      weight - ' + weight)
                 i = int(weight)
                 while i > 0:
-                    #print('          adding ' + name + ' to list')
+                    print('          adding ' + name + ' to list')
                     weighted_list.append(name)
                     i -= 1
-        #else:
-            #print('if 1 FALSE')
-        #print (weighted_list)
-    return random.choice(weighted_list)
+        else:
+            print('if 1 FALSE')
+        print(weighted_list)
+
+
+#   return random.choice(weighted_list)
 
 
 def get_settlement_shops(ssn, ir, xml_shop):
@@ -103,4 +129,5 @@ settlement_shops_list = (parse_xml_element('data/biome.xml', 'SHOP', 'name'))
 i = 0
 while i < 10:
     i += 1
-    print(weighted_element_xml('data/biome.xml', 'RAW', 'SHOP', 'mining'))
+
+print(weighted_element_xml('data/biome.xml', "./BIOME[@name='tundra']/TOPOGRAPHY[@name='coastal']/*"))
