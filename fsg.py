@@ -5,7 +5,7 @@ random.seed(random.randint(1, 100000))
 
 
 def parse_xml_element(xml_file, element, attribute):
-    """Takes a file and an element name and returns a list of every instance of that element."""
+    """Takes a file and an element name and returns a list of every unique instance of that element."""
     tree = ET.parse(xml_file)
     root = tree.getroot()
     xml_list = []
@@ -31,7 +31,7 @@ def weighted_element_xml(xml_file, element_root):
         #print('    weight - ' + weight)
         i = int(weight)
         while i > 0:
-            #print('        adding ' + name + ' to list')
+            #print('        adding ' + name + ' to list, weight - ' + str(i))
             weighted_list.append(name)
             i -= 1
     return random.choice(weighted_list)
@@ -58,9 +58,9 @@ settlement_age = random.randint(1, 6)
 settlement_structures = ((settlement_population << 1) // settlement_density) >> 1
 settlement_shops_num = (settlement_population // 150)
 settlement_shops_list = (parse_xml_element('data/biome.xml', 'SHOP', 'name'))
-primary_biome = weighted_element_xml('data/biome.xml', "./*")
-primary_topography = weighted_element_xml('data/biome.xml', "./BIOME[@name='" + primary_biome + "']/*")
-industry_raw = weighted_element_xml('data/biome.xml', "./BIOME[@name='" + primary_biome + "']/TOPOGRAPHY[@name='" + primary_topography + "']/*")
+primary_biome = weighted_element_xml('data/biome.xml', "./ENV/*")
+primary_topography = weighted_element_xml('data/biome.xml', "./ENV/BIOME[@name='" + primary_biome + "']/*")
+industry_raw = weighted_element_xml('data/biome.xml', "./IND//TOPOGRAPHY[@name='" + primary_topography + "']/*")
 settlement_shops = get_settlement_shops(settlement_shops_num, settlement_shops_list)
 
 print("settlement_name - " + settlement_name)

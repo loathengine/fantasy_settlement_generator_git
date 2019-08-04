@@ -22,11 +22,14 @@ for b in biome:
 print('  </ENV>')
 
 print('  <IND>')
-for r in raw:
-    print('    <RAW name="' + r + '" weight="3" >')
-    for s in shop:
-        print('      <SHOP name="' + s + '" weight="3" />')
-    print('    </RAW>')
+for t in topo:
+    print('    <TOPOGRAPHY name="' + t + '" weight="3" >')
+    for r in raw:
+        print('      <RAW name="' + r + '" weight="3" >')
+        for s in shop:
+            print('        <SHOP name="' + s + '" weight="3" />')
+        print('      </RAW>')
+    print('    </TOPOGRAPHY>')
 print('  </IND>')
 print('</UNIVERSE>')
 

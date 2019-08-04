@@ -1,9 +1,7 @@
-maidservant
+maid service
 barber
-restaurateur
-water carrier
-laundress
-porter
+food stall
+laundry
 doctor
-bather
-copyist
+bathhouse
+general goods
