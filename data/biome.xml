@@ -2,8 +2,8 @@
 
 <ENV name="world">
     <BIOME name="tundra" weight="99" description="...cold?">
-        <TOPOGRAPHY name="coastal" weight="2">
-            <RAW name="mining" weight="4" description="...picks and shovels">
+        <TOPOGRAPHY name="coastal" weight="3">
+            <RAW name="mining" weight="3" description="...picks and shovels">
                 <SHOP name="smith" weight="2"/>
                 <SHOP name="mason" weight="4"/>
                 <SHOP name="barber" weight="1"/>
@@ -13,7 +13,7 @@
                 <SHOP name="butcher/salt packer" weight="3"/>
             </RAW>
         </TOPOGRAPHY>
-        <TOPOGRAPHY name="mountain" weight="4">
+        <TOPOGRAPHY name="mountain" weight="3">
              <RAW name="mining" weight="2" description="...picks and shovels">
                 <SHOP name="smith" weight="2"/>
                  <SHOP name="mason" weight="4"/>
@@ -37,7 +37,7 @@
                 <SHOP name="butcher/salt packer" weight="3"/>
             </RAW>
         </TOPOGRAPHY>
-        <TOPOGRAPHY name="flat lands" weight="5" >
+        <TOPOGRAPHY name="flat lands" weight="3" >
                <RAW name="mining" weight="2" description="...picks and shovels">
                 <SHOP name="smith" weight="2"/>
                 <SHOP name="mason" weight="4"/>
@@ -61,7 +61,7 @@
                 <SHOP name="butcher/salt packer" weight="3"/>
             </RAW>
         </TOPOGRAPHY>
-        <TOPOGRAPHY name="foot hills" weight="5" >
+        <TOPOGRAPHY name="foot hills" weight="3" >
               <RAW name="mining" weight="2" description="...picks and shovels">
                 <SHOP name="smith" weight="2"/>
                 <SHOP name="mason" weight="4"/>

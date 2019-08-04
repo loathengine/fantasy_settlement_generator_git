@@ -17,57 +17,24 @@ def parse_xml_element(xml_file, element, attribute):
 
 
 def weighted_element_xml(xml_file, element_root):
-    print('xml file - ' + xml_file)
+    #print('xml file - ' + xml_file)
     tree = ET.parse(xml_file)
     root = tree.getroot()
     weighted_list = []
-    print(root.findall(element_root))
+    print(element_root)
     for e in root.findall(element_root):
         print(e)
-        print('    e - ' + str(e.get('name')))
+        #print('    e - ' + str(e.get('name')))
         name = e.get('name')
-        print('    name - ' + name)
+        #print('    name - ' + name)
         weight = e.get('weight')
-        print('    weight - ' + weight)
+        #print('    weight - ' + weight)
         i = int(weight)
         while i > 0:
-            print('        adding ' + name + ' to list')
+            #print('        adding ' + name + ' to list')
             weighted_list.append(name)
             i -= 1
     return random.choice(weighted_list)
-
-
-
-
-def old_weighted_element_xml(xml_file, element_root, primary):
-    tree = ET.parse(xml_file)
-    root = tree.getroot()
-    weighted_list = []
-    i = 0
-    print(root.iter(element_root))
-    for e1 in root.iter(element_root):
-        print('e1 - ' + str(e1.get('name')))
-        print(primary)
-        if str(e1.get('name')) == str(primary):
-            print("    if 1 TRUE")
-            for e2 in e1.iter(element2):
-                print('      e2 - ' + str(e2.get('name')))
-                name = e2.get('name')
-                print('      name - ' + name)
-                weight = e2.get('weight')
-                print('      weight - ' + weight)
-                i = int(weight)
-                while i > 0:
-                    print('          adding ' + name + ' to list')
-                    weighted_list.append(name)
-                    i -= 1
-        else:
-            print('if 1 FALSE')
-        print(weighted_list)
-
-
-#   return random.choice(weighted_list)
-
 
 def get_settlement_shops(ssn, ir, xml_shop):
     print('ir is - ' + ir)
@@ -104,9 +71,9 @@ settlement_age = random.randint(1, 6)
 settlement_structures = ((settlement_population << 1) // settlement_density) >> 1
 settlement_shops_num = (settlement_population // 150)
 settlement_shops_list = (parse_xml_element('data/biome.xml', 'SHOP', 'name'))
-# primary_biome = weighted_element_xml('data/biome.xml', 'ENV', 'BIOME')
-# primary_topology = weighted_element_xml('data/biome.xml', 'BIOME', 'TOPOGRAPHY')
-# industry_raw = weighted_element_xml('data/biome.xml', 'TOPOGRAPHY', 'RAW')
+primary_biome = weighted_element_xml('data/biome.xml', "./BIOME/*")
+#primary_topology = weighted_element_xml('data/biome.xml', "./BIOME[@name=" + primary_biome + "]/*")
+#industry_raw = weighted_element_xml('data/biome.xml', "./BIOME[@name=" + primary_biome + "]/TOPOGRAPHY[@name=" + primary_topology + "]/*")
 # settlement_shops = get_settlement_shops(settlement_shops_num, industry_raw, settlement_shops_list)
 
 # print("settlement_name - " + settlement_name)
@@ -129,5 +96,5 @@ settlement_shops_list = (parse_xml_element('data/biome.xml', 'SHOP', 'name'))
 i = 0
 while i < 10:
     i += 1
-
-print(weighted_element_xml('data/biome.xml', "./BIOME[@name='tundra']/TOPOGRAPHY[@name='coastal']/*"))
+#    print(weighted_element_xml('data/biome.xml', "./BIOME[@name='tundra']/TOPOGRAPHY[@name='coastal']/*"))
+print(primary_biome)
