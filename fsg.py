@@ -71,9 +71,9 @@ settlement_age = random.randint(1, 6)
 settlement_structures = ((settlement_population << 1) // settlement_density) >> 1
 settlement_shops_num = (settlement_population // 150)
 settlement_shops_list = (parse_xml_element('data/biome.xml', 'SHOP', 'name'))
-primary_biome = weighted_element_xml('data/biome.xml', "./BIOME/*")
-#primary_topology = weighted_element_xml('data/biome.xml', "./BIOME[@name=" + primary_biome + "]/*")
-#industry_raw = weighted_element_xml('data/biome.xml', "./BIOME[@name=" + primary_biome + "]/TOPOGRAPHY[@name=" + primary_topology + "]/*")
+primary_biome = weighted_element_xml('data/biome.xml', "./*")
+primary_topology = weighted_element_xml('data/biome.xml', "./BIOME[@name='" + primary_biome + "']/*")
+industry_raw = weighted_element_xml('data/biome.xml', "./BIOME[@name='" + primary_biome + "']/TOPOGRAPHY[@name='" + primary_topology + "']/*")
 # settlement_shops = get_settlement_shops(settlement_shops_num, industry_raw, settlement_shops_list)
 
 # print("settlement_name - " + settlement_name)
