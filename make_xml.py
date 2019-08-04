@@ -7,8 +7,11 @@ with open('./data/primary_topography.txt') as t:
 with open('./data/industry_raw.txt') as r:
     raw = r.read().splitlines()
 
-with open('./data/industry_crafts.txt') as s:
-    shop = s.read().splitlines()
+with open('./data/industry_crafts.txt') as cs:
+    craft_shop = cs.read().splitlines()
+
+with open('./data/industry_services.txt') as ss:
+    craft_shop = ss.read().splitlines()
 
 
 print('<?xml version="1.0" encoding="UTF-8"?>')
