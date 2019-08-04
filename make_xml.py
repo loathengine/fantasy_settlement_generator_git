@@ -12,13 +12,23 @@ with open('./data/industry_crafts.txt') as s:
 
 
 print('<?xml version="1.0" encoding="UTF-8"?>')
-print('<ENV>')
+print('<UNIVERSE>')
+print('  <ENV>')
 for b in biome:
     print('    <BIOME name="' + b + '" weight="3" >')
     for t in topo:
-        print('        <TOPOGRAPHY name="' + t + '" weight="3" >')
-        for r in raw:
-            print('            <RAW name="' + r + '" weight="3" />')
-        print('        </TOPOGRAPHY>')
+        print('      <TOPOGRAPHY name="' + t + '" weight="3" />')
     print('    </BIOME>')
-print('</ENV>')
+print('  </ENV>')
+
+print('  <IND>')
+for r in raw:
+    print('    <RAW name="' + r + '" weight="3" >')
+    for s in shop:
+        print('      <SHOP name="' + s + '" weight="3" />')
+    print('    </RAW>')
+print('  </IND>')
+print('</UNIVERSE>')
+
+
+
