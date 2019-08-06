@@ -1,11 +1,4 @@
-temperate deciduous forest
 temperate rain forest
-tropical rain forest
-tropical seasonal forest
+temperate deciduous forest
 grassland
 savanna
-taiga
-cold desert
-hot desert
-tundra
-glacier
