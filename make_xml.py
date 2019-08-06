@@ -22,21 +22,19 @@ def write_xml(file):
     for b in biome:
         print('    <BIOME name="' + b + '" weight="3" >', file=file)
         for t in topo:
-            print('      <TOPOGRAPHY name="' + t + '" weight="3" />', file=file)
+            print('    <TOPOGRAPHY name="' + t + '" weight="3" >', file=file)
+            for r in raw:
+                print('      <RAW name="' + r + '" weight="3" >', file=file)
+                for cs in craft_shop:
+                    print('        <SHOP name="' + cs + '" weight="3" />', file=file)
+                for ss in service_shop:
+                    print('        <SHOP name="' + ss + '" weight="3" />', file=file)
+                print('      </RAW>', file=file)
+            print('    </TOPOGRAPHY>', file=file)
         print('    </BIOME>', file=file)
     print('  </ENV>', file=file)
 
     print('  <IND>', file=file)
-    for t in topo:
-        print('    <TOPOGRAPHY name="' + t + '" weight="3" >', file=file)
-        for r in raw:
-            print('      <RAW name="' + r + '" weight="3" >', file=file)
-            for cs in craft_shop:
-                print('        <SHOP name="' + cs + '" weight="3" />', file=file)
-            for ss in service_shop:
-                print('        <SHOP name="' + ss + '" weight="3" />', file=file)
-            print('      </RAW>', file=file)
-        print('    </TOPOGRAPHY>', file=file)
     print('  </IND>', file=file)
     print('</UNIVERSE>', file=file)
 

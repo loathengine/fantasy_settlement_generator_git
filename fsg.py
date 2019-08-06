@@ -60,7 +60,7 @@ settlement_shops_num = (settlement_population // 150)
 settlement_shops_list = (parse_xml_element('data/monolith.xml', 'SHOP', 'name'))
 primary_biome = weighted_element_xml('data/monolith.xml', "./ENV/*")
 primary_topography = weighted_element_xml('data/monolith.xml', "./ENV/BIOME[@name='" + primary_biome + "']/*")
-industry_raw = weighted_element_xml('data/monolith.xml', "./IND//TOPOGRAPHY[@name='" + primary_topography + "']/*")
+industry_raw = weighted_element_xml('data/monolith.xml', "./ENV/BIOME/TOPOGRAPHY[@name='" + primary_topography + "']/*")
 settlement_shops = get_settlement_shops(settlement_shops_num, settlement_shops_list)
 
 print("settlement_name - " + settlement_name)
