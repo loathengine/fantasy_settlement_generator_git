@@ -1,6 +1,4 @@
 mining
 farming
-ranching
 forestry
 fishing
-foraging
