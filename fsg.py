@@ -49,7 +49,7 @@ def get_settlement_shops(ssn, xml_shop):
             shop_dict[shop_results] = 1
     return shop_dict
 
-def get_settlement_label(settlement_population):
+def get_settlement_label(xml_file, element_root, settlement_population):
     """Need to sort data before doing the size checks"""
     tree = ET.parse(xml_file)
     root = tree.getroot()
@@ -65,7 +65,7 @@ def get_settlement_label(settlement_population):
 
 settlement_name = "Testberg"
 settlement_population = random.randint(100, 5000)
-settlement_label = get_settlement_label(settlement_population)
+settlement_label = get_settlement_label('data/monolith.xml', "./STATS/LABEL", settlement_population)
 settlement_density = random.randint(1, 6)
 settlement_wealth = random.randint(1, 6)
 settlement_age = random.randint(1, 6)
@@ -79,7 +79,6 @@ settlement_shops = get_settlement_shops(settlement_shops_num, settlement_shops_l
 
 print("settlement_name - " + settlement_name)
 print("settlement_population - " + str(settlement_population))
-print("settlement_population - " +
 print("settlement_label - " + settlement_label)
 print("settlement_wealth - " + str(settlement_wealth))
 print("settlement_age - " + str(settlement_age))

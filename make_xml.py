@@ -25,7 +25,7 @@ def write_xml(file):
 
     print('  <STATS>', file=file)
     for s_l in size_label:
-        print('    <LABEL name="' + s_l + '" ceiling="3" >', file=file)
+        print('    <LABEL name="' + s_l + '" ceiling="3" />', file=file)
     print('  </STATS>', file=file)
 
 
