@@ -49,23 +49,23 @@ def get_settlement_shops(ssn, xml_shop):
             shop_dict[shop_results] = 1
     return shop_dict
 
-def get_settlement_label(settlement_population)
+def get_settlement_label(settlement_population):
+    """Need to sort data before doing the size checks"""
     tree = ET.parse(xml_file)
     root = tree.getroot()
-    weighted_list = []
+    settlement_label = ""
     for e in root.findall(element_root):
         name = e.get('name')
-        weight = e.get('weight')
-        i = int(weight)
-        while i > 0:
-            #print('        adding ' + name + ' to list, weight - ' + str(i))
-            weighted_list.append(name)
-            i -= 1
-    return random.choice(weighted_list)
+        ceiling = e.get('ceiling')
+        i = int(ceiling)
+        if i <= settlement_population:
+            settlement_label = name
+    return settlement_label
 
 
 settlement_name = "Testberg"
 settlement_population = random.randint(100, 5000)
+settlement_label = get_settlement_label(settlement_population)
 settlement_density = random.randint(1, 6)
 settlement_wealth = random.randint(1, 6)
 settlement_age = random.randint(1, 6)
@@ -79,7 +79,8 @@ settlement_shops = get_settlement_shops(settlement_shops_num, settlement_shops_l
 
 print("settlement_name - " + settlement_name)
 print("settlement_population - " + str(settlement_population))
-print("settlement_density - " + str(settlement_density))
+print("settlement_population - " +
+print("settlement_label - " + settlement_label)
 print("settlement_wealth - " + str(settlement_wealth))
 print("settlement_age - " + str(settlement_age))
 print("settlement_structures - " + str(settlement_structures))
