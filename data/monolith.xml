@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <UNIVERSE>
   <STATS>
+    <LABEL name="Thorp" ceiling="1" />
     <LABEL name="Hamlet" ceiling="21" />
-    <LABEL name="Village" ceiling="" />
-    <LABEL name="Small town" ceiling="3" />
-    <LABEL name="Large town" ceiling="3" />
-    <LABEL name="Small city" ceiling="3" />
-    <LABEL name="Large city" ceiling="3" />
-    <LABEL name="Metropolis" ceiling="3" />
+    <LABEL name="Village" ceiling="61" />
+    <LABEL name="Small town" ceiling="201" />
+    <LABEL name="Large town" ceiling="2001" />
+    <LABEL name="Small city" ceiling="5001" />
+    <LABEL name="Large city" ceiling="10001" />
+    <LABEL name="Metropolis" ceiling="25001" />
   </STATS>
   <ENV>
     <BIOME name="temperate rain forest" weight="3" >
