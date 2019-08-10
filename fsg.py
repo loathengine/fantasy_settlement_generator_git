@@ -49,6 +49,20 @@ def get_settlement_shops(ssn, xml_shop):
             shop_dict[shop_results] = 1
     return shop_dict
 
+def get_settlement_label(settlement_population)
+    tree = ET.parse(xml_file)
+    root = tree.getroot()
+    weighted_list = []
+    for e in root.findall(element_root):
+        name = e.get('name')
+        weight = e.get('weight')
+        i = int(weight)
+        while i > 0:
+            #print('        adding ' + name + ' to list, weight - ' + str(i))
+            weighted_list.append(name)
+            i -= 1
+    return random.choice(weighted_list)
+
 
 settlement_name = "Testberg"
 settlement_population = random.randint(100, 5000)
