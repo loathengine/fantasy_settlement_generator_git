@@ -19,6 +19,9 @@ def write_xml(file):
     with open('./data/size_label.txt') as sl:
         size_label = sl.read().splitlines()
 
+    with open('./data/settlement_government.txt') as sg:
+        settlement_government = sg.read().splitlines()
+
 
     print('<?xml version="1.0" encoding="UTF-8"?>', file=file)
     print('<UNIVERSE>', file=file)
@@ -26,7 +29,11 @@ def write_xml(file):
     print('  <STATS>', file=file)
     for s_l in size_label:
         print('    <LABEL name="' + s_l + '" ceiling="3" />', file=file)
+    for s_g in settlement_government:
+        print('    <GOVERNMENT name="' + s_g + '" weight="3" />', file=file)
     print('  </STATS>', file=file)
+
+
 
 
     print('  <ENV>', file=file)
