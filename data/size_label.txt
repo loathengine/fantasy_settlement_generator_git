@@ -1,0 +1,7 @@
+Hamlet
+Village
+Small town
+Large town
+Small city
+Large city
+Metropolis

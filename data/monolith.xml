@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <UNIVERSE>
+  <STATS>
+    <LABEL name="Hamlet" weight="3" >
+    <LABEL name="Village" weight="3" >
+    <LABEL name="Small town" weight="3" >
+    <LABEL name="Large town" weight="3" >
+    <LABEL name="Small city" weight="3" >
+    <LABEL name="Large city" weight="3" >
+    <LABEL name="Metropolis" weight="3" >
+  </STATS>
   <ENV>
     <BIOME name="temperate rain forest" weight="3" >
     <TOPOGRAPHY name="coastal" weight="3" >
