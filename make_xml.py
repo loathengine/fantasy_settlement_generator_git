@@ -34,6 +34,8 @@ def write_xml(file):
         print('    <LABEL name="' + s_l + '" ceiling="3" />', file=file)
     for s_g in settlement_government:
         print('    <GOVERNMENT name="' + s_g + '" weight="3" />', file=file)
+    for s_t in settlement_trait:
+        print('    <TRAIT name="' + s_t + '" weight="3" />', file=file)
     print('  </STATS>', file=file)
 
 
