@@ -58,7 +58,7 @@ def get_settlement_label(xml_file, element_root, settlement_population):
         name = e.get('name')
         ceiling = e.get('ceiling')
         i = int(ceiling)
-        if i <= settlement_population:
+        if i >= settlement_population:
             settlement_label = name
     return settlement_label
 
