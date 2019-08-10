@@ -1,5 +1,6 @@
-Thorp
-Hamlet
+key,weight,desc
+Thorp,21,Really small
+Hamlet,61
 Village
 Small town
 Large town
