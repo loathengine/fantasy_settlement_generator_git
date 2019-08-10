@@ -19,6 +19,30 @@
     <GOVERNMENT name="Theocracy" weight="3" />
     <GOVERNMENT name="Plutocracy" weight="3" />
     <GOVERNMENT name="Utopian Experiment" weight="3" />
+    <TRAIT name="Abundance" weight="3" />
+    <TRAIT name="Abstinent" weight="3" />
+    <TRAIT name="Academic" weight="3" />
+    <TRAIT name="Adventure Site" weight="3" />
+    <TRAIT name="Artist’s Colony" weight="3" />
+    <TRAIT name="Asylum" weight="3" />
+    <TRAIT name="Broad Minded" weight="3" />
+    <TRAIT name="City of the Dead" weight="3" />
+    <TRAIT name="Cruel Watch" weight="3" />
+    <TRAIT name="Cultured" weight="3" />
+    <TRAIT name="Decadent" weight="3" />
+    <TRAIT name="Deep Traditions" weight="3" />
+    <TRAIT name="Defensible" weight="3" />
+    <TRAIT name="Defiant" weight="3" />
+    <TRAIT name="Eldritch" weight="3" />
+    <TRAIT name="Famed Breeders" weight="3" />
+    <TRAIT name="Gambling" weight="3" />
+    <TRAIT name="Insular" weight="3" />
+    <TRAIT name="Militarized" weight="3" />
+    <TRAIT name="Pious" weight="3" />
+    <TRAIT name="Racially Intolerant" weight="3" />
+    <TRAIT name="Resettled Ruins" weight="3" />
+    <TRAIT name="Rule of Might" weight="3" />
+    <TRAIT name="Trading Post" weight="3" />
   </STATS>
   <ENV>
     <BIOME name="temperate rain forest" weight="3" >
