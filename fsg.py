@@ -58,7 +58,7 @@ def get_settlement_label(xml_file, element_root, settlement_population):
         name = e.get('name')
         ceiling = e.get('ceiling')
         i = int(ceiling)
-        if i >= settlement_population:
+        if i <= settlement_population:
             settlement_label = name
     return settlement_label
 
@@ -69,6 +69,7 @@ settlement_label = get_settlement_label('data/monolith.xml', "./STATS/LABEL", se
 settlement_density = random.randint(1, 6)
 settlement_wealth = random.randint(1, 6)
 settlement_age = random.randint(1, 6)
+settlement_alignment = random.randint(1, 6)
 settlement_structures = ((settlement_population << 1) // settlement_density) >> 1
 settlement_shops_num = (settlement_population // 150)
 settlement_shops_list = (parse_xml_element('data/monolith.xml', 'SHOP', 'name'))
@@ -82,6 +83,7 @@ print("settlement_population - " + str(settlement_population))
 print("settlement_label - " + settlement_label)
 print("settlement_wealth - " + str(settlement_wealth))
 print("settlement_age - " + str(settlement_age))
+print("settlement_alignment - " + str(settlement_alignment))
 print("settlement_structures - " + str(settlement_structures))
 print("primary_biome - " + primary_biome)
 print("primary_topography - " + primary_topography)
