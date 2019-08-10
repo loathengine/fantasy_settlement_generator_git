@@ -22,6 +22,9 @@ def write_xml(file):
     with open('./data/settlement_government.txt') as sg:
         settlement_government = sg.read().splitlines()
 
+    with open('./data/settlement_trait.txt') as st:
+        settlement_trait = st.read().splitlines()
+
 
     print('<?xml version="1.0" encoding="UTF-8"?>', file=file)
     print('<UNIVERSE>', file=file)
