@@ -1,8 +1,8 @@
-"""TODO:shop quality"""
-"""TODO:government and guards"""
-"""TODO:tavern generator"""
-"""TODO:npc generator"""
-
+#TODO:add functionality
+# shop quality
+# government and guards
+# tavern generator
+# npc generator
 
 import xml.etree.ElementTree as ET
 import random
@@ -49,7 +49,7 @@ def get_settlement_shops(ssn, xml_shop):
     return shop_dict
 
 def get_settlement_label(xml_file, element_root, settlement_population):
-    """Need to sort data before doing the size checks"""
+    # TODO: Need to sort data before doing the size checks
     tree = ET.parse(xml_file)
     root = tree.getroot()
     settlement_label = ""
