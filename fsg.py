@@ -1,3 +1,7 @@
+'''Todo list'''
+'''shop quality'''
+
+
 import xml.etree.ElementTree as ET
 import random
 
@@ -17,27 +21,20 @@ def parse_xml_element(xml_file, element, attribute):
 
 
 def weighted_element_xml(xml_file, element_root):
-    #print('xml file - ' + xml_file)
     tree = ET.parse(xml_file)
     root = tree.getroot()
     weighted_list = []
-    #print(element_root)
     for e in root.findall(element_root):
-        #print(e)
-        #print('    e - ' + str(e.get('name')))
         name = e.get('name')
-        #print('    name - ' + name)
         weight = e.get('weight')
-        #print('    weight - ' + weight)
         i = int(weight)
         while i > 0:
-            #print('        adding ' + name + ' to list, weight - ' + str(i))
             weighted_list.append(name)
             i -= 1
     return random.choice(weighted_list)
 
+
 def get_settlement_shops(ssn, xml_shop):
-    shop_results = ""
     shop_dict = {}
     x = 0
     while x < ssn:
@@ -94,6 +91,8 @@ print("primary_topography - " + primary_topography)
 print("industry_raw - " + industry_raw)
 print("settlement_shops_num - " + str(settlement_shops_num))
 print("settlement_shop_list - " + str(settlement_shops_list))
+
+
 print('     Shop Type -- Number')
 print('     -------------------')
 for x,y in settlement_shops.items():
