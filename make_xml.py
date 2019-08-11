@@ -28,7 +28,6 @@ def write_xml(file):
 
     print('<?xml version="1.0" encoding="UTF-8"?>', file=file)
     print('<UNIVERSE>', file=file)
-
     print('  <STATS>', file=file)
     for s_l in size_label:
         print('    <LABEL name="' + s_l + '" ceiling="3" />', file=file)
@@ -37,10 +36,6 @@ def write_xml(file):
     for s_t in settlement_trait:
         print('    <TRAIT name="' + s_t + '" weight="3" />', file=file)
     print('  </STATS>', file=file)
-
-
-
-
     print('  <ENV>', file=file)
     for p_b in primary_biome:
         print('    <BIOME name="' + p_b + '" weight="3" >', file=file)
@@ -56,7 +51,6 @@ def write_xml(file):
             print('    </TOPOGRAPHY>', file=file)
         print('    </BIOME>', file=file)
     print('  </ENV>', file=file)
-
     print('  <IND>', file=file)
     print('  </IND>', file=file)
     print('</UNIVERSE>', file=file)

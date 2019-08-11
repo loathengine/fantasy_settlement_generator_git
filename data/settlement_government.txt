@@ -1,3 +1,4 @@
+key,weight,desc
 Autocracy
 Colonial
 Council
