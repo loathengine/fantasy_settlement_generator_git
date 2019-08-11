@@ -7,14 +7,14 @@ def import_csv(file):
         return (list(reader))
 
 
-size_label = import_csv('size_label.txt')
-primary_biome = import_csv('primary_biome.txt')
-primary_topography = import_csv('primary_topography.txt')
-industry_raw = import_csv('industry_raw.txt')
-industry_crafts = import_csv('industry_crafts.txt')
-industry_services = import_csv('industry_services.txt')
-settlement_government = import_csv('settlement_government.txt')
-settlement_trait = import_csv('settlement_trait.txt')
+size_label = import_csv('data/size_label.txt')
+primary_biome = import_csv('data/primary_biome.txt')
+primary_topography = import_csv('data/primary_topography.txt')
+industry_raw = import_csv('data/industry_raw.txt')
+industry_crafts = import_csv('data/industry_crafts.txt')
+industry_services = import_csv('data/industry_services.txt')
+settlement_government = import_csv('data/settlement_government.txt')
+settlement_trait = import_csv('data/settlement_trait.txt')
 
 def write_xml(file):
     print('<?xml version="1.0" encoding="UTF-8"?>', file=file)
@@ -47,5 +47,5 @@ def write_xml(file):
     print('</UNIVERSE>', file=file)
 
 
-with open("monolith.xml", "w") as m:
+with open("data/monolith.xml", "w") as m:
     write_xml(m)
