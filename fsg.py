@@ -1,6 +1,4 @@
-'''Todo list'''
-'''shop quality'''
-
+"""TODO:shop quality"""
 
 import xml.etree.ElementTree as ET
 import random
