@@ -1,4 +1,8 @@
 """TODO:shop quality"""
+"""TODO:government and guards"""
+"""TODO:tavern generator"""
+"""TODO:npc generator"""
+
 
 import xml.etree.ElementTree as ET
 import random
