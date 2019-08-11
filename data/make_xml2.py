@@ -16,14 +16,7 @@ industry_services = import_csv('industry_services.txt')
 settlement_government = import_csv('settlement_government.txt')
 settlement_trait = import_csv('settlement_trait.txt')
 
-
-print('<?xml version="1.0" encoding="UTF-8"?>')
-print('<UNIVERSE>')
-print('  <STATS>')
-for s_l in size_label:
-   print('    <LABEL name="' + str(s_l['key']) + '" ceiling="' + str(s_l['weight']) + '" />')
-
-def write_xml
+def write_xml(file):
     print('<?xml version="1.0" encoding="UTF-8"?>', file=file)
     print('<UNIVERSE>', file=file)
     print('  <STATS>', file=file)
