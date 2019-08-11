@@ -15,11 +15,14 @@ industry_crafts = import_csv('data/industry_crafts.txt')
 industry_services = import_csv('data/industry_services.txt')
 settlement_government = import_csv('data/settlement_government.txt')
 settlement_trait = import_csv('data/settlement_trait.txt')
+race_percentage = import_csv('data/race_percentage.txt')
 
 def write_xml(file):
     print('<?xml version="1.0" encoding="UTF-8"?>', file=file)
     print('<UNIVERSE>', file=file)
     print('  <STATS>', file=file)
+    for r_p in race_percentage:
+        print('    <RACE name="' + str(r_p['key']) + '" ceiling="' + str(r_p['weight']) + '" />', file=file)
     for s_l in size_label:
         print('    <LABEL name="' + str(s_l['key']) + '" ceiling="' + str(s_l['weight']) + '" />', file=file)
     for s_g in settlement_government:

@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <UNIVERSE>
   <STATS>
+    <RACE name="human" ceiling="40" />
+    <RACE name="dwarf" ceiling="10" />
+    <RACE name="elf" ceiling="10" />
+    <RACE name="gnome" ceiling="10" />
+    <RACE name="halfling" ceiling="10" />
+    <RACE name="half-elf" ceiling="15" />
+    <RACE name="half-orc" ceiling="5" />
     <LABEL name="Thorp" ceiling="1" />
     <LABEL name="Hamlet" ceiling="21" />
     <LABEL name="Village" ceiling="61" />
