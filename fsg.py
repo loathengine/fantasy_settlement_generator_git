@@ -76,8 +76,8 @@ settlement_government = weighted_element_xml('data/monolith.xml', "./STATS/GOVER
 settlement_trait = weighted_element_xml('data/monolith.xml', "./STATS/TRAIT")
 settlement_structures = ((settlement_population << 1) // settlement_density) >> 1
 settlement_shops_num = (settlement_population // 300)
-settlement_inn_num = (settlement_population // 500)
-settlement_tavern_num = (settlement_population // 150)
+settlement_inn_num = (settlement_population // 100)
+settlement_tavern_num = (settlement_population // 500)
 primary_biome = weighted_element_xml('data/monolith.xml', "./ENV/*")
 primary_topography = weighted_element_xml('data/monolith.xml', "./ENV/BIOME[@name='" + primary_biome + "']/*")
 industry_raw = weighted_element_xml('data/monolith.xml', "./ENV/BIOME/TOPOGRAPHY[@name='" + primary_topography + "']/*")
