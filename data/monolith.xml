@@ -60,7 +60,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -98,7 +98,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -136,7 +136,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -174,7 +174,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -214,7 +214,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -252,7 +252,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -290,7 +290,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -328,7 +328,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -368,7 +368,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -406,7 +406,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -444,7 +444,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -482,7 +482,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -522,7 +522,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -560,7 +560,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -598,7 +598,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -636,7 +636,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -676,7 +676,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -714,7 +714,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -752,7 +752,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -790,7 +790,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -830,7 +830,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -868,7 +868,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -906,7 +906,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -944,7 +944,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -986,7 +986,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1024,7 +1024,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1062,7 +1062,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1100,7 +1100,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1140,7 +1140,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1178,7 +1178,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1216,7 +1216,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1254,7 +1254,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1294,7 +1294,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1332,7 +1332,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1370,7 +1370,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1408,7 +1408,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1448,7 +1448,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1486,7 +1486,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1524,7 +1524,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1562,7 +1562,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1602,7 +1602,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1640,7 +1640,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1678,7 +1678,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1716,7 +1716,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1756,7 +1756,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1794,7 +1794,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1832,7 +1832,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1870,7 +1870,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1912,7 +1912,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1950,7 +1950,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -1988,7 +1988,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2026,7 +2026,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2066,7 +2066,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2104,7 +2104,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2142,7 +2142,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2180,7 +2180,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2220,7 +2220,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2258,7 +2258,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2296,7 +2296,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2334,7 +2334,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2374,7 +2374,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2412,7 +2412,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2450,7 +2450,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2488,7 +2488,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2528,7 +2528,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2566,7 +2566,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2604,7 +2604,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2642,7 +2642,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2682,7 +2682,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2720,7 +2720,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2758,7 +2758,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2796,7 +2796,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2838,7 +2838,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2876,7 +2876,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2914,7 +2914,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2952,7 +2952,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -2992,7 +2992,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -3030,7 +3030,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -3068,7 +3068,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -3106,7 +3106,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -3146,7 +3146,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -3184,7 +3184,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -3222,7 +3222,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -3260,7 +3260,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -3300,7 +3300,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -3338,7 +3338,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -3376,7 +3376,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -3414,7 +3414,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -3454,7 +3454,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -3492,7 +3492,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -3530,7 +3530,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -3568,7 +3568,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -3608,7 +3608,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -3646,7 +3646,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -3684,7 +3684,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />
@@ -3722,7 +3722,7 @@
         <SHOP name="Jeweler: Gem Cutter" weight="3" />
         <SHOP name="Tailor" weight="3" />
         <SHOP name="Cobbler" weight="3" />
-        <SHOP name="Toymaker" weight="3" />
+        <SHOP name="Toymaker" weight="50" />
         <SHOP name="Gambling House" weight="3" />
         <SHOP name="Alchemists" weight="3" />
         <SHOP name="Lawyer" weight="3" />

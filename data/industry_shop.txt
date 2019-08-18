@@ -4,7 +4,7 @@ Jeweler: Goldsmiths
 Jeweler: Gem Cutter
 Tailor
 Cobbler
-Toymaker|50
+Toymaker
 Gambling House
 Alchemists
 Lawyer
