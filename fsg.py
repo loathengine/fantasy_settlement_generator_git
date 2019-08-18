@@ -1,6 +1,7 @@
 #TODO:add functionality
-# shop quality
+# shop number and quality
 # government and guards
+# religion and stuff
 # tavern generator
 # npc generator
 
