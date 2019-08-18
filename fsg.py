@@ -8,8 +8,8 @@
 import xml.etree.ElementTree as ET
 import random
 
-#random.seed(random.randint(1, 100000))
-random.seed(86753099)
+random.seed(random.randint(100, 100000))
+#random.seed(86753099)
 
 
 def parse_xml_element(xml_file, element, attribute):
@@ -90,14 +90,32 @@ print("<div class='wide'>")
 print("<img src='https://i.imgur.com/iMA7lg9.png' style='width:700px' />")
 print("</div>")
 print("### Background")
+print("Add background flavor.")
+print("## Settlement Features")
 print(settlement_name + " is a " + settlement_label + " located in the " + primary_topography + " region of the areas "
       + "greater " + primary_biome + ".  The settlement seems to be " + settlement_age + ".  " + settlement_name +
-      " and the local surroundings are under the control of the" + settlement_government + "."  )
+      " and the local surroundings are under the control of the " + settlement_government + ".  "  )
+print("#### Demographics")
+print("___")
+print("- **Name: **" + settlement_name)
+print("- **Population: **" + str(settlement_population))
+print("- **Number by race: ** Human 100% ")
+print("- **Size: **" + settlement_label)
+print("- **Wealth: **" + str(settlement_wealth))
+print("- **Age: **" + str(settlement_age))
+print("- **Alignment: **" + str(settlement_alignment))
+print("- **Government Type: **" + settlement_government)
+print("- **Settlement Trait: **" + settlement_trait)
+
+print("#### Industry and Economy")
+print("___")
+print("- **Primary Raw Materials: **" + industry_raw)
+print("- **Number Of Structures: **" + str(settlement_structures))
+print("- **Shops of Note: **")
+for x,y in settlement_shops.items():
+    print(x)
 
 
-
-
-print("settlement_name - " + settlement_name)
 print("settlement_population - " + str(settlement_population))
 print("settlement_label - " + settlement_label)
 print("settlement_wealth - " + str(settlement_wealth))
