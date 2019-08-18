@@ -39,6 +39,7 @@ def weighted_element_xml(xml_file, element_root):
 
 
 def get_settlement_shops(ssn):
+    ssn = ssn // 5
     shop_dict = {}
     x = 0
     while x < ssn:
