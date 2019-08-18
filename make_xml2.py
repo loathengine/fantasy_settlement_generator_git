@@ -27,7 +27,7 @@ def write_xml(file):
     for s_l in size_label:
         print('    <LABEL name="' + str(s_l['key']) + '" ceiling="' + str(s_l['weight']) + '" />', file=file)
     for s_a in settle_age:
-        print('    <AGE name="' + str(s_a['key']) + '" weight="' + str(s_l['weight']) + '" desc="' + str(s_l['desc']) + '" />', file=file)
+        print('    <AGE name="' + str(s_a['key']) + '" weight="' + str(s_a['weight']) + '" desc="' + str(s_a['desc']) + '" />', file=file)
     for s_g in settlement_government:
         print('    <GOVERNMENT name="' + str(s_g['key']) + '" weight="' + str(s_g['weight']) + '" />', file=file)
     for s_t in settlement_trait:
