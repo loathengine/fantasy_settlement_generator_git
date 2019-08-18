@@ -8,7 +8,8 @@
 import xml.etree.ElementTree as ET
 import random
 
-random.seed(random.randint(1, 100000))
+#random.seed(random.randint(1, 100000))
+random.seed(random.randint(86753099))
 
 
 def parse_xml_element(xml_file, element, attribute):
@@ -84,23 +85,28 @@ primary_topography = weighted_element_xml('data/monolith.xml', "./ENV/BIOME[@nam
 industry_raw = weighted_element_xml('data/monolith.xml', "./ENV/BIOME/TOPOGRAPHY[@name='" + primary_topography + "']/*")
 settlement_shops = get_settlement_shops(settlement_shops_num)
 
-print("settlement_name - " + settlement_name)
-print("settlement_population - " + str(settlement_population))
-print("settlement_label - " + settlement_label)
-print("settlement_wealth - " + str(settlement_wealth))
-print("settlement_age - " + str(settlement_age))
-print("settlement_alignment - " + str(settlement_alignment))
-print("settlement_government - " + settlement_government)
-print("settlement_trait - " + settlement_trait)
-print("settlement_structures - " + str(settlement_structures))
-print("primary_biome - " + primary_biome)
-print("primary_topography - " + primary_topography)
-print("industry_raw - " + industry_raw)
-print("settlement_inn_num - " + str(settlement_inn_num))
-print("settlement_tavern_num - " + str(settlement_tavern_num))
-print("settlement_shops_num - " + str(settlement_shops_num))
+print("# " + settlement_name)
+print("<div class='wide'>")
+print("<img src='https://i.imgur.com/iMA7lg9.png' style='width:700px' />")
+print("</div>")
 
-print('     Shops of Note')
-print('     -------------------')
-for x,y in settlement_shops.items():
-    print('     ' + x)
+#print("settlement_name - " + settlement_name)
+#print("settlement_population - " + str(settlement_population))
+#print("settlement_label - " + settlement_label)
+#print("settlement_wealth - " + str(settlement_wealth))
+#print("settlement_age - " + str(settlement_age))
+#print("settlement_alignment - " + str(settlement_alignment))
+#print("settlement_government - " + settlement_government)
+#print("settlement_trait - " + settlement_trait)
+#print("settlement_structures - " + str(settlement_structures))
+#print("primary_biome - " + primary_biome)
+#print("primary_topography - " + primary_topography)
+#print("industry_raw - " + industry_raw)
+#print("settlement_inn_num - " + str(settlement_inn_num))
+#print("settlement_tavern_num - " + str(settlement_tavern_num))
+#print("settlement_shops_num - " + str(settlement_shops_num))
+
+#print('     Shops of Note')
+#print('     -------------------')
+#for x,y in settlement_shops.items():
+#    print('     ' + x)
