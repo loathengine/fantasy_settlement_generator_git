@@ -8,7 +8,7 @@
 import xml.etree.ElementTree as ET
 import random
 
-#random.seed(random.randint(1, 100000))
+random.seed(random.randint(1, 100000))
 
 
 def parse_xml_element(xml_file, element, attribute):
@@ -99,8 +99,8 @@ print("settlement_inn_num - " + str(settlement_inn_num))
 print("settlement_tavern_num - " + str(settlement_tavern_num))
 print("settlement_shops_num - " + str(settlement_shops_num))
 
-print('     Shops of Note -- Number')
+print('     Shops of Note')
 print('     -------------------')
-for x,y in settlement_shops.items():
-    print('     ' + x + " -- " + str(y))
+for x in settlement_shops.items():
+    print('     ' + x)
 
