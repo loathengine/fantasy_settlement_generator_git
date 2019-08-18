@@ -75,7 +75,7 @@ settlement_alignment = random.randint(1, 6)
 settlement_government = weighted_element_xml('data/monolith.xml', "./STATS/GOVERNMENT")
 settlement_trait = weighted_element_xml('data/monolith.xml', "./STATS/TRAIT")
 settlement_structures = ((settlement_population << 1) // settlement_density) >> 1
-settlement_shops_num = (settlement_population // 150)
+settlement_shops_num = (settlement_population // 300)
 primary_biome = weighted_element_xml('data/monolith.xml', "./ENV/*")
 primary_topography = weighted_element_xml('data/monolith.xml', "./ENV/BIOME[@name='" + primary_biome + "']/*")
 industry_raw = weighted_element_xml('data/monolith.xml', "./ENV/BIOME/TOPOGRAPHY[@name='" + primary_topography + "']/*")
@@ -95,7 +95,7 @@ print("primary_topography - " + primary_topography)
 print("industry_raw - " + industry_raw)
 print("settlement_shops_num - " + str(settlement_shops_num))
 
-print('     Shop Type -- Number')
+print('     Shops of Note -- Number')
 print('     -------------------')
 for x,y in settlement_shops.items():
     print('     ' + x + " -- " + str(y))
