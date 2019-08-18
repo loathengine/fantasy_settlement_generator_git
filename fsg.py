@@ -30,7 +30,9 @@ def weighted_element_xml(xml_file, element_root):
     weighted_list = []
     for e in root.findall(element_root):
         name = e.get('name')
+        print(name)
         weight = e.get('weight')
+        print(weight)
         i = int(weight)
         while i > 0:
             weighted_list.append(name)
