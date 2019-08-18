@@ -20,16 +20,17 @@
     <AGE name="relatively young" weight="3" desc="2" />
     <AGE name="matured" weight="3" desc="3" />
     <AGE name="quite ancient" weight="1" desc="4" />
-    <GOVERNMENT name="Autocracy" weight="3" />
-    <GOVERNMENT name="Colonial" weight="3" />
-    <GOVERNMENT name="Council" weight="3" />
-    <GOVERNMENT name="Dynasty" weight="3" />
-    <GOVERNMENT name="Military" weight="3" />
-    <GOVERNMENT name="Overlord" weight="3" />
-    <GOVERNMENT name="Secret Syndicate" weight="3" />
-    <GOVERNMENT name="Theocracy" weight="3" />
-    <GOVERNMENT name="Plutocracy" weight="3" />
-    <GOVERNMENT name="Utopian Experiment" weight="3" />
+    <GOVERNMENT name="an autocrat" weight="3" />
+    <GOVERNMENT name="colonists" weight="3" />
+    <GOVERNMENT name="a dynasty" weight="3" />
+    <GOVERNMENT name="the military" weight="3" />
+    <GOVERNMENT name="an overlord" weight="3" />
+    <GOVERNMENT name="a secret syndicate" weight="3" />
+    <GOVERNMENT name="theocrats" weight="3" />
+    <GOVERNMENT name="plutocrats" weight="3" />
+    <GOVERNMENT name="utopian experimentalists" weight="3" />
+    <GOVERNMENT name="city counsel" weight="3" />
+    <GOVERNMENT name="counsel of elders" weight="3" />
     <TRAIT name="Abundance" weight="3" />
     <TRAIT name="Abstinent" weight="3" />
     <TRAIT name="Academic" weight="3" />
