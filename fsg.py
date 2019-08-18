@@ -51,6 +51,7 @@ def get_settlement_shops(ssn):
             shop_dict[shop_results] = 1
     return shop_dict
 
+
 def get_settlement_label(xml_file, element_root, settlement_population):
     # TODO: Need to sort data before doing the size checks
     tree = ET.parse(xml_file)
@@ -103,4 +104,3 @@ print('     Shops of Note')
 print('     -------------------')
 for x,y in settlement_shops.items():
     print('     ' + x)
-

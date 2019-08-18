@@ -1,37 +1,55 @@
 key|weight|desc
-Blacksmith
-Jeweler: Goldsmiths
-Jeweler: Gem Cutter
-Tailor
-Cobbler
-Toymaker
-Gambling House
-Alchemists
-Lawyer
-Brewery
-Carpentry: General
-Carpentry: Wood Carvings
-Cartography
-Leatherwork: General
-Mason
-Artist: Scribes
-Artist: Painter
-Artist: Sculpter
-Artist: Candlestick Maker
-Artist: Potters
-Tinkers
-Weaver
-Engineers / Archetech
+Shopkeeper
+Judge
+Brewer
+Sailor
+Artists: Painter
+Artists: Sculpter
+Artists: Candlestick Maker
+Artists: Musician
+Artists: Actor
+Artists: Comedian
+Artists: Bard
+Prize Fighter
+Scholar: Tutors
+Scholar: Teachers
+Servants
+Urchins
+Pickpocket
+Gangster
+Burglar
+Highwaymen
+Moneylender
+Assassin
+Nanny
+Nurse
+Laundress
+Prostitutes
+Doctor
 Barber
-Lumber Mill
-Grain Mill
+Lumberjack
+Miner
+Fisherman
+Hunter
+Travelling Merchant
+Courier
+Courtisan
+Herald
+Page
+Gardener / Groundskeeper
+Banker
+Bureaucrat
+Diplomat
+Translator
 Locksmith
 Baker
-Stable
-Adventure Supplies
+Stablehand
+Grocer
+Monk
 Glassblower
 Fletcher
 Instrument Crafter
 Investigator
 Fishmonger
 Slaver
+Slave
