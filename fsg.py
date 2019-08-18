@@ -89,10 +89,10 @@ print("# " + settlement_name)
 print("<div class='wide'>")
 print("<img src='https://i.imgur.com/iMA7lg9.png' style='width:700px' />")
 print("</div>")
-
-print(settlement_name + " is a " + settlement_label + located )
-
 print("### Background")
+print(settlement_name + " is a " + settlement_label + " located in the " + primary_topography + " region of the areas greater " + primary_biome  )
+
+
 
 
 print("settlement_name - " + settlement_name)
