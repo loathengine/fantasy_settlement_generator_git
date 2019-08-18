@@ -8,7 +8,7 @@
 import xml.etree.ElementTree as ET
 import random
 
-random.seed(random.randint(1, 100000))
+#random.seed(random.randint(1, 100000))
 
 
 def parse_xml_element(xml_file, element, attribute):
@@ -75,7 +75,6 @@ settlement_government = weighted_element_xml('data/monolith.xml', "./STATS/GOVER
 settlement_trait = weighted_element_xml('data/monolith.xml', "./STATS/TRAIT")
 settlement_structures = ((settlement_population << 1) // settlement_density) >> 1
 settlement_shops_num = (settlement_population // 150)
-settlement_shops_list = (parse_xml_element('data/monolith.xml', 'SHOP', 'name'))
 primary_biome = weighted_element_xml('data/monolith.xml', "./ENV/*")
 primary_topography = weighted_element_xml('data/monolith.xml', "./ENV/BIOME[@name='" + primary_biome + "']/*")
 industry_raw = weighted_element_xml('data/monolith.xml', "./ENV/BIOME/TOPOGRAPHY[@name='" + primary_topography + "']/*")
