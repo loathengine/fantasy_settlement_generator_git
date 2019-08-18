@@ -93,8 +93,6 @@ print("primary_biome - " + primary_biome)
 print("primary_topography - " + primary_topography)
 print("industry_raw - " + industry_raw)
 print("settlement_shops_num - " + str(settlement_shops_num))
-print("settlement_shop_list - " + str(settlement_shops_list))
-
 
 print('     Shop Type -- Number')
 print('     -------------------')
