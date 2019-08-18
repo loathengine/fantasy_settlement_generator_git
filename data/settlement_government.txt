@@ -1,11 +1,12 @@
 key|weight|desc
-Autocracy
-Colonial
-Council
-Dynasty
-Military
-Overlord
-Secret Syndicate
-Theocracy
-Plutocracy
-Utopian Experiment
+an autocrat
+colonists
+a dynasty
+the military
+an overlord
+a secret syndicate
+theocrats
+plutocrats
+utopian experimentalists
+city counsel
+counsel of elders

@@ -16,10 +16,10 @@
     <LABEL name="small city" ceiling="5001" />
     <LABEL name="large city" ceiling="10001" />
     <LABEL name="metropolis" ceiling="25001" />
-    <AGE name="1" weight="25001" desc="3" />
-    <AGE name="2" weight="25001" desc="3" />
-    <AGE name="3" weight="25001" desc="3" />
-    <AGE name="4" weight="25001" desc="3" />
+    <AGE name="new" weight="1" desc="1" />
+    <AGE name="relatively young" weight="3" desc="2" />
+    <AGE name="matured" weight="3" desc="3" />
+    <AGE name="quite ancient" weight="1" desc="4" />
     <GOVERNMENT name="Autocracy" weight="3" />
     <GOVERNMENT name="Colonial" weight="3" />
     <GOVERNMENT name="Council" weight="3" />

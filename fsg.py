@@ -72,7 +72,7 @@ settlement_population = random.randint(1, 50)
 settlement_label = get_settlement_label('data/monolith.xml', "./STATS/LABEL", settlement_population)
 settlement_density = random.randint(3, 6)
 settlement_wealth = random.randint(1, 6)
-settlement_age = random.randint(1, 6)
+settlement_age = weighted_element_xml('data/monolith.xml', "./STATS/AGE")
 settlement_alignment = random.randint(1, 6)
 settlement_government = weighted_element_xml('data/monolith.xml', "./STATS/GOVERNMENT")
 settlement_trait = weighted_element_xml('data/monolith.xml', "./STATS/TRAIT")
@@ -90,7 +90,9 @@ print("<div class='wide'>")
 print("<img src='https://i.imgur.com/iMA7lg9.png' style='width:700px' />")
 print("</div>")
 print("### Background")
-print(settlement_name + " is a " + settlement_label + " located in the " + primary_topography + " region of the areas greater " + primary_biome  )
+print(settlement_name + " is a " + settlement_label + " located in the " + primary_topography + " region of the areas "
+      + "greater " + primary_biome + ".  The settlement seems to be " + settlement_age + ".  " + settlement_name +
+      " and the local surroundings are under the control of " + settlement_government + "."  )
 
 
 
