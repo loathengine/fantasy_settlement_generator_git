@@ -9,7 +9,7 @@ import xml.etree.ElementTree as ET
 import random
 
 #random.seed(random.randint(1, 100000))
-random.seed(random.randint(86753099))
+random.seed(86753099)
 
 
 def parse_xml_element(xml_file, element, attribute):
@@ -90,21 +90,26 @@ print("<div class='wide'>")
 print("<img src='https://i.imgur.com/iMA7lg9.png' style='width:700px' />")
 print("</div>")
 
-#print("settlement_name - " + settlement_name)
-#print("settlement_population - " + str(settlement_population))
-#print("settlement_label - " + settlement_label)
-#print("settlement_wealth - " + str(settlement_wealth))
-#print("settlement_age - " + str(settlement_age))
-#print("settlement_alignment - " + str(settlement_alignment))
-#print("settlement_government - " + settlement_government)
-#print("settlement_trait - " + settlement_trait)
-#print("settlement_structures - " + str(settlement_structures))
-#print("primary_biome - " + primary_biome)
-#print("primary_topography - " + primary_topography)
-#print("industry_raw - " + industry_raw)
-#print("settlement_inn_num - " + str(settlement_inn_num))
-#print("settlement_tavern_num - " + str(settlement_tavern_num))
-#print("settlement_shops_num - " + str(settlement_shops_num))
+print(settlement_name + " is a " + settlement_label + located )
+
+print("### Background")
+
+
+print("settlement_name - " + settlement_name)
+print("settlement_population - " + str(settlement_population))
+print("settlement_label - " + settlement_label)
+print("settlement_wealth - " + str(settlement_wealth))
+print("settlement_age - " + str(settlement_age))
+print("settlement_alignment - " + str(settlement_alignment))
+print("settlement_government - " + settlement_government)
+print("settlement_trait - " + settlement_trait)
+print("settlement_structures - " + str(settlement_structures))
+print("primary_biome - " + primary_biome)
+print("primary_topography - " + primary_topography)
+print("industry_raw - " + industry_raw)
+print("settlement_inn_num - " + str(settlement_inn_num))
+print("settlement_tavern_num - " + str(settlement_tavern_num))
+print("settlement_shops_num - " + str(settlement_shops_num))
 
 #print('     Shops of Note')
 #print('     -------------------')
