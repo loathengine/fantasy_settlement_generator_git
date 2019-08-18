@@ -3,7 +3,7 @@ import csv
 def import_csv(file):
 
     with open(file) as csvfile:
-        reader = csv.DictReader(csvfile,delimiter=",", restval=3)
+        reader = csv.DictReader(csvfile,delimiter="|", restval=3)
         return (list(reader))
 
 

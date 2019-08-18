@@ -1,4 +1,4 @@
-key,weight,desc
+key|weight|desc
 mining
 farming
 forestry

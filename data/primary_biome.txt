@@ -1,4 +1,4 @@
-key,weight,desc
+key|weight|desc
 temperate rain forest
 temperate deciduous forest
 grassland
