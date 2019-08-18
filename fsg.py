@@ -66,7 +66,7 @@ def get_settlement_label(xml_file, element_root, settlement_population):
 
 
 settlement_name = "Testberg"
-settlement_population = random.randint(100, 5000)
+settlement_population = random.randint(100, 50000)
 settlement_label = get_settlement_label('data/monolith.xml', "./STATS/LABEL", settlement_population)
 settlement_density = random.randint(3, 6)
 settlement_wealth = random.randint(1, 6)
