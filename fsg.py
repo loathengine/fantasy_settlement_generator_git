@@ -24,6 +24,7 @@ def parse_xml_element(xml_file, element, attribute):
 
 
 def weighted_element_xml(xml_file, element_root):
+    """Takes a file and an element name and returns a weighted random result"""
     tree = ET.parse(xml_file)
     root = tree.getroot()
     weighted_list = []
@@ -37,12 +38,12 @@ def weighted_element_xml(xml_file, element_root):
     return random.choice(weighted_list)
 
 
-def get_settlement_shops(ssn, xml_shop):
+def get_settlement_shops(ssn):
     shop_dict = {}
     x = 0
     while x < ssn:
         x += 1
-        shop_results = random.choice(xml_shop)
+        shop_results = weighted_element_xml('data/monolith.xml', "./ENV/BIOME/TOPOGRAPHY/RAW/[@name='" + industry_raw + "']/*")
         if shop_results in shop_dict:
             shop_dict[shop_results] += 1
         else:
@@ -78,7 +79,7 @@ settlement_shops_list = (parse_xml_element('data/monolith.xml', 'SHOP', 'name'))
 primary_biome = weighted_element_xml('data/monolith.xml', "./ENV/*")
 primary_topography = weighted_element_xml('data/monolith.xml', "./ENV/BIOME[@name='" + primary_biome + "']/*")
 industry_raw = weighted_element_xml('data/monolith.xml', "./ENV/BIOME/TOPOGRAPHY[@name='" + primary_topography + "']/*")
-settlement_shops = get_settlement_shops(settlement_shops_num, settlement_shops_list)
+settlement_shops = get_settlement_shops(settlement_shops_num)
 
 print("settlement_name - " + settlement_name)
 print("settlement_population - " + str(settlement_population))
