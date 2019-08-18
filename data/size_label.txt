@@ -1,9 +1,9 @@
 key|weight|desc
-Thorp|1|Really small
-Hamlet|21
-Village|61
-Small town|201
-Large town|2001
-Small city|5001
-Large city|10001
-Metropolis|25001
+thorp|1|Really small
+hamlet|21
+village|61
+small town|201
+large town|2001
+small city|5001
+large city|10001
+metropolis|25001
