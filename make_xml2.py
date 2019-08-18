@@ -11,7 +11,7 @@ size_label = import_csv('data/size_label.txt')
 primary_biome = import_csv('data/primary_biome.txt')
 primary_topography = import_csv('data/primary_topography.txt')
 industry_raw = import_csv('data/industry_raw.txt')
-industry_shops = import_csv('data/industry_shops.txt')
+industry_shop = import_csv('data/industry_shop.txt')
 industry_services = import_csv('data/industry_services.txt')
 settlement_government = import_csv('data/settlement_government.txt')
 settlement_trait = import_csv('data/settlement_trait.txt')
@@ -37,7 +37,7 @@ def write_xml(file):
             print('    <TOPOGRAPHY name="' + str(p_t['key']) + '" weight="3" >', file=file)
             for r_i in industry_raw:
                 print('      <RAW name="' + str(r_i['key']) + '" weight="3" >', file=file)
-                for i_c in industry_shops:
+                for i_c in industry_shop:
                     print('        <SHOP name="' + str(i_c['key']) + '" weight="3" />', file=file)
                 for i_s in industry_services:
                     print('        <SHOP name="' + str(i_s['key']) + '" weight="3" />', file=file)
