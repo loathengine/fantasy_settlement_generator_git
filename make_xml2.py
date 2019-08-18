@@ -16,6 +16,7 @@ industry_services = import_csv('data/industry_services.txt')
 settlement_government = import_csv('data/settlement_government.txt')
 settlement_trait = import_csv('data/settlement_trait.txt')
 race_percentage = import_csv('data/race_percentage.txt')
+settle_age = import_csv('data/settlement_age.txt')
 
 def write_xml(file):
     print('<?xml version="1.0" encoding="UTF-8"?>', file=file)
@@ -25,6 +26,8 @@ def write_xml(file):
         print('    <RACE name="' + str(r_p['key']) + '" ceiling="' + str(r_p['weight']) + '" />', file=file)
     for s_l in size_label:
         print('    <LABEL name="' + str(s_l['key']) + '" ceiling="' + str(s_l['weight']) + '" />', file=file)
+    for s_a in settle_age:
+        print('    <LABEL name="' + str(s_a['key']) + '" weight="' + str(s_l['weight']) + '" desc="' + str(s_l['desc']) + '" />', file=file)
     for s_g in settlement_government:
         print('    <GOVERNMENT name="' + str(s_g['key']) + '" weight="' + str(s_g['weight']) + '" />', file=file)
     for s_t in settlement_trait:
