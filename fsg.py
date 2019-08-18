@@ -44,6 +44,7 @@ def get_settlement_shops(ssn):
     while x < ssn:
         x += 1
         shop_results = weighted_element_xml('data/monolith.xml', "./ENV/BIOME/TOPOGRAPHY/RAW/[@name='" + industry_raw + "']/*")
+        print(shop_results)
         if shop_results in shop_dict:
             shop_dict[shop_results] += 1
         else:
