@@ -1,5 +1,5 @@
 key|weight|desc
-Blacksmith|1000
+Blacksmith
 Jeweler: Goldsmiths
 Jeweler: Gem Cutter
 Tailor
