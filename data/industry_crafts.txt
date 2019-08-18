@@ -1,7 +1,0 @@
-key,weight,desc
-smith
-tanner
-weaver
-mason
-carpenter
-butcher/salt packer
