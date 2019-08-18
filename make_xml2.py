@@ -26,21 +26,19 @@ def write_xml(file):
     for s_l in size_label:
         print('    <LABEL name="' + str(s_l['key']) + '" ceiling="' + str(s_l['weight']) + '" />', file=file)
     for s_g in settlement_government:
-        print('    <GOVERNMENT name="' + str(s_g['key']) + '" weight="3" />', file=file)
+        print('    <GOVERNMENT name="' + str(s_g['key']) + '" weight="' + str(s_g['weight']) + '" />', file=file)
     for s_t in settlement_trait:
-        print('    <TRAIT name="' + str(s_t['key']) + '" weight="3" />', file=file)
+        print('    <TRAIT name="' + str(s_t['key']) + '" weight="' + str(s_t['weight']) + '" />', file=file)
     print('  </STATS>', file=file)
     print('  <ENV>', file=file)
     for p_b in primary_biome:
-        print('    <BIOME name="' + str(p_b['key']) + '" weight="3" >', file=file)
+        print('    <BIOME name="' + str(p_b['key']) + '" weight="' + str(p_b['weight']) + '" >', file=file)
         for p_t in primary_topography:
-            print('    <TOPOGRAPHY name="' + str(p_t['key']) + '" weight="3" >', file=file)
+            print('    <TOPOGRAPHY name="' + str(p_t['key']) + '" weight="' + str(p_t['weight']) + '" >', file=file)
             for r_i in industry_raw:
-                print('      <RAW name="' + str(r_i['key']) + '" weight="3" >', file=file)
-                for i_c in industry_shop:
-                    print('        <SHOP name="' + str(i_c['key']) + '" weight="3" />', file=file)
-                for i_s in industry_services:
-                    print('        <SHOP name="' + str(i_s['key']) + '" weight="3" />', file=file)
+                print('      <RAW name="' + str(r_i['key']) + '" weight="' + str(r_i['weight']) + '" >', file=file)
+                for i_s in industry_shop:
+                    print('        <SHOP name="' + str(i_s['key']) + '" weight="' + str(i_s['weight']) + '" />', file=file)
                 print('      </RAW>', file=file)
             print('    </TOPOGRAPHY>', file=file)
         print('    </BIOME>', file=file)
