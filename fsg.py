@@ -1,5 +1,5 @@
 #TODO:add functionality
-# figure out race stuff
+# figure out race % stuff
 # shop number and quality
 # government and guards
 # religion and stuff
@@ -12,8 +12,19 @@ import random
 random.seed(random.randint(100, 100000))
 #random.seed(86753099)
 
+def xml_element_dict(xml_file, element_root):
+    """Takes a file and an element name and returns a dict of every unique instance of that element."""
+    tree = ET.parse(xml_file)
+    root = tree.getroot()
+    xml_dict = {}
+    for e in root.findall(element_root):
+        name = e.get('name')
+        weight = e.get('weight')
+        xml_dict[name] = weight
+    return xml_dict
 
-def parse_xml_element(xml_file, element, attribute):
+
+def xml_element_list(xml_file, element, attribute):
     """Takes a file and an element name and returns a list of every unique instance of that element."""
     tree = ET.parse(xml_file)
     root = tree.getroot()
@@ -40,19 +51,18 @@ def weighted_element_xml(xml_file, element_root):
     return random.choice(weighted_list)
 
 
-def get_settlement_shops(ssn):
+def get_settlement_shops(xml_file, element_root, ssn):
     ssn = 1 + ssn // 5
     shop_dict = {}
     x = 0
     while x < ssn:
         x += 1
-        shop_results = weighted_element_xml('data/monolith.xml', "./ENV/BIOME/TOPOGRAPHY/RAW/[@name='" + industry_raw + "']/*")
+        shop_results = weighted_element_xml(xml_file, element_root)
         if shop_results in shop_dict:
             shop_dict[shop_results] += 1
         else:
             shop_dict[shop_results] = 1
     return shop_dict
-
 
 def get_settlement_label(xml_file, element_root, settlement_population):
     # TODO: Need to sort data before doing the size checks
@@ -84,7 +94,8 @@ settlement_tavern_num = (settlement_population // 1000)
 primary_biome = weighted_element_xml('data/monolith.xml', "./ENV/*")
 primary_topography = weighted_element_xml('data/monolith.xml', "./ENV/BIOME[@name='" + primary_biome + "']/*")
 industry_raw = weighted_element_xml('data/monolith.xml', "./ENV/BIOME/TOPOGRAPHY[@name='" + primary_topography + "']/*")
-settlement_shops = get_settlement_shops(settlement_shops_num)
+settlement_shops = get_settlement_shops('data/monolith.xml', "./ENV/BIOME/TOPOGRAPHY/RAW/[@name='" + industry_raw + "']/*", settlement_shops_num)
+settlement_races = xml_element_dict('data/monolith.xml', "./STATS/RACE")
 
 print("# " + settlement_name)
 print("\n")
@@ -105,7 +116,9 @@ print("#### Demographics")
 print("___")
 print("- **Name: **" + settlement_name)
 print("- **Population: **" + str(settlement_population))
-print("- **Number by race: ** Human 100% ")
+print("- **Number by race: **")
+for x,y in settlement_races.items():
+    print(x + " " + y + "%,")
 print("- **Size: **" + settlement_label)
 print("- **Wealth: **" + str(settlement_wealth))
 print("- **Age: **" + str(settlement_age))

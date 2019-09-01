@@ -1,12 +1,12 @@
 key|weight|desc
-autocrat
-colonists
-dynasty
-military
-overlord
-secret syndicate
-theocrats
-plutocrats
+an autocrat
+the local colonists
+a dynasty
+the military
+an overlord
+a secret syndicate
+the theocrats
+the plutocrats
 utopian experimentalists
-city counsel
-counsel of elders
+a city counsel
+a counsel of elders

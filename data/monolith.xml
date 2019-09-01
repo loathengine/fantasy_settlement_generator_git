@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <UNIVERSE>
   <STATS>
-    <RACE name="human" ceiling="40" />
-    <RACE name="dwarf" ceiling="10" />
-    <RACE name="elf" ceiling="10" />
-    <RACE name="gnome" ceiling="10" />
-    <RACE name="halfling" ceiling="10" />
-    <RACE name="half-elf" ceiling="15" />
-    <RACE name="half-orc" ceiling="5" />
+    <RACE name="human" weight="40" />
+    <RACE name="dwarf" weight="10" />
+    <RACE name="elf" weight="10" />
+    <RACE name="gnome" weight="10" />
+    <RACE name="halfling" weight="10" />
+    <RACE name="half-elf" weight="15" />
+    <RACE name="half-orc" weight="5" />
     <LABEL name="thorp" ceiling="1" />
     <LABEL name="hamlet" ceiling="21" />
     <LABEL name="village" ceiling="61" />
@@ -21,16 +21,16 @@
     <AGE name="matured" weight="3" desc="3" />
     <AGE name="quite ancient" weight="1" desc="4" />
     <GOVERNMENT name="an autocrat" weight="3" />
-    <GOVERNMENT name="colonists" weight="3" />
+    <GOVERNMENT name="the local colonists" weight="3" />
     <GOVERNMENT name="a dynasty" weight="3" />
     <GOVERNMENT name="the military" weight="3" />
     <GOVERNMENT name="an overlord" weight="3" />
     <GOVERNMENT name="a secret syndicate" weight="3" />
-    <GOVERNMENT name="theocrats" weight="3" />
-    <GOVERNMENT name="plutocrats" weight="3" />
+    <GOVERNMENT name="the theocrats" weight="3" />
+    <GOVERNMENT name="the plutocrats" weight="3" />
     <GOVERNMENT name="utopian experimentalists" weight="3" />
-    <GOVERNMENT name="city counsel" weight="3" />
-    <GOVERNMENT name="counsel of elders" weight="3" />
+    <GOVERNMENT name="a city counsel" weight="3" />
+    <GOVERNMENT name="a counsel of elders" weight="3" />
     <TRAIT name="Abundance" weight="3" />
     <TRAIT name="Abstinent" weight="3" />
     <TRAIT name="Academic" weight="3" />

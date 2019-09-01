@@ -23,7 +23,7 @@ def write_xml(file):
     print('<UNIVERSE>', file=file)
     print('  <STATS>', file=file)
     for r_p in race_percentage:
-        print('    <RACE name="' + str(r_p['key']) + '" ceiling="' + str(r_p['weight']) + '" />', file=file)
+        print('    <RACE name="' + str(r_p['key']) + '" weight="' + str(r_p['weight']) + '" />', file=file)
     for s_l in size_label:
         print('    <LABEL name="' + str(s_l['key']) + '" ceiling="' + str(s_l['weight']) + '" />', file=file)
     for s_a in settle_age:
