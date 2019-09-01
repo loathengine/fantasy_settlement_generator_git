@@ -100,7 +100,7 @@ print("\n")
 print("## Settlement Features")
 print(settlement_name + " is a " + settlement_label + " located in the " + primary_topography + " region of the areas "
       + "greater " + primary_biome + ".  The settlement seems to be " + settlement_age + ".  " + settlement_name +
-      " and the local surroundings are under the control of the " + settlement_government + ".  "  )
+      " and the local surroundings are under the control of " + settlement_government + ".  "  )
 print("#### Demographics")
 print("___")
 print("- **Name: **" + settlement_name)
