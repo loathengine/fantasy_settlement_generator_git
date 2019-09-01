@@ -1,5 +1,4 @@
 #TODO:add functionality
-# figure out race % stuff
 # shop number and quality
 # government and guards
 # religion and stuff
