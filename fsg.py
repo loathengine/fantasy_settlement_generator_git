@@ -10,7 +10,9 @@ import xml.etree.ElementTree as ET
 import random
 
 random.seed(random.randint(100, 100000))
-#random.seed(86753099)
+
+
+# random.seed(86753099)
 
 
 def weighted_element_xml(xml_file, element_root):
@@ -41,16 +43,17 @@ def xml_element_dict_all(xml_file, element_root):
         xml_dict[name] = [weight, description]
     return xml_dict
 
+
 def xml_element_dict_count(xml_file, element_root, count):
     """Takes a file and an element name and a count and returns a unigue dict of size count of that element."""
-    dict = {}
+    dictionary = {}
     x = 0
     while x < count:
         results = weighted_element_xml(xml_file, element_root)
-        if results[0] not in dict:
-            dict[results[0]] = [results[1], results[2]]
+        if results[0] not in dictionary:
+            dictionary[results[0]] = [results[1], results[2]]
             x += 1
-    return dict
+    return dictionary
 
 
 def xml_element_list_unique(xml_file, element, attribute):
@@ -78,18 +81,19 @@ def get_settlement_shops(xml_file, element_root, ssn):
             shop_dict[shop_results[0]] = 1
     return shop_dict
 
-def get_settlement_label(xml_file, element_root, settlement_population):
+
+def get_settlement_label(xml_file, element_root, settlement_pop):
     # TODO: Need to sort data before doing the size checks
     tree = ET.parse(xml_file)
     root = tree.getroot()
-    settlement_label = ""
+    settlement_list = ""
     for e in root.findall(element_root):
         name = e.get('name')
         ceiling = e.get('ceiling')
         i = int(ceiling)
-        if i < settlement_population:
-            settlement_label = name
-    return settlement_label
+        if i < settlement_pop:
+            settlement_list = name
+    return settlement_list
 
 
 settlement_name = "Testberg"
@@ -107,8 +111,11 @@ settlement_inn_num = (settlement_population // 1500)
 settlement_tavern_num = (settlement_population // 1000)
 primary_biome = weighted_element_xml('data/monolith.xml', "./ENV/*")
 primary_topography = weighted_element_xml('data/monolith.xml', "./ENV/BIOME[@name='" + primary_biome[0] + "']/*")
-industry_raw = weighted_element_xml('data/monolith.xml', "./ENV/BIOME/TOPOGRAPHY[@name='" + primary_topography[0] + "']/*")
-settlement_shops = get_settlement_shops('data/monolith.xml', "./ENV/BIOME/TOPOGRAPHY/RAW/[@name='" + industry_raw[0] + "']/*", settlement_shops_num)
+industry_raw = weighted_element_xml('data/monolith.xml',
+                                    "./ENV/BIOME/TOPOGRAPHY[@name='" + primary_topography[0] + "']/*")
+settlement_shops = get_settlement_shops('data/monolith.xml',
+                                        "./ENV/BIOME/TOPOGRAPHY/RAW/[@name='" + industry_raw[0] + "']/*",
+                                        settlement_shops_num)
 settlement_races = xml_element_dict_all('data/monolith.xml', "./STATS/RACE")
 district_number = random.randint(1, 6)
 district_info = xml_element_dict_count('data/monolith.xml', "./STATS/DISTRICT", district_number)
@@ -125,15 +132,16 @@ print("\n")
 print("\page")
 print("\n")
 print("## Settlement Features")
-print(settlement_name + " is a " + settlement_label + " located in the " + primary_topography[0] + " region of the areas "
-      + "greater " + primary_biome[0] + ".  The settlement seems to be " + settlement_age[0] + ".  " + settlement_name +
-      " and the local surroundings are under the control of " + settlement_government[0] + ".  "  )
+print(
+    settlement_name + " is a " + settlement_label + " located in the " + primary_topography[0] + " region of the areas "
+    + "greater " + primary_biome[0] + ".  The settlement seems to be " + settlement_age[0] + ".  " + settlement_name +
+    " and the local surroundings are under the control of " + settlement_government[0] + ".  ")
 print("#### Demographics")
 print("___")
 print("- **Name: **" + settlement_name)
 print("- **Population: **" + str(settlement_population))
 print("- **Number by race: **")
-for x,y in settlement_races.items():
+for x, y in settlement_races.items():
     print(x + " " + y[0] + "%,")
 print("- **Size: **" + settlement_label)
 print("- **Wealth: **" + str(settlement_wealth))
@@ -148,7 +156,7 @@ print("- **Primary Raw Materials: **" + industry_raw[0])
 print("- **Number Of Structures: **" + str(settlement_structures))
 print("- **Number Of Shops: **" + str(settlement_shops_num))
 print("- **Shops of Note: **")
-for x,y in settlement_shops.items():
+for x, y in settlement_shops.items():
     print(x + ",")
 print("\n")
 print("#### Food and Hospitality")
@@ -157,7 +165,7 @@ print("- **Available Inns: **" + str(settlement_inn_num))
 print("- **Operating Taverns: **" + str(settlement_tavern_num))
 print("\n")
 print("### Districts")
-for x,y in district_info.items():
+for x, y in district_info.items():
     print("##### " + x)
     print(y[1])
 print("\n")
@@ -177,4 +185,3 @@ print("* Stewed Lentils, Mug of Cider (3 cp)")
 print("* Roasted Cabbage, Mug of Stout (4 cp)")
 print("* Stewed Lentils, Mug of Perry (4 cp)")
 print("* Pottage, Mug of Perry (4 cp)")
-
