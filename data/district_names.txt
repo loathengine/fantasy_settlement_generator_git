@@ -1,31 +1,21 @@
 key|weight|desc
-Lower East Fisp|3
-Tais Town|3
-Upper East Winwoopt|3
-Upper West Spadlork|3
-Pleecerd Vale|3
-Downtown Scroppand|3
-Remmest Side|3
-Midtown Cledard|3
-West Loattoatnift Grove|3
-Splofiloast Valley|3
-Lower East Gald|3
-South Spleld|3
-Girveb Road|3
-Lower South Glostes|3
-Newup Row|3
-South Naippais|3
-Upper Skugailt|3
-Upper North Spleorom|3
-East Cloowergost Cross|3
-Leorioctelf Circle|3
-Soliloquy Meadow|3
-Citrine Woods|3
-Peacock Forest|3
-Kelly Falls|3
-Copper Point|3
-Gray Meadow|3
-Sand Farms|3
-Collard Meadow|3
-Claret Hook|3
-Mount Lapis|3
+Lower East Fisp|3|Academic: Scholar’s hovel, schoolhouse, alchemist’s laboratory, library, archives, observatory, university
+Tais Town|3|Craft: Blacksmith, tanner’s row, maker’s street, guild canton, loomworks,
+Upper East Winwoopt|3|Culture: Tavern, playhouse, horse track, theater, tournament lists, menagerie, concert hall, arena, circus, colosseum,
+Upper West Spadlork|3|Foreign: An area defined by its cultural, ethnic, political, or linguistic composition –dwarftown, the foreign legation, the goblin ghetto, the Halfling hillside.  Language skills, Cultural Familiarities, Savoir Faire etc are appropriate.
+Pleecerd Vale|3|Graveyard: Graveyard, cemetery, crypt, mausoleum, necropolis
+Downtown Scroppand|3|Green: Common, green, herbalist, fishery, garden, lumberyard, granary, farm, parkland,
+Remmest Side|3|Hazardous: Old well, abandoned mine, crumbling ruins of the old town, sinkhole, blood forest, scree slope, buried canton, magma pit
+Midtown Cledard|3|Historic: Old inn, founder’s house, ancient city, ruins district
+West Loattoatnift Grove|3|Law and Order: Guardhouse, watchtower, gallows, gaol, prison, courthouse
+Splofiloast Valley|3|Military: Barracks, parade grounds, archery range, tower, armory, keep, castle, citadel
+Lower East Gald|3|Money: Pawnbroker, moneylender, jeweler, bank, gemcutter, mint
+South Spleld|3|Plaza: Well, fountain, stele, statue, piazza, plinth, monument, town square, park, plaza, grand arcade
+Girveb Road|3|Poor: Shack, orphanage, slums, workhouse, shanty town
+Lower South Glostes|3|Portage: Jetty, roadhouse, mooring, stables, shipwright, lighthouse, caravanserai, lumberyard, docks, tradehouse, port, harbor,
+Newup Row|3|Public: Amenity	Well, common, leech, orphanage, public baths, surgeon, hospice,
+South Naippais|3|Religious: Sacred font, shrine, temple, monastery, church, abbey, cathedral, ecclesiastical courts
+Upper Skugailt|3|Rich: Gentleman’s house, manor, finishing school, mansion, manor district,
+Cloowergost Cross|3|Ruling: Town hall, lord’s manor, palace
+Leorioctelf Circle|3|Trade: Stall, trader’s row, market, auction house, fish market, guild-house, merchant’s guild, grand bazaar,
+Citrine Woods|3|Underworld: Back alley, mugger’s row, gang turf, smuggler’s den, thieves district. Streetwise rolls definitely required!

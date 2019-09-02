@@ -1,36 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <UNIVERSE>
   <STATS>
-    <DISTRICT name="Lower East Fisp" weight="3" />
-    <DISTRICT name="Tais Town" weight="3" />
-    <DISTRICT name="Upper East Winwoopt" weight="3" />
-    <DISTRICT name="Upper West Spadlork" weight="3" />
-    <DISTRICT name="Pleecerd Vale" weight="3" />
-    <DISTRICT name="Downtown Scroppand" weight="3" />
-    <DISTRICT name="Remmest Side" weight="3" />
-    <DISTRICT name="Midtown Cledard" weight="3" />
-    <DISTRICT name="West Loattoatnift Grove" weight="3" />
-    <DISTRICT name="Splofiloast Valley" weight="3" />
-    <DISTRICT name="Lower East Gald" weight="3" />
-    <DISTRICT name="South Spleld" weight="3" />
-    <DISTRICT name="Girveb Road" weight="3" />
-    <DISTRICT name="Lower South Glostes" weight="3" />
-    <DISTRICT name="Newup Row" weight="3" />
-    <DISTRICT name="South Naippais" weight="3" />
-    <DISTRICT name="Upper Skugailt" weight="3" />
-    <DISTRICT name="Upper North Spleorom" weight="3" />
-    <DISTRICT name="East Cloowergost Cross" weight="3" />
-    <DISTRICT name="Leorioctelf Circle" weight="3" />
-    <DISTRICT name="Soliloquy Meadow" weight="3" />
-    <DISTRICT name="Citrine Woods" weight="3" />
-    <DISTRICT name="Peacock Forest" weight="3" />
-    <DISTRICT name="Kelly Falls" weight="3" />
-    <DISTRICT name="Copper Point" weight="3" />
-    <DISTRICT name="Gray Meadow" weight="3" />
-    <DISTRICT name="Sand Farms" weight="3" />
-    <DISTRICT name="Collard Meadow" weight="3" />
-    <DISTRICT name="Claret Hook" weight="3" />
-    <DISTRICT name="Mount Lapis" weight="3" />
+    <DISTRICT name="Lower East Fisp" weight="3" desc="Academic: Scholar’s hovel, schoolhouse, alchemist’s laboratory, library, archives, observatory, university" />
+    <DISTRICT name="Tais Town" weight="3" desc="Craft: Blacksmith, tanner’s row, maker’s street, guild canton, loomworks," />
+    <DISTRICT name="Upper East Winwoopt" weight="3" desc="Culture: Tavern, playhouse, horse track, theater, tournament lists, menagerie, concert hall, arena, circus, colosseum," />
+    <DISTRICT name="Upper West Spadlork" weight="3" desc="Foreign: An area defined by its cultural, ethnic, political, or linguistic composition –dwarftown, the foreign legation, the goblin ghetto, the Halfling hillside.  Language skills, Cultural Familiarities, Savoir Faire etc are appropriate." />
+    <DISTRICT name="Pleecerd Vale" weight="3" desc="Graveyard: Graveyard, cemetery, crypt, mausoleum, necropolis" />
+    <DISTRICT name="Downtown Scroppand" weight="3" desc="Green: Common, green, herbalist, fishery, garden, lumberyard, granary, farm, parkland," />
+    <DISTRICT name="Remmest Side" weight="3" desc="Hazardous: Old well, abandoned mine, crumbling ruins of the old town, sinkhole, blood forest, scree slope, buried canton, magma pit" />
+    <DISTRICT name="Midtown Cledard" weight="3" desc="Historic: Old inn, founder’s house, ancient city, ruins district" />
+    <DISTRICT name="West Loattoatnift Grove" weight="3" desc="Law and Order: Guardhouse, watchtower, gallows, gaol, prison, courthouse" />
+    <DISTRICT name="Splofiloast Valley" weight="3" desc="Military: Barracks, parade grounds, archery range, tower, armory, keep, castle, citadel" />
+    <DISTRICT name="Lower East Gald" weight="3" desc="Money: Pawnbroker, moneylender, jeweler, bank, gemcutter, mint" />
+    <DISTRICT name="South Spleld" weight="3" desc="Plaza: Well, fountain, stele, statue, piazza, plinth, monument, town square, park, plaza, grand arcade" />
+    <DISTRICT name="Girveb Road" weight="3" desc="Poor: Shack, orphanage, slums, workhouse, shanty town" />
+    <DISTRICT name="Lower South Glostes" weight="3" desc="Portage: Jetty, roadhouse, mooring, stables, shipwright, lighthouse, caravanserai, lumberyard, docks, tradehouse, port, harbor," />
+    <DISTRICT name="Newup Row" weight="3" desc="Public: Amenity	Well, common, leech, orphanage, public baths, surgeon, hospice," />
+    <DISTRICT name="South Naippais" weight="3" desc="Religious: Sacred font, shrine, temple, monastery, church, abbey, cathedral, ecclesiastical courts" />
+    <DISTRICT name="Upper Skugailt" weight="3" desc="Rich: Gentleman’s house, manor, finishing school, mansion, manor district," />
+    <DISTRICT name="Cloowergost Cross" weight="3" desc="Ruling: Town hall, lord’s manor, palace" />
+    <DISTRICT name="Leorioctelf Circle" weight="3" desc="Trade: Stall, trader’s row, market, auction house, fish market, guild-house, merchant’s guild, grand bazaar," />
+    <DISTRICT name="Citrine Woods" weight="3" desc="Underworld: Back alley, mugger’s row, gang turf, smuggler’s den, thieves district. Streetwise rolls definitely required!" />
     <RACE name="human" weight="40" />
     <RACE name="dwarf" weight="10" />
     <RACE name="elf" weight="10" />

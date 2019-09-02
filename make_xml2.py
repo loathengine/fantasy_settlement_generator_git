@@ -24,7 +24,7 @@ def write_xml(file):
     print('<UNIVERSE>', file=file)
     print('  <STATS>', file=file)
     for d_n in district_names:
-        print('    <DISTRICT name="' + str(d_n['key']) + '" weight="' + str(d_n['weight']) + '" />', file=file)
+        print('    <DISTRICT name="' + str(d_n['key']) + '" weight="' + str(d_n['weight']) + '" desc="' + str(d_n['desc']) + '" />', file=file)
     for r_p in race_percentage:
         print('    <RACE name="' + str(r_p['key']) + '" weight="' + str(r_p['weight']) + '" />', file=file)
     for s_l in size_label:
