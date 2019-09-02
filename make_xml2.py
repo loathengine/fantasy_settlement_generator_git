@@ -17,11 +17,14 @@ settlement_government = import_csv('data/settlement_government.txt')
 settlement_trait = import_csv('data/settlement_trait.txt')
 race_percentage = import_csv('data/race_percentage.txt')
 settle_age = import_csv('data/settlement_age.txt')
+district_names = import_csv('data/district_names.txt')
 
 def write_xml(file):
     print('<?xml version="1.0" encoding="UTF-8"?>', file=file)
     print('<UNIVERSE>', file=file)
     print('  <STATS>', file=file)
+    for d_n in district_names:
+        print('    <DISTRICT name="' + str(d_n['key']) + '" weight="' + str(d_n['weight']) + '" />', file=file)
     for r_p in race_percentage:
         print('    <RACE name="' + str(r_p['key']) + '" weight="' + str(r_p['weight']) + '" />', file=file)
     for s_l in size_label:

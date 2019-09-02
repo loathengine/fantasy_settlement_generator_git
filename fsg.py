@@ -2,6 +2,7 @@
 # shop number and quality
 # government and guards
 # religion and stuff
+# name generator
 # tavern generator
 # npc generator
 
@@ -10,29 +11,6 @@ import random
 
 random.seed(random.randint(100, 100000))
 #random.seed(86753099)
-
-def xml_element_dict(xml_file, element_root):
-    """Takes a file and an element name and returns a dict of every unique instance of that element."""
-    tree = ET.parse(xml_file)
-    root = tree.getroot()
-    xml_dict = {}
-    for e in root.findall(element_root):
-        name = e.get('name')
-        weight = e.get('weight')
-        xml_dict[name] = weight
-    return xml_dict
-
-
-def xml_element_list(xml_file, element, attribute):
-    """Takes a file and an element name and returns a list of every unique instance of that element."""
-    tree = ET.parse(xml_file)
-    root = tree.getroot()
-    xml_list = []
-    for e in root.iter(element):
-        xml_list.append(e.get(attribute))
-    xml_set = set(xml_list)
-    unique_xml_list = list(xml_set)
-    return unique_xml_list
 
 
 def weighted_element_xml(xml_file, element_root):
@@ -48,6 +26,41 @@ def weighted_element_xml(xml_file, element_root):
             weighted_list.append(name)
             i -= 1
     return random.choice(weighted_list)
+
+
+def xml_element_dict_all(xml_file, element_root):
+    """Takes a file and an element name and returns a dict of every unique instance of that element."""
+    tree = ET.parse(xml_file)
+    root = tree.getroot()
+    xml_dict = {}
+    for e in root.findall(element_root):
+        name = e.get('name')
+        weight = e.get('weight')
+        xml_dict[name] = weight
+    return xml_dict
+
+def xml_element_dict_count(xml_file, element_root, count):
+    """Takes a file and an element name and a count and returns a unigue dict of size count of that element."""
+    dict = {}
+    x = 0
+    while x < count:
+        results = weighted_element_xml(xml_file, element_root)
+        if results not in dict:
+            dict[results] = 1
+            x += 1
+    return dict
+
+
+def xml_element_list_unique(xml_file, element, attribute):
+    """Takes a file and an element name and returns a list of every unique instance of that element."""
+    tree = ET.parse(xml_file)
+    root = tree.getroot()
+    xml_list = []
+    for e in root.iter(element):
+        xml_list.append(e.get(attribute))
+    xml_set = set(xml_list)
+    unique_xml_list = list(xml_set)
+    return unique_xml_list
 
 
 def get_settlement_shops(xml_file, element_root, ssn):
@@ -94,7 +107,9 @@ primary_biome = weighted_element_xml('data/monolith.xml', "./ENV/*")
 primary_topography = weighted_element_xml('data/monolith.xml', "./ENV/BIOME[@name='" + primary_biome + "']/*")
 industry_raw = weighted_element_xml('data/monolith.xml', "./ENV/BIOME/TOPOGRAPHY[@name='" + primary_topography + "']/*")
 settlement_shops = get_settlement_shops('data/monolith.xml', "./ENV/BIOME/TOPOGRAPHY/RAW/[@name='" + industry_raw + "']/*", settlement_shops_num)
-settlement_races = xml_element_dict('data/monolith.xml', "./STATS/RACE")
+settlement_races = xml_element_dict_all('data/monolith.xml', "./STATS/RACE")
+district_number = random.randint(1, 6)
+district_info = xml_element_dict_count('data/monolith.xml', "./STATS/DISTRICT", district_number)
 
 print("# " + settlement_name)
 print("\n")
@@ -140,10 +155,8 @@ print("- **Available Inns: **" + str(settlement_inn_num))
 print("- **Operating Taverns: **" + str(settlement_tavern_num))
 print("\n")
 print("### Districts")
-print("1. Old District - This area contains the spiritual grounds of Areksul.  Named after the bishop Receb whom for decades tirelessly spent his fortune turning the area into a beautiful place for all to worship.  A true Omnist.  'Receb the Purifier' was found dead having choked to death ravenously feasting on the entrails of children.  The remains of thousands where found in his personal home.  No one quite knows where the children came from because the number would be unsupportable by even a large city.  The lanes are lined with husks of worship much like a row of rotten teeth in the mandible of a long dead carnivore.  New and old are indistinguishable.  Sometimes you can here the trumpets of a seeker finding their faith.  No many local residents enter this area.")
-print("2. Fairypark - Contains a barracks and large parade grounds.  While well maintained the barracks is minimally staffed by ordinary road guard.")
-print("3. Dusk Chapel - Is quit old and houses not only the mayors house but also a few inns and taverns along with other businesses.  The building are quite ancient but well maintain and actually quite cozy.")
-print("4. The Star - The west gate is where most of the trade occurs.  To the north is a shared square where a small but seeming perpetual farmers market exists.  This district seem to support not just the locals but also the tradesmen and travelers on road from the capital.")
+for x,y in district_info.items():
+    print("##### " + x + "\n" + " Desc")
 print("\n")
 print("### Notable Inns/Taverns")
 print("## Carpenter's Cup")

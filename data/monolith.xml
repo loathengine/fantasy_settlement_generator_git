@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <UNIVERSE>
   <STATS>
+    <DISTRICT name="Lower East Fisp" weight="3" />
+    <DISTRICT name="Tais Town" weight="3" />
+    <DISTRICT name="Upper East Winwoopt" weight="3" />
+    <DISTRICT name="Upper West Spadlork" weight="3" />
+    <DISTRICT name="Pleecerd Vale" weight="3" />
+    <DISTRICT name="Downtown Scroppand" weight="3" />
+    <DISTRICT name="Remmest Side" weight="3" />
+    <DISTRICT name="Midtown Cledard" weight="3" />
+    <DISTRICT name="West Loattoatnift Grove" weight="3" />
+    <DISTRICT name="Splofiloast Valley" weight="3" />
+    <DISTRICT name="Lower East Gald" weight="3" />
+    <DISTRICT name="South Spleld" weight="3" />
+    <DISTRICT name="Girveb Road" weight="3" />
+    <DISTRICT name="Lower South Glostes" weight="3" />
+    <DISTRICT name="Newup Row" weight="3" />
+    <DISTRICT name="South Naippais" weight="3" />
+    <DISTRICT name="Upper Skugailt" weight="3" />
+    <DISTRICT name="Upper North Spleorom" weight="3" />
+    <DISTRICT name="East Cloowergost Cross" weight="3" />
+    <DISTRICT name="Leorioctelf Circle" weight="3" />
+    <DISTRICT name="Soliloquy Meadow" weight="3" />
+    <DISTRICT name="Citrine Woods" weight="3" />
+    <DISTRICT name="Peacock Forest" weight="3" />
+    <DISTRICT name="Kelly Falls" weight="3" />
+    <DISTRICT name="Copper Point" weight="3" />
+    <DISTRICT name="Gray Meadow" weight="3" />
+    <DISTRICT name="Sand Farms" weight="3" />
+    <DISTRICT name="Collard Meadow" weight="3" />
+    <DISTRICT name="Claret Hook" weight="3" />
+    <DISTRICT name="Mount Lapis" weight="3" />
     <RACE name="human" weight="40" />
     <RACE name="dwarf" weight="10" />
     <RACE name="elf" weight="10" />
