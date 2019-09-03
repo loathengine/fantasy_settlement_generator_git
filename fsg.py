@@ -67,6 +67,16 @@ def xml_element_list_unique(xml_file, element, attribute):
     unique_xml_list = list(xml_set)
     return unique_xml_list
 
+def xml_element_list_unique_count(xml_file, element, attribute, count):
+    """Takes a file and an element name and returns a unique list of or size count for that element."""
+    tree = ET.parse(xml_file)
+    root = tree.getroot()
+    xml_list = []
+    for e in root.iter(element):
+        xml_list.append(e.get(attribute))
+    xml_set = set(xml_list)
+    unique_xml_list = list(xml_set)
+    return random.sample(unique_xml_list, count)
 
 def get_settlement_shops(xml_file, element_root, ssn):
     ssn = 1 + ssn // 5

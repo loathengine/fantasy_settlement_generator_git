@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <UNIVERSE>
   <STATS>
+    <TAVERN name="The Unicorn Pub" weight="3" desc="Its not real" />
+    <TAVERN name="The Brass Captain Inn" weight="3" desc="" />
+    <TAVERN name="The Shallow Forester and One-eyed Grub Pub" weight="3" desc="" />
+    <TAVERN name="The Minotaur Tavern" weight="3" desc="" />
+    <TAVERN name="Bronze Majordomo Inn" weight="3" desc="" />
+    <TAVERN name="The Mate Tavern" weight="3" desc="" />
+    <TAVERN name="Flaming Heron Pub" weight="3" desc="" />
+    <TAVERN name="The Advocate" weight="3" desc="" />
+    <TAVERN name="The Golden Spirit Inn" weight="3" desc="" />
+    <TAVERN name="Moody Horseman Inn" weight="3" desc="" />
+    <TAVERN name="The Apothecary" weight="3" desc="" />
+    <TAVERN name="Teeny Roebuck Inn" weight="3" desc="" />
+    <TAVERN name="The Moody Hyena and Angry Vintner Pub" weight="3" desc="" />
+    <TAVERN name="The Loud Sailor Inn" weight="3" desc="" />
+    <TAVERN name="Laughing Vine and Dead Explorer" weight="3" desc="" />
+    <TAVERN name="The Barrel" weight="3" desc="" />
+    <TAVERN name="Lucky Midwife Arms" weight="3" desc="" />
+    <TAVERN name="Witty Miner Inn" weight="3" desc="" />
+    <TAVERN name="The Hunter" weight="3" desc="" />
+    <TAVERN name="Black Beekeeper Inn" weight="3" desc="" />
+    <TAVERN name="The Ball" weight="3" desc="" />
+    <TAVERN name="The Mean Bleacher" weight="3" desc="" />
+    <TAVERN name="The Moon" weight="3" desc="" />
+    <TAVERN name="Golden Painter Pub" weight="3" desc="" />
+    <TAVERN name="The Teamster Arms" weight="3" desc="" />
+    <TAVERN name="The Plasterer" weight="3" desc="" />
+    <TAVERN name="The Straight Cartographer Tavern" weight="3" desc="" />
+    <TAVERN name="Gross Harpy Pub" weight="3" desc="" />
+    <TAVERN name="Haughty Sculptor Inn" weight="3" desc="" />
+    <TAVERN name="The Cowherd" weight="3" desc="" />
+    <TAVERN name="Ancient Chamberlain Tavern" weight="3" desc="" />
+    <TAVERN name="The Mace" weight="3" desc="" />
+    <TAVERN name="The Turquoise Dove" weight="3" desc="" />
+    <TAVERN name="The Brass Physician Tavern" weight="3" desc="" />
+    <TAVERN name="The Seeker and Fishmonger" weight="3" desc="" />
+    <TAVERN name="The Cooper and The Jester Inn" weight="3" desc="" />
+    <TAVERN name="Dusty Eagle Tavern" weight="3" desc="" />
+    <TAVERN name="Happy Nymph Inn" weight="3" desc="" />
+    <TAVERN name="The Screeching Golem" weight="3" desc="" />
+    <TAVERN name="Skinny Flail Inn" weight="3" desc="" />
+    <TAVERN name="The Duchess Tavern" weight="3" desc="" />
+    <TAVERN name="The Naked Mohel and Tall Bee Pub" weight="3" desc="" />
+    <TAVERN name="The Red Rabbi Inn" weight="3" desc="" />
+    <TAVERN name="Puny Mummy Inn" weight="3" desc="" />
+    <TAVERN name="Arrogant Nightmare Pub" weight="3" desc="" />
+    <TAVERN name="The Crooked Highwayman Pub" weight="3" desc="" />
+    <TAVERN name="The Silver Horse and Rancid Cutler Tavern" weight="3" desc="" />
+    <TAVERN name="The Bather and The Wheelwright Tavern" weight="3" desc="" />
+    <TAVERN name="The Comet and Neanderthal" weight="3" desc="" />
+    <TAVERN name="The Beetle Tavern" weight="3" desc="" />
     <DISTRICT name="Lower East Fisp" weight="3" desc="Academic: Scholar’s hovel, schoolhouse, alchemist’s laboratory, library, archives, observatory, university" />
     <DISTRICT name="Tais Town" weight="3" desc="Craft: Blacksmith, tanner’s row, maker’s street, guild canton, loomworks," />
     <DISTRICT name="Upper East Winwoopt" weight="3" desc="Culture: Tavern, playhouse, horse track, theater, tournament lists, menagerie, concert hall, arena, circus, colosseum," />
