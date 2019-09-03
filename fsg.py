@@ -97,7 +97,7 @@ def get_settlement_label(xml_file, element_root, settlement_pop):
 
 
 settlement_name = "Testberg"
-settlement_population = random.randint(20, 50000)
+settlement_population = random.randint(20, 10000)
 settlement_label = get_settlement_label('data/monolith.xml', "./STATS/LABEL", settlement_population)
 settlement_density = random.randint(3, 6)
 settlement_wealth = random.randint(1, 6)
@@ -159,7 +159,7 @@ print("- **Shops of Note: **")
 for x, y in settlement_shops.items():
     print(x + ",")
 print("\n")
-print("#### Food and Hospitality")
+print("#### Notable Inns/Taverns")
 print("___")
 print("- **Available Inns: **" + str(settlement_inn_num))
 print("- **Operating Taverns: **" + str(settlement_tavern_num))
