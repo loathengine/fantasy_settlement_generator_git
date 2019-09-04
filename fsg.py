@@ -107,6 +107,7 @@ def get_settlement_label(xml_file, element_root, settlement_pop):
 
 
 def get_settlement_taverns(count):
+    # TODO: Name, Location, Description, Innkeeper, Menu
     dictionary = {}
     dictionary = xml_element_dict_count('data/monolith.xml', "./STATS/TAVERN", count)
     return dictionary
@@ -175,16 +176,17 @@ print("- **Number Of Shops: **" + str(settlement_shops_num))
 print("- **Shops of Note: **")
 for x, y in settlement_shops.items():
     print(x + ",")
-
+print("- **Number Of Inns/Taverns: **" + str(settlement_tavern_num))
+print("- **Inn/Tavern Name: **")
+for x, y in settlement_taverns.items():
+    print(x + ",")
 print("\n")
 print("### Districts")
 for x, y in district_info.items():
     print("##### " + x)
     print(y[1])
 print("\n")
-print("### Notable Inns/Taverns")
-for x, y in settlement_taverns.items():
-    print(x + ",")
+
 print("## Carpenter's Cup")
 print("#####  Location")
 print("In The Star ward, near an outcrop of rune-carved stone.")
