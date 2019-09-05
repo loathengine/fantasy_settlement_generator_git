@@ -1,56 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <UNIVERSE>
   <STATS>
-    <TAVERN name="The Unicorn Pub" weight="3" desc="Its not real" />
-    <TAVERN name="The Brass Captain Inn" weight="3" desc="" />
-    <TAVERN name="The Shallow Forester and One-eyed Grub Pub" weight="3" desc="" />
-    <TAVERN name="The Minotaur Tavern" weight="3" desc="" />
-    <TAVERN name="Bronze Majordomo Inn" weight="3" desc="" />
-    <TAVERN name="The Mate Tavern" weight="3" desc="" />
-    <TAVERN name="Flaming Heron Pub" weight="3" desc="" />
-    <TAVERN name="The Advocate" weight="3" desc="" />
-    <TAVERN name="The Golden Spirit Inn" weight="3" desc="" />
-    <TAVERN name="Moody Horseman Inn" weight="3" desc="" />
-    <TAVERN name="The Apothecary" weight="3" desc="" />
-    <TAVERN name="Teeny Roebuck Inn" weight="3" desc="" />
-    <TAVERN name="The Moody Hyena and Angry Vintner Pub" weight="3" desc="" />
-    <TAVERN name="The Loud Sailor Inn" weight="3" desc="" />
-    <TAVERN name="Laughing Vine and Dead Explorer" weight="3" desc="" />
-    <TAVERN name="The Barrel" weight="3" desc="" />
-    <TAVERN name="Lucky Midwife Arms" weight="3" desc="" />
-    <TAVERN name="Witty Miner Inn" weight="3" desc="" />
-    <TAVERN name="The Hunter" weight="3" desc="" />
-    <TAVERN name="Black Beekeeper Inn" weight="3" desc="" />
-    <TAVERN name="The Ball" weight="3" desc="" />
-    <TAVERN name="The Mean Bleacher" weight="3" desc="" />
-    <TAVERN name="The Moon" weight="3" desc="" />
-    <TAVERN name="Golden Painter Pub" weight="3" desc="" />
-    <TAVERN name="The Teamster Arms" weight="3" desc="" />
-    <TAVERN name="The Plasterer" weight="3" desc="" />
-    <TAVERN name="The Straight Cartographer Tavern" weight="3" desc="" />
-    <TAVERN name="Gross Harpy Pub" weight="3" desc="" />
-    <TAVERN name="Haughty Sculptor Inn" weight="3" desc="" />
-    <TAVERN name="The Cowherd" weight="3" desc="" />
-    <TAVERN name="Ancient Chamberlain Tavern" weight="3" desc="" />
-    <TAVERN name="The Mace" weight="3" desc="" />
-    <TAVERN name="The Turquoise Dove" weight="3" desc="" />
-    <TAVERN name="The Brass Physician Tavern" weight="3" desc="" />
-    <TAVERN name="The Seeker and Fishmonger" weight="3" desc="" />
-    <TAVERN name="The Cooper and The Jester Inn" weight="3" desc="" />
-    <TAVERN name="Dusty Eagle Tavern" weight="3" desc="" />
-    <TAVERN name="Happy Nymph Inn" weight="3" desc="" />
-    <TAVERN name="The Screeching Golem" weight="3" desc="" />
-    <TAVERN name="Skinny Flail Inn" weight="3" desc="" />
-    <TAVERN name="The Duchess Tavern" weight="3" desc="" />
-    <TAVERN name="The Naked Mohel and Tall Bee Pub" weight="3" desc="" />
-    <TAVERN name="The Red Rabbi Inn" weight="3" desc="" />
-    <TAVERN name="Puny Mummy Inn" weight="3" desc="" />
-    <TAVERN name="Arrogant Nightmare Pub" weight="3" desc="" />
-    <TAVERN name="The Crooked Highwayman Pub" weight="3" desc="" />
-    <TAVERN name="The Silver Horse and Rancid Cutler Tavern" weight="3" desc="" />
-    <TAVERN name="The Bather and The Wheelwright Tavern" weight="3" desc="" />
-    <TAVERN name="The Comet and Neanderthal" weight="3" desc="" />
-    <TAVERN name="The Beetle Tavern" weight="3" desc="" />
+    <TAVERN_MENU name="Boiled Eggs and Dried Leek, Tankard of Stout (10 cp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Roasted Mutton and Dried Turnip, Tankard of Mead (10 cp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Stewed Onions, Mug of Cider (5 cp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Stewed Lentils, Mug of Cider (3 cp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Roasted Cabbage, Mug of Stout (4 cp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Stewed Lentils, Mug of Perry (4 cp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Pottage, Mug of Perry (4 cp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Blood pudding, Curds, Chicken eggs, Strawberries, Oatmeal (1 sp)." weight="3" desc="3" />
+    <TAVERN_MENU name="Pork chop, Chicken eggs, Black beans, Apple (2 sp)." weight="3" desc="3" />
+    <TAVERN_MENU name="Pork liver, Seaweed, Succotash, Rice, Fruitcake (2 sp)." weight="3" desc="3" />
+    <TAVERN_MENU name="Goose eggs, Currants, Corn pone (1 sp)." weight="3" desc="3" />
+    <TAVERN_MENU name="Ham, Quail eggs, Duck eggs, Melon, Sea oats (2 gp)." weight="3" desc="3" />
+    <TAVERN_MENU name="Veal sweetbreads, Sharp cheese, Leeks, Peach (2 gp)." weight="3" desc="3" />
+    <TAVERN_MENU name="Mixed grill, Collard greens, Chick peas, Rice, Plum pudding (2 gp)." weight="3" desc="3" />
+    <TAVERN_MENU name="Soft cheese, Pomegranite, Corn pone (8 sp)." weight="3" desc="3" />
+    <TAVERN_MENU name="Stewed Sausage and Soft Cheese, Tankard of Stout (8 cp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Roasted Mushrooms, Mug of Cider (4 cp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Stewed Eel and Turnip, Tankard of Cider (8 cp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Boiled Eggs and Buckwheat Bread, Tankard of Mead (11 cp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Stewed Mutton and Whey Cheese, Tankard of Perry (8 cp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Chicken Liver Pate and Bread (3 sp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Apple Stuffed Mushrooms (8 cp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Cheese rolls with a filling of nuts, honey and vegetables (6 cp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Roast Goose strewn with Caraway seeds (4 sp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Roasted and Smoked Pork Spareribs (6 sp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Braised Oxtails with Mushrooms (6 sp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Mutton, Lettuce and Tomato (5 sp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Grilled Fillet of Salmon (6 sp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Breaded Breast of Chicken, Whiskey and Mushroom Sauce (6 sp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Stuffed Mushrooms with Thyme and Creamcheese (4 sp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Smoked Fresh Trout Fillets (4 sp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Kito's Spiced Potatos (7 cp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Roast Stuffed Leg of Lamb with Mint Sauce (6 sp)" weight="3" desc="3" />
+    <TAVERN_MENU name="Smoked Salmon Salad (4 sp)" weight="3" desc="3" />
+    <TAVERN_DESC name="From the outside it looks dull, dark and crude. Large stones and marble details make up most of the building's outer structure." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="It's impossible to see through the closed windows, but the quiet sorrow from within can be felt outside." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="As you enter the tavern through the hardwooden door, you're welcomed by a feeling of discomfort and aromas of what's probably food, hopefully." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="The bartender is talking to a customer and makes no effort to acknowledge your pressence." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="It's as dreary inside as it is on the outside. Hardwood beams support the upper floor and the candles attached to them. The walls are decorated with mounted animal heads and small animals, though most have become worn and broken, given the place an even creapier feel." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="The tavern itself is almost completely abandoned. The few people inside could be locals, could be lost souls, but whoever they are, you'd like to stay as for away from them as possible." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="You did hear rumors about this tavern, supposedly it's infamous for something, but for the life of you you can't remember what for. Though juding by everything in this place, it must be something horrifying." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="From the outside it looks homey, humble and warm. Logs and wooden pillars make up most of the building's outer structure." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="It's difficult to see through the small, stained glass windows, but the enjoyment from within can be felt outside." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="As you enter the tavern through the old, hardwooden door, you're welcomed by dancing people and laughing voices." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="The bartender is extremely busy, but still manages to welcome you with a friendly nod." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="It's as lovely inside as it is on the outside. Hardwooden beams support the upper floor and the large candles attached to them. The walls are decorated with sports memorabilia, it's clear the owner, and probably the customers, are avid fans." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="The tavern itself is packed. Tourists seem to be the primary clientele here, which often leads to exciting evenings. Several long tables are occupied by, what looks like couples, lone travellers and anybody else who enjoys great company. The other, smaller tables are also occupied by people who are singing and dancing, occassionaly pulling an unsuspecting waitress amidst their dancing group. Even most of the stools at the bar are occupied, though nobody seems to mind more company." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="You did hear rumors about this tavern, supposedly it's famous for something, but you can't remember what for. Though judging by the smells of grilled and cooked food coming from the kitchen, it must be the food. You manage to find a seat and prepare for what will undoubtedbly be a great evening." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="From the outside it looks uninviting, dull and uncomfortable. Timber and well-crafted wooden beams make up most of the building's outer structure." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="It's difficult to see through the small, stained glass windows, but the lifelessness from within can be felt outside." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="As you enter the tavern through the thick, wooden door, you're welcomed by silence and a horrific scent." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="The bartender is coughing into a dirty napkin and makes no effort to acknowledge your pressence." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="It's as disgusting inside as it is on the outside. Rounded, wooden beams support the upper floor and the lanterns attached to them. The walls are covered in photographs of what were undoubtedly better times for this tavern. They're now more of a painful reminder of what it has turned into." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="The tavern itself is almost completely abandoned. The few people inside you'd like to stay away from, but whoever they are, it's about the clearest sign you can get, telling you you don't belong." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="You did hear rumors about this tavern, supposedly it's infamous for something, but for the life of you you can't remember what for. Though juding by the dirt and unhygienic circumstances, it's probably food poisoning." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="The inn is a modest wooden building, with roughly hewn wooden tables and benches. A fake dragon's skull hangs over the hearth. Accommodations consist of several hammocks in the common room." weight="3" desc="Tavern" />
+    <TAVERN_DESC name="The inn is a two-storey stone-walled building, with a heather-thatched roof and a smooth stone floor. Accommodations consist of wooden cots near the hearth. The inn was rebuilt recently after a devastating fire." weight="3" desc="Tavern" />
+    <TAVERN_NAME name="The Unicorn Pub" weight="3" desc="Its not real" />
+    <TAVERN_NAME name="The Brass Captain Inn" weight="3" desc="" />
+    <TAVERN_NAME name="The Shallow Forester and One-eyed Grub Pub" weight="3" desc="" />
+    <TAVERN_NAME name="The Minotaur Tavern" weight="3" desc="" />
+    <TAVERN_NAME name="Bronze Majordomo Inn" weight="3" desc="" />
+    <TAVERN_NAME name="The Mate Tavern" weight="3" desc="" />
+    <TAVERN_NAME name="Flaming Heron Pub" weight="3" desc="" />
+    <TAVERN_NAME name="The Advocate" weight="3" desc="" />
+    <TAVERN_NAME name="The Golden Spirit Inn" weight="3" desc="" />
+    <TAVERN_NAME name="Moody Horseman Inn" weight="3" desc="" />
+    <TAVERN_NAME name="The Apothecary" weight="3" desc="" />
+    <TAVERN_NAME name="Teeny Roebuck Inn" weight="3" desc="" />
+    <TAVERN_NAME name="The Moody Hyena and Angry Vintner Pub" weight="3" desc="" />
+    <TAVERN_NAME name="The Loud Sailor Inn" weight="3" desc="" />
+    <TAVERN_NAME name="Laughing Vine and Dead Explorer" weight="3" desc="" />
+    <TAVERN_NAME name="The Barrel" weight="3" desc="" />
+    <TAVERN_NAME name="Lucky Midwife Arms" weight="3" desc="" />
+    <TAVERN_NAME name="Witty Miner Inn" weight="3" desc="" />
+    <TAVERN_NAME name="The Hunter" weight="3" desc="" />
+    <TAVERN_NAME name="Black Beekeeper Inn" weight="3" desc="" />
+    <TAVERN_NAME name="The Ball" weight="3" desc="" />
+    <TAVERN_NAME name="The Mean Bleacher" weight="3" desc="" />
+    <TAVERN_NAME name="The Moon" weight="3" desc="" />
+    <TAVERN_NAME name="Golden Painter Pub" weight="3" desc="" />
+    <TAVERN_NAME name="The Teamster Arms" weight="3" desc="" />
+    <TAVERN_NAME name="The Plasterer" weight="3" desc="" />
+    <TAVERN_NAME name="The Straight Cartographer Tavern" weight="3" desc="" />
+    <TAVERN_NAME name="Gross Harpy Pub" weight="3" desc="" />
+    <TAVERN_NAME name="Haughty Sculptor Inn" weight="3" desc="" />
+    <TAVERN_NAME name="The Cowherd" weight="3" desc="" />
+    <TAVERN_NAME name="Ancient Chamberlain Tavern" weight="3" desc="" />
+    <TAVERN_NAME name="The Mace" weight="3" desc="" />
+    <TAVERN_NAME name="The Turquoise Dove" weight="3" desc="" />
+    <TAVERN_NAME name="The Brass Physician Tavern" weight="3" desc="" />
+    <TAVERN_NAME name="The Seeker and Fishmonger" weight="3" desc="" />
+    <TAVERN_NAME name="The Cooper and The Jester Inn" weight="3" desc="" />
+    <TAVERN_NAME name="Dusty Eagle Tavern" weight="3" desc="" />
+    <TAVERN_NAME name="Happy Nymph Inn" weight="3" desc="" />
+    <TAVERN_NAME name="The Screeching Golem" weight="3" desc="" />
+    <TAVERN_NAME name="Skinny Flail Inn" weight="3" desc="" />
+    <TAVERN_NAME name="The Duchess Tavern" weight="3" desc="" />
+    <TAVERN_NAME name="The Naked Mohel and Tall Bee Pub" weight="3" desc="" />
+    <TAVERN_NAME name="The Red Rabbi Inn" weight="3" desc="" />
+    <TAVERN_NAME name="Puny Mummy Inn" weight="3" desc="" />
+    <TAVERN_NAME name="Arrogant Nightmare Pub" weight="3" desc="" />
+    <TAVERN_NAME name="The Crooked Highwayman Pub" weight="3" desc="" />
+    <TAVERN_NAME name="The Silver Horse and Rancid Cutler Tavern" weight="3" desc="" />
+    <TAVERN_NAME name="The Bather and The Wheelwright Tavern" weight="3" desc="" />
+    <TAVERN_NAME name="The Comet and Neanderthal" weight="3" desc="" />
+    <TAVERN_NAME name="The Beetle Tavern" weight="3" desc="" />
     <DISTRICT name="Lower East Fisp" weight="3" desc="Academic: Scholar’s hovel, schoolhouse, alchemist’s laboratory, library, archives, observatory, university" />
     <DISTRICT name="Tais Town" weight="3" desc="Craft: Blacksmith, tanner’s row, maker’s street, guild canton, loomworks," />
     <DISTRICT name="Upper East Winwoopt" weight="3" desc="Culture: Tavern, playhouse, horse track, theater, tournament lists, menagerie, concert hall, arena, circus, colosseum," />

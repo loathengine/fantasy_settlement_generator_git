@@ -45,14 +45,13 @@ def xml_element_dict_all(xml_file, element_root):
 
 
 def xml_element_dict_count(xml_file, element_root, count):
-    """Takes a file and an element name and a count and returns a unigue dict of size count of that element."""
+    """Takes a file and an element name and a count and returns a unique dict of size count of that element."""
     dictionary = {}
-    x = 0
-    while x < count:
+    while count > 0:
         results = weighted_element_xml(xml_file, element_root)
         if results[0] not in dictionary:
             dictionary[results[0]] = [results[1], results[2]]
-            x += 1
+            count -= 1
     return dictionary
 
 
@@ -66,6 +65,7 @@ def xml_element_list_unique(xml_file, element, attribute):
     xml_set = set(xml_list)
     unique_xml_list = list(xml_set)
     return unique_xml_list
+
 
 def xml_element_list_unique_count(xml_file, element, attribute, count):
     """Takes a file and an element name and returns a unique list of or size count for that element."""
@@ -105,12 +105,22 @@ def get_settlement_label(xml_file, element_root, settlement_pop):
             settlement_list = name
     return settlement_list
 
+def npc_generator():
+    return "Bob"
 
-def get_settlement_taverns(count):
-    # TODO: Name, Location, Description, Innkeeper, Menu
-    dictionary = {}
-    dictionary = xml_element_dict_count('data/monolith.xml', "./STATS/TAVERN", count)
-    return dictionary
+
+def get_settlement_tavern(t_n, t_l):
+    # TODO: Name=settlement_tavern_name, Location=district_info, Description, Innkeeper, Menu, Patrons
+    xml_dict = {}
+    for name in t_n:
+        tavern_name = name
+        tavern_location = random.choice(list(t_l))
+        tavern_description = weighted_element_xml('data/monolith.xml', "./STATS/TAVERN_DESC")
+        tavern_innkeeper = npc_generator()
+        tavern_menu = weighted_element_xml('data/monolith.xml', "./STATS/TAVERN_MENU")
+        xml_dict[tavern_name] = [tavern_location, tavern_description[0], tavern_innkeeper, tavern_menu[0]]
+    return xml_dict
+
 
 settlement_name = "Testberg"
 settlement_population = random.randint(20, 10000)
@@ -124,9 +134,6 @@ settlement_trait = weighted_element_xml('data/monolith.xml', "./STATS/TRAIT")
 settlement_structures = ((settlement_population << 1) // settlement_density) >> 1
 settlement_shops_num = 1 + (settlement_population // 150)
 
-settlement_tavern_num = (2 + settlement_population // 3000)
-settlement_taverns = get_settlement_taverns(settlement_tavern_num)
-
 primary_biome = weighted_element_xml('data/monolith.xml', "./ENV/*")
 primary_topography = weighted_element_xml('data/monolith.xml', "./ENV/BIOME[@name='" + primary_biome[0] + "']/*")
 industry_raw = weighted_element_xml('data/monolith.xml',
@@ -134,9 +141,14 @@ industry_raw = weighted_element_xml('data/monolith.xml',
 settlement_shops = get_settlement_shops('data/monolith.xml',
                                         "./ENV/BIOME/TOPOGRAPHY/RAW/[@name='" + industry_raw[0] + "']/*",
                                         settlement_shops_num)
+
 settlement_races = xml_element_dict_all('data/monolith.xml', "./STATS/RACE")
 district_number = random.randint(1, 6)
 district_info = xml_element_dict_count('data/monolith.xml', "./STATS/DISTRICT", district_number)
+
+settlement_tavern_num = (2 + settlement_population // 3000)
+settlement_tavern_names = xml_element_dict_count('data/monolith.xml', "./STATS/TAVERN_NAME", settlement_tavern_num)
+settlement_taverns = get_settlement_tavern(settlement_tavern_names, district_info)
 
 print("# " + settlement_name)
 print("\n")
@@ -177,8 +189,8 @@ print("- **Shops of Note: **")
 for x, y in settlement_shops.items():
     print(x + ",")
 print("- **Number Of Inns/Taverns: **" + str(settlement_tavern_num))
-print("- **Inn/Tavern Name: **")
-for x, y in settlement_taverns.items():
+print("- **Inn/Tavern Names: **")
+for x, y in settlement_tavern_names.items():
     print(x + ",")
 print("\n")
 print("### Districts")
@@ -187,18 +199,13 @@ for x, y in district_info.items():
     print(y[1])
 print("\n")
 
-print("## Carpenter's Cup")
-print("#####  Location")
-print("In The Star ward, near an outcrop of rune-carved stone.")
-print("##### Description")
-print("The inn is a simple wooden shack, with several shuttered windows. Several battered shields hang on the walls. Accomodations consist of a few small rooms with straw mats and straw mats near the hearth.")
-print("##### Innkeeper")
-print("The innkeeper is a tall male human named Monder.")
-print("##### Menu")
-print("* Boiled Eggs and Dried Leek, Tankard of Stout (10 cp)")
-print("* Roasted Mutton and Dried Turnip, Tankard of Mead (10 cp)")
-print("* Stewed Onions, Mug of Cider (5 cp)")
-print("* Stewed Lentils, Mug of Cider (3 cp)")
-print("* Roasted Cabbage, Mug of Stout (4 cp)")
-print("* Stewed Lentils, Mug of Perry (4 cp)")
-print("* Pottage, Mug of Perry (4 cp)")
+for x, y in settlement_taverns.items():
+    print("## " + x)
+    print("#####  Location")
+    print(y[0])
+    print("##### Description")
+    print(y[1])
+    print("##### Innkeeper")
+    print(y[2])
+    print("##### Menu")
+    print(y[3])
