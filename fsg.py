@@ -120,7 +120,7 @@ def get_settlement_tavern(t_n, t_l):
         tavern_innkeeper = npc_generator()
         tavern_menu = list(xml_element_dict_count('data/monolith.xml', "./STATS/TAVERN_MENU", 5))
         xml_dict[tavern_name] = [tavern_location, tavern_description[0], tavern_innkeeper, tavern_menu[0],
-                                 tavern_menu[1], tavern_menu[2], tavern_menu[3],tavern_menu[4]]
+                                 tavern_menu[1], tavern_menu[2], tavern_menu[3], tavern_menu[4]]
     return xml_dict
 
 
