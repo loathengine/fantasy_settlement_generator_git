@@ -78,12 +78,12 @@ def xml_element_list_unique_count(xml_file, element, attribute, count):
     unique_xml_list = list(xml_set)
     return random.sample(unique_xml_list, count)
 
+
 def get_settlement_shops(xml_file, element_root, ssn):
     ssn = 1 + ssn // 5
     shop_dict = {}
-    x = 0
-    while x < ssn:
-        x += 1
+    while ssn > 0:
+        ssn -= 1
         shop_results = weighted_element_xml(xml_file, element_root)
         if shop_results[0] in shop_dict:
             shop_dict[shop_results[0]] += 1
@@ -105,6 +105,7 @@ def get_settlement_label(xml_file, element_root, settlement_pop):
             settlement_list = name
     return settlement_list
 
+
 def npc_generator():
     return "Bob"
 
@@ -117,8 +118,9 @@ def get_settlement_tavern(t_n, t_l):
         tavern_location = random.choice(list(t_l))
         tavern_description = weighted_element_xml('data/monolith.xml', "./STATS/TAVERN_DESC")
         tavern_innkeeper = npc_generator()
-        tavern_menu = weighted_element_xml('data/monolith.xml', "./STATS/TAVERN_MENU")
-        xml_dict[tavern_name] = [tavern_location, tavern_description[0], tavern_innkeeper, tavern_menu[0]]
+        tavern_menu = list(xml_element_dict_count('data/monolith.xml', "./STATS/TAVERN_MENU", 5))
+        xml_dict[tavern_name] = [tavern_location, tavern_description[0], tavern_innkeeper, tavern_menu[0],
+                                 tavern_menu[1], tavern_menu[2], tavern_menu[3],tavern_menu[4]]
     return xml_dict
 
 
@@ -208,4 +210,9 @@ for x, y in settlement_taverns.items():
     print("##### Innkeeper")
     print(y[2])
     print("##### Menu")
-    print(y[3])
+    print("* " + y[3])
+    print("* " + y[4])
+    print("* " + y[5])
+    print("* " + y[6])
+    print("* " + y[7])
+    print("\n")
