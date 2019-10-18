@@ -33,6 +33,7 @@ def weighted_element_xml(xml_file, element_root):
 
 def xml_element_dict_all(xml_file, element_root):
     """Takes a file and an element name and returns a dict of every unique instance of that element."""
+    """Format: key, [weight, description]"""
     tree = ET.parse(xml_file)
     root = tree.getroot()
     xml_dict = {}
@@ -124,8 +125,8 @@ def get_settlement_tavern(t_n, t_l):
     return xml_dict
 
 
-settlement_name = "Testberg"
-settlement_population = random.randint(20, 10000)
+settlement_name = str(weighted_element_xml('data/monolith.xml', "./STATS/SIGN")[0])
+settlement_population = random.randint(50, 50000)
 settlement_label = get_settlement_label('data/monolith.xml', "./STATS/LABEL", settlement_population)
 settlement_density = random.randint(3, 6)
 settlement_wealth = random.randint(1, 6)
@@ -145,7 +146,7 @@ settlement_shops = get_settlement_shops('data/monolith.xml',
                                         settlement_shops_num)
 
 settlement_races = xml_element_dict_all('data/monolith.xml', "./STATS/RACE")
-district_number = random.randint(1, 6)
+district_number = random.randint(3, 9)
 district_info = xml_element_dict_count('data/monolith.xml', "./STATS/DISTRICT", district_number)
 
 settlement_tavern_num = (2 + settlement_population // 3000)
@@ -167,7 +168,8 @@ print("## Settlement Features")
 print(
     settlement_name + " is a " + settlement_label + " located in the " + primary_topography[0] + " region of the areas "
     + "greater " + primary_biome[0] + ".  The settlement seems to be " + settlement_age[0] + ".  " + settlement_name +
-    " and the local surroundings are under the control of " + settlement_government[0] + ".  ")
+    " and the local surroundings are under the control of " + settlement_government[0] + ".")
+print("\n")
 print("#### Demographics")
 print("___")
 print("- **Name: **" + settlement_name)
@@ -181,6 +183,7 @@ print("- **Age: **" + str(settlement_age[0]))
 print("- **Alignment: **" + str(settlement_alignment))
 print("- **Government Type: **" + settlement_government[0])
 print("- **Settlement Trait: **" + settlement_trait[0])
+print("- **Number of Districts: ** " + str(district_number) )
 print("\n")
 print("#### Industry and Economy")
 print("___")
@@ -188,13 +191,20 @@ print("- **Primary Raw Materials: **" + industry_raw[0])
 print("- **Number Of Structures: **" + str(settlement_structures))
 print("- **Number Of Shops: **" + str(settlement_shops_num))
 print("- **Shops of Note: **")
-for x, y in settlement_shops.items():
-    print(x + ",")
+for x in settlement_shops.keys():
+    if x == list(settlement_shops.keys())[-1]:
+        print(x + ".")
+    else:
+        print(x + ",")
 print("- **Number Of Inns/Taverns: **" + str(settlement_tavern_num))
-print("- **Inn/Tavern Names: **")
-for x, y in settlement_tavern_names.items():
-    print(x + ",")
+print("- **Inns/Taverns of Note: **")
+for x in settlement_tavern_names.keys():
+    if x == list(settlement_tavern_names.keys())[-1]:
+        print(x + ".")
+    else:
+        print(x + ",")
 print("\n")
+
 print("### Districts")
 for x, y in district_info.items():
     print("##### " + x)
