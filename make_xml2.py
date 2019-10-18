@@ -7,6 +7,7 @@ def import_csv(file):
         return (list(reader))
 
 
+
 size_label = import_csv('data/size_label.txt')
 primary_biome = import_csv('data/primary_biome.txt')
 primary_topography = import_csv('data/primary_topography.txt')
