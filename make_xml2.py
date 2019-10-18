@@ -10,6 +10,7 @@ def import_csv(file):
 
 size_label = import_csv('data/size_label.txt')
 primary_biome = import_csv('data/primary_biome.txt')
+
 primary_topography = import_csv('data/primary_topography.txt')
 industry_raw = import_csv('data/industry_raw.txt')
 industry_shop = import_csv('data/industry_shop.txt')
