@@ -8,6 +8,7 @@
 
 import xml.etree.ElementTree as ET
 import random
+import string
 
 random.seed(random.randint(100, 100000))
 
@@ -126,15 +127,15 @@ def get_settlement_tavern(t_n, t_l):
 
 
 settlement_name = str(weighted_element_xml('data/monolith.xml', "./STATS/SIGN")[0])
-settlement_population = random.randint(50, 50000)
+settlement_population = random.randint(300, 5000)
 settlement_label = get_settlement_label('data/monolith.xml', "./STATS/LABEL", settlement_population)
-settlement_density = random.randint(3, 6)
+settlement_density = random.randint(1, 10)
 settlement_wealth = random.randint(1, 6)
 settlement_age = weighted_element_xml('data/monolith.xml', "./STATS/AGE")
 settlement_alignment = random.randint(1, 6)
 settlement_government = weighted_element_xml('data/monolith.xml', "./STATS/GOVERNMENT")
 settlement_trait = weighted_element_xml('data/monolith.xml', "./STATS/TRAIT")
-settlement_structures = ((settlement_population << 1) // settlement_density) >> 1
+settlement_wards = 6 + (settlement_population // settlement_density) // 100
 settlement_shops_num = 1 + (settlement_population // 150)
 
 primary_biome = weighted_element_xml('data/monolith.xml', "./ENV/*")
@@ -176,19 +177,19 @@ print("- **Name: **" + settlement_name)
 print("- **Population: **" + str(settlement_population))
 print("- **Number by race: **")
 for x, y in settlement_races.items():
-    print(x + " " + y[0] + "%,")
-print("- **Size: **" + settlement_label)
+    print(string.capwords(x) + " " + y[0] + "%,")
+print("- **Size: **" + string.capwords(settlement_label))
 print("- **Wealth: **" + str(settlement_wealth))
-print("- **Age: **" + str(settlement_age[0]))
+print("- **Age: **" + string.capwords(settlement_age[0]))
 print("- **Alignment: **" + str(settlement_alignment))
-print("- **Government Type: **" + settlement_government[0])
+print("- **Government Type: **" + string.capwords(settlement_government[0]) + " - " + settlement_government[2])
 print("- **Settlement Trait: **" + settlement_trait[0])
+print("- **Number Of Wards: **" + str(settlement_wards))
 print("- **Number of Districts: ** " + str(district_number) )
 print("\n")
 print("#### Industry and Economy")
 print("___")
-print("- **Primary Raw Materials: **" + industry_raw[0])
-print("- **Number Of Structures: **" + str(settlement_structures))
+print("- **Primary Raw Materials: **" + string.capwords(industry_raw[0]))
 print("- **Number Of Shops: **" + str(settlement_shops_num))
 print("- **Shops of Note: **")
 for x in settlement_shops.keys():
