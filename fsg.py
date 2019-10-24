@@ -6,7 +6,7 @@
 # tavern generator
 # npc generator
 
-import xml.etree.ElementTree as ET
+import xml.etree.ElementTree as ElementTree
 import random
 import string
 
@@ -16,9 +16,9 @@ random.seed(random.randint(100, 100000))
 # random.seed(86753099)
 
 
-def weighted_element_xml(xml_file, element_root):
+def weighted_element_list(xml_file, element_root):
     """Takes a file and an element name and returns a weighted random result"""
-    tree = ET.parse(xml_file)
+    tree = ElementTree.parse(xml_file)
     root = tree.getroot()
     weighted_list = []
     for e in root.findall(element_root):
@@ -32,34 +32,34 @@ def weighted_element_xml(xml_file, element_root):
     return random.choice(weighted_list)
 
 
-def xml_element_dict_all(xml_file, element_root):
+def all_unique_element_dict(xml_file, element_root):
     """Takes a file and an element name and returns a dict of every unique instance of that element."""
     """Format: key, [weight, description]"""
-    tree = ET.parse(xml_file)
+    tree = ElementTree.parse(xml_file)
     root = tree.getroot()
-    xml_dict = {}
+    dictionary = {}
     for e in root.findall(element_root):
         name = e.get('name')
         weight = e.get('weight')
         description = e.get('desc')
-        xml_dict[name] = [weight, description]
-    return xml_dict
+        dictionary[name] = [weight, description]
+    return dictionary
 
 
-def xml_element_dict_count(xml_file, element_root, count):
+def count_unique_element_dict(xml_file, element_root, count):
     """Takes a file and an element name and a count and returns a unique dict of size count of that element."""
     dictionary = {}
     while count > 0:
-        results = weighted_element_xml(xml_file, element_root)
+        results = weighted_element_list(xml_file, element_root)
         if results[0] not in dictionary:
             dictionary[results[0]] = [results[1], results[2]]
             count -= 1
     return dictionary
 
 
-def xml_element_list_unique(xml_file, element, attribute):
+def all_unique_element_list(xml_file, element, attribute):
     """Takes a file and an element name and returns a list of every unique instance of that element."""
-    tree = ET.parse(xml_file)
+    tree = ElementTree.parse(xml_file)
     root = tree.getroot()
     xml_list = []
     for e in root.iter(element):
@@ -69,9 +69,9 @@ def xml_element_list_unique(xml_file, element, attribute):
     return unique_xml_list
 
 
-def xml_element_list_unique_count(xml_file, element, attribute, count):
+def count_unique_element_list(xml_file, element, attribute, count):
     """Takes a file and an element name and returns a unique list of or size count for that element."""
-    tree = ET.parse(xml_file)
+    tree = ElementTree.parse(xml_file)
     root = tree.getroot()
     xml_list = []
     for e in root.iter(element):
@@ -86,7 +86,7 @@ def get_settlement_shops(xml_file, element_root, ssn):
     shop_dict = {}
     while ssn > 0:
         ssn -= 1
-        shop_results = weighted_element_xml(xml_file, element_root)
+        shop_results = weighted_element_list(xml_file, element_root)
         if shop_results[0] in shop_dict:
             shop_dict[shop_results[0]] += 1
         else:
@@ -96,7 +96,7 @@ def get_settlement_shops(xml_file, element_root, ssn):
 
 def get_settlement_label(xml_file, element_root, settlement_pop):
     # TODO: Need to sort data before doing the size checks
-    tree = ET.parse(xml_file)
+    tree = ElementTree.parse(xml_file)
     root = tree.getroot()
     settlement_list = ""
     for e in root.findall(element_root):
@@ -118,40 +118,43 @@ def get_settlement_tavern(t_n, t_l):
     for name in t_n:
         tavern_name = name
         tavern_location = random.choice(list(t_l))
-        tavern_description = weighted_element_xml('data/monolith.xml', "./STATS/TAVERN_DESC")
+        tavern_description = weighted_element_list('data/monolith.xml', "./STATS/TAVERN_DESC")
         tavern_innkeeper = npc_generator()
-        tavern_menu = list(xml_element_dict_count('data/monolith.xml', "./STATS/TAVERN_MENU", 5))
+        tavern_menu = list(count_unique_element_dict('data/monolith.xml', "./STATS/TAVERN_MENU", 5))
         xml_dict[tavern_name] = [tavern_location, tavern_description[0], tavern_innkeeper, tavern_menu[0],
                                  tavern_menu[1], tavern_menu[2], tavern_menu[3], tavern_menu[4]]
     return xml_dict
 
+xml_file = 'data/monolith.xml'
 
-settlement_name = str(weighted_element_xml('data/monolith.xml', "./STATS/SIGN")[0])
+settlement_name = str(weighted_element_list(xml_file, "./STATS/SIGN")[0])
 settlement_population = random.randint(300, 5000)
-settlement_label = get_settlement_label('data/monolith.xml', "./STATS/LABEL", settlement_population)
+settlement_label = get_settlement_label(xml_file, "./STATS/LABEL", settlement_population)
 settlement_density = random.randint(1, 10)
 settlement_wealth = random.randint(1, 6)
-settlement_age = weighted_element_xml('data/monolith.xml', "./STATS/AGE")
+settlement_age = weighted_element_list(xml_file, "./STATS/AGE")
 settlement_alignment = random.randint(1, 6)
-settlement_government = weighted_element_xml('data/monolith.xml', "./STATS/GOVERNMENT")
-settlement_trait = weighted_element_xml('data/monolith.xml', "./STATS/TRAIT")
+settlement_government = weighted_element_list(xml_file, "./STATS/GOVERNMENT")
+settlement_trait = weighted_element_list(xml_file, "./STATS/TRAIT")
 settlement_wards = 6 + (settlement_population // settlement_density) // 100
 settlement_shops_num = 1 + (settlement_population // 150)
 
-primary_biome = weighted_element_xml('data/monolith.xml', "./ENV/*")
-primary_topography = weighted_element_xml('data/monolith.xml', "./ENV/BIOME[@name='" + primary_biome[0] + "']/*")
-industry_raw = weighted_element_xml('data/monolith.xml',
-                                    "./ENV/BIOME/TOPOGRAPHY[@name='" + primary_topography[0] + "']/*")
-settlement_shops = get_settlement_shops('data/monolith.xml',
-                                        "./ENV/BIOME/TOPOGRAPHY/RAW/[@name='" + industry_raw[0] + "']/*",
-                                        settlement_shops_num)
+primary_env = weighted_element_list(xml_file, "./ENV")
+primary_biome = weighted_element_list(xml_file, "./ENV/BIOME") 
+primary_topography = weighted_element_list(xml_file, "./ENV/BIOME[@name='" + primary_biome[0] + "']/TOPOGRAPHY")
+industry_raw = weighted_element_list(xml_file, "./ENV/BIOME[@name='" + primary_biome[0] + "']/TOPOGRAPHY[@name='" + primary_topography[0] + "']/RAW")
 
-settlement_races = xml_element_dict_all('data/monolith.xml', "./STATS/RACE")
+env_biome_topo_raw= "./ENV/BIOME[@name='" + primary_biome[0] + "']/TOPOGRAPHY[@name='" + primary_topography[0] + "']/RAW[@name='" + industry_raw[0] + "']" 
+
+print(env_biome_topo_raw)
+
+
+settlement_shops = get_settlement_shops(xml_file, env_biome_topo_raw + "/SHOP", settlement_shops_num)
+settlement_races = all_unique_element_dict(xml_file, "./STATS/RACE")
 district_number = random.randint(3, 9)
-district_info = xml_element_dict_count('data/monolith.xml', "./STATS/DISTRICT", district_number)
-
+district_info = count_unique_element_dict(xml_file, "./STATS/DISTRICT", district_number)
 settlement_tavern_num = (2 + settlement_population // 3000)
-settlement_tavern_names = xml_element_dict_count('data/monolith.xml', "./STATS/TAVERN_NAME", settlement_tavern_num)
+settlement_tavern_names = count_unique_element_dict(xml_file, "./STATS/TAVERN_NAME", settlement_tavern_num)
 settlement_taverns = get_settlement_tavern(settlement_tavern_names, district_info)
 
 print("# " + settlement_name)

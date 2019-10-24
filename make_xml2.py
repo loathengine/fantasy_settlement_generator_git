@@ -19,6 +19,7 @@ settlement_trait = import_csv('data/settlement_trait.txt')
 race_percentage = import_csv('data/race_percentage.txt')
 settle_age = import_csv('data/settlement_age.txt')
 district_names = import_csv('data/district_names.txt')
+district_trait = import_csv('data/district_trait.txt')
 tavern_names = import_csv('data/tavern_names.txt')
 tavern_description = import_csv('data/tavern_description.txt')
 tavern_menu = import_csv('data/tavern_menu.txt')
@@ -34,7 +35,10 @@ def write_xml(file):
     for t_n in tavern_names:
         print('    <TAVERN_NAME name="' + str(t_n['key']) + '" weight="' + str(t_n['weight']) + '" desc="' + str(t_n['desc']) + '" />', file=file)
     for d_n in district_names:
-        print('    <DISTRICT name="' + str(d_n['key']) + '" weight="' + str(d_n['weight']) + '" desc="' + str(d_n['desc']) + '" />', file=file)
+        print('    <DISTRICT name="' + str(d_n['key']) + '" weight="' + str(d_n['weight']) + '" desc="' + str(d_n['desc']) + '" >', file=file)
+        for d_t in district_trait:
+            print('      <DISTRICT_TRAIT name="' + str(d_t['key']) + '" weight="' + str(d_t['weight']) + '" desc="' + str(d_t['desc']) + '" />', file=file)
+        print('    </DISTRICT>', file=file)    
     for r_p in race_percentage:
         print('    <RACE name="' + str(r_p['key']) + '" weight="' + str(r_p['weight']) + '" desc="' + str(r_p['desc']) + '" />', file=file)
     for s_l in size_label:
@@ -48,15 +52,15 @@ def write_xml(file):
     for s_t in settlement_trait:
         print('    <TRAIT name="' + str(s_t['key']) + '" weight="' + str(s_t['weight']) + '" desc="' + str(s_t['desc']) + '" />', file=file)
     print('  </STATS>', file=file)
-    print('  <ENV>', file=file)
+    print('  <ENV name="DEFAULT" weight="3" desc="The default enviroment for your universe." >', file=file)
     for p_b in primary_biome:
-        print('    <BIOME name="' + str(p_b['key']) + '" weight="' + str(p_b['weight']) + '" desc="' + str(p_b['desc']) + '" >', file=file)
+        print('      <BIOME name="' + str(p_b['key']) + '" weight="' + str(p_b['weight']) + '" desc="' + str(p_b['desc']) + '" >', file=file)
         for p_t in primary_topography:
-            print('    <TOPOGRAPHY name="' + str(p_t['key']) + '" weight="' + str(p_t['weight']) + '" desc="' + str(p_t['desc']) + '" >', file=file)
+            print('      <TOPOGRAPHY name="' + str(p_t['key']) + '" weight="' + str(p_t['weight']) + '" desc="' + str(p_t['desc']) + '" >', file=file)
             for r_i in industry_raw:
-                print('      <RAW name="' + str(r_i['key']) + '" weight="' + str(r_i['weight']) + '" desc="' + str(r_i['desc']) + '" >', file=file)
+                print('        <RAW name="' + str(r_i['key']) + '" weight="' + str(r_i['weight']) + '" desc="' + str(r_i['desc']) + '" >', file=file)
                 for i_s in industry_shop:
-                    print('        <SHOP name="' + str(i_s['key']) + '" weight="' + str(i_s['weight']) + '" desc="' + str(i_s['desc']) + '" />', file=file)
+                    print('          <SHOP name="' + str(i_s['key']) + '" weight="' + str(i_s['weight']) + '" desc="' + str(i_s['desc']) + '" />', file=file)
                 print('      </RAW>', file=file)
             print('    </TOPOGRAPHY>', file=file)
         print('    </BIOME>', file=file)
