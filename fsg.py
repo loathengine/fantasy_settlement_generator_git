@@ -9,13 +9,11 @@
 import random
 import string
 import xml.etree.ElementTree as ElementTree
-import mfcg
+from selenium import webdriver
 
 randomseed = random.randint(11111111, 99999999)
 
 random.seed(randomseed)
-
-
 
 def weighted_element_list(xml_file, element_root):
     """Takes a file and an element name and returns a weighted random result"""
@@ -125,27 +123,24 @@ def get_settlement_tavern(t_n, t_l):
                                  tavern_menu[1], tavern_menu[2], tavern_menu[3], tavern_menu[4]]
     return xml_dict
 
-def make_MFC(size, seed, name):
-    web = "http://fantasycities.watabou.ru/?size=" + size + "&seed=" + seed + "&name=" + name
-    print (web)
-
+def webthing(size, seed, name):
+    DRIVER = 'C:\Program Files (x86)\Google\chromedriver.exe'
+    driver = webdriver.Chrome(DRIVER)
+    driver.get('http://fantasycities.watabou.ru/?size=' + str(size) + '&seed=' + str(seed) + '&name=' + name)
+    screenshot = driver.save_screenshot('output/' + str(seed) + '.png')
+    driver.quit()
 
 xml_file_path = 'data/monolith.xml'
 
 primary_env = weighted_element_list(xml_file_path, "./ENV")
 primary_biome = weighted_element_list(xml_file_path, "./ENV/BIOME")
 primary_topography = weighted_element_list(xml_file_path, "./ENV/BIOME[@name='" + primary_biome[0] + "']/TOPOGRAPHY")
-industry_raw = weighted_element_list(xml_file_path, "./ENV/BIOME[@name='" + primary_biome[0] + "']/TOPOGRAPHY[@name='" +
-                                     primary_topography[0] + "']/RAW")
+industry_raw = weighted_element_list(xml_file_path, "./ENV/BIOME[@name='" + primary_biome[0] + "']/TOPOGRAPHY[@name='" + primary_topography[0] + "']/RAW")
 
-env_biome_topo_raw = "./ENV/BIOME[@name='" + primary_biome[0] + "']/TOPOGRAPHY[@name='" + primary_topography[
-    0] + "']/RAW[@name='" + industry_raw[0] + "']"
-
-print(env_biome_topo_raw)
-
+env_biome_topo_raw = "./ENV/BIOME[@name='" + primary_biome[0] + "']/TOPOGRAPHY[@name='" + primary_topography[0] + "']/RAW[@name='" + industry_raw[0] + "']"
 
 settlement_name = str(weighted_element_list(xml_file_path, env_biome_topo_raw + "/SIGN")[0])
-settlement_population = random.randint(300, 5000)
+settlement_population = random.randint(300, 30000)
 settlement_label = get_settlement_label(xml_file_path, "./STATS/LABEL", settlement_population)
 settlement_density = random.randint(3, 7)
 settlement_wealth = random.randint(1, 6)
@@ -157,7 +152,7 @@ settlement_wards = 6 + (settlement_population // settlement_density) // 100
 settlement_shops_num = 3 + (settlement_population // 1500)
 settlement_shops = get_settlement_shops(xml_file_path, env_biome_topo_raw + "/SHOP", settlement_shops_num)
 settlement_races = all_unique_element_dict(xml_file_path, "./STATS/RACE")
-district_number = 3 + (settlement_population // settlement_density) // 10000
+district_number = 3 + (settlement_population // settlement_density) // 1000
 district_info = count_unique_element_dict(xml_file_path, env_biome_topo_raw + "/DISTRICT", district_number)
 settlement_tavern_num = (2 + settlement_population // 3000)
 settlement_tavern_names = count_unique_element_dict(xml_file_path, "./STATS/TAVERN_NAME", settlement_tavern_num)
@@ -183,6 +178,7 @@ print("\n")
 print("#### Demographics")
 print("___")
 print("- **Name: **" + settlement_name)
+print("- **Real population: **" + str(settlement_population))
 print("- **Population: **" + string.capwords(settlement_label))
 print("- **Number by race: **")
 for x, y in settlement_races.items():
@@ -237,4 +233,5 @@ for x, y in settlement_taverns.items():
 
 
 
-make_MFC(str(settlement_wards), str(randomseed), settlement_name)
+
+#webthing(str(settlement_wards), str(randomseed), settlement_name)
