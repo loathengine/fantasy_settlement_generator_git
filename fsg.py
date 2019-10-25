@@ -6,14 +6,15 @@
 # tavern generator
 # npc generator
 
-import xml.etree.ElementTree as ElementTree
 import random
 import string
+import xml.etree.ElementTree as ElementTree
+import mfcg
 
-random.seed(random.randint(100, 100000))
+randomseed = random.randint(11111111, 99999999)
 
+random.seed(randomseed)
 
-# random.seed(86753099)
 
 
 def weighted_element_list(xml_file, element_root):
@@ -124,6 +125,10 @@ def get_settlement_tavern(t_n, t_l):
                                  tavern_menu[1], tavern_menu[2], tavern_menu[3], tavern_menu[4]]
     return xml_dict
 
+def make_MFC(size, seed, name):
+    web = "http://fantasycities.watabou.ru/?size=" + size + "&seed=" + seed + "&name=" + name
+    print (web)
+
 
 xml_file_path = 'data/monolith.xml'
 
@@ -229,3 +234,7 @@ for x, y in settlement_taverns.items():
     print("* " + y[6])
     print("* " + y[7])
     print("\n")
+
+
+
+make_MFC(str(settlement_wards), str(randomseed), settlement_name)
