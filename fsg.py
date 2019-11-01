@@ -123,12 +123,18 @@ def get_settlement_tavern(t_n, t_l):
                                  tavern_menu[1], tavern_menu[2], tavern_menu[3], tavern_menu[4]]
     return xml_dict
 
-def webthing(size, seed, name):
+def web_get_city(size, seed, name):
     DRIVER = 'C:\Program Files (x86)\Google\chromedriver.exe'
     driver = webdriver.Chrome(DRIVER)
     driver.get('http://fantasycities.watabou.ru/?size=' + str(size) + '&seed=' + str(seed) + '&name=' + name)
     screenshot = driver.save_screenshot('output/' + str(seed) + '.png')
     driver.quit()
+
+def web_paste_city():
+    # Using Chrome to access web
+    driver = webdriver.Chrome()
+    # Open the website
+    driver.get('https://homebrewery.naturalcrit.com/new')
 
 xml_file_path = 'data/monolith.xml'
 
@@ -140,7 +146,7 @@ industry_raw = weighted_element_list(xml_file_path, "./ENV/BIOME[@name='" + prim
 env_biome_topo_raw = "./ENV/BIOME[@name='" + primary_biome[0] + "']/TOPOGRAPHY[@name='" + primary_topography[0] + "']/RAW[@name='" + industry_raw[0] + "']"
 
 settlement_name = str(weighted_element_list(xml_file_path, env_biome_topo_raw + "/SIGN")[0])
-settlement_population = random.randint(300, 30000)
+settlement_population = random.randint(300, 3000)
 settlement_label = get_settlement_label(xml_file_path, "./STATS/LABEL", settlement_population)
 settlement_density = random.randint(3, 7)
 settlement_wealth = random.randint(1, 6)
@@ -234,4 +240,26 @@ for x, y in settlement_taverns.items():
 
 
 
-#webthing(str(settlement_wards), str(randomseed), settlement_name)
+#web_get_city(str(settlement_wards), str(randomseed), settlement_name)
+
+#web_paste_city
+
+# Using Chrome to access web
+# Open the website
+DRIVER = 'C:\Program Files (x86)\Google\chromedriver.exe'
+driver = webdriver.Chrome(DRIVER)
+driver.get('https://homebrewery.naturalcrit.com/new')
+ids = driver.find_elements_by_css_selector('div.codeEditor')
+for ii in ids:
+    #print ii.tag_name
+    print (ii)    # id name as string
+id_box = driver.find_element_by_css_selector('div.codeEditor')
+id_box.click()
+
+from selenium.webdriver.common.action_chains import ActionChains
+actions = ActionChains(driver)
+actions.send_keys('Fantasy City!')
+actions.perform()
+
+#send_keys('Fantasy City!')
+#driver.quit()
