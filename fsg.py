@@ -131,10 +131,21 @@ def web_get_city(size, seed, name):
     driver.quit()
 
 def web_paste_city():
-    # Using Chrome to access web
-    driver = webdriver.Chrome()
-    # Open the website
+    DRIVER = 'C:\Program Files (x86)\Google\chromedriver.exe'
+    driver = webdriver.Chrome(DRIVER)
     driver.get('https://homebrewery.naturalcrit.com/new')
+    id_box = driver.find_element_by_css_selector('div.codeEditor')
+    id_box.click()
+    from selenium.webdriver.common.action_chains import ActionChains
+    actions = ActionChains(driver)
+    actions.send_keys('Fantasy City!')
+    actions.perform()
+
+def write_web_page(str, seed):
+    filename = "c:\/Users\/johnf\/Desktop\/homebrew\/" + seed + ".html"
+    file = open(filename, "w")
+    file.writelines(str)
+    file.close()
 
 xml_file_path = 'data/monolith.xml'
 
@@ -163,6 +174,9 @@ district_info = count_unique_element_dict(xml_file_path, env_biome_topo_raw + "/
 settlement_tavern_num = (2 + settlement_population // 3000)
 settlement_tavern_names = count_unique_element_dict(xml_file_path, "./STATS/TAVERN_NAME", settlement_tavern_num)
 settlement_taverns = get_settlement_tavern(settlement_tavern_names, district_info)
+
+
+
 
 print("# " + settlement_name)
 print("\n")
@@ -238,28 +252,69 @@ for x, y in settlement_taverns.items():
     print("\n")
 
 
+web_page = ""
+
+web_page = web_page + '<!DOCTYPE html> \n'
+web_page = web_page + '<!-- saved from url=(0065)https://homebrewery.naturalcrit.com/print?dialog=true&local=print --> \n'
+web_page = web_page + '<html> \n'
+web_page = web_page + '   <head> \n'
+web_page = web_page + '      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> \n'
+web_page = web_page + '      <link href="./markup_files/font-awesome.min.css" rel="stylesheet"> \n'
+web_page = web_page + '      <link href="./markup_files/css" rel="stylesheet" type="text/css"> \n'
+web_page = web_page + '      <title>Fantasy Settlement Generator</title> \n'
+web_page = web_page + '      <link rel="stylesheet" type="text/css" href="./markup_files/bundle.css"> \n'
+web_page = web_page + '      <style class="crddr-fonts" type="text/css">@import url(https://fonts.googleapis.com/css?family=Bitter:bold);</style> \n'
+web_page = web_page + '      <style class="crddr-fonts" type="text/css">@font-face {font-family: "Helvetica Neue For Number"; src: local("Helvetica Neue"); unicode-range: U+30-39; } \n'
+web_page = web_page + "         @font-face {font-family: 'anticon'; src: url('https://at.alicdn.com/t/font_148784_v4ggb6wrjmkotj4i.eot'); /* IE9*/ src: url('https://at.alicdn.com/t/font_148784_v4ggb6wrjmkotj4i.eot?#iefix') format('embedded-opentype'), /* chrome, firefox */ url('https://at.alicdn.com/t/font_148784_v4ggb6wrjmkotj4i.woff') format('woff'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('https://at.alicdn.com/t/font_148784_v4ggb6wrjmkotj4i.ttf') format('truetype'), /* iOS 4.1- */ url('https://at.alicdn.com/t/font_148784_v4ggb6wrjmkotj4i.svg#iconfont') format('svg'); } /* \n"
+web_page = web_page + "         @font-face {font-family: 'ReviewIcons'; src: local('ReviewIcons'), url('.../assets/ReviewIcons.woff') format('woff'); } */ \n"
+web_page = web_page + '      </style> \n'
+web_page = web_page + '   </head> \n'
+web_page = web_page + '<body> \n'
+web_page = web_page + '<main> \n'
+web_page = web_page + '<div> \n'
+
+#Page one
+
+web_page = web_page + '<div class="phb" id="p1"> \n'
+web_page = web_page + '<style> \n'
+web_page = web_page + '.phb#p1{ text-align:center; } \n'
+web_page = web_page + '.phb#p1:after{ display:none; } \n'
+web_page = web_page + '</style> \n'
+web_page = web_page + '<div style="margin-top:450px;">  </div> \n'
+web_page = web_page + '<h1 id="' + settlement_name + '">' + settlement_name + ' </h1> \n'
+web_page = web_page + '<div style="margin-top:25px"> \n'
+web_page = web_page + '<p></p> \n'
+web_page = web_page + '</div> \n'
+web_page = web_page + '<p></p> \n'
+web_page = web_page + '<p></p> \n'
+web_page = web_page + '<div class="wide"> \n'
+web_page = web_page + '<p></p> \n'
+web_page = web_page + '<h5 id="a-mystical-settlement-in-a-fantastical-world">A mystical settlement in a fantastical world</h5> \n'
+web_page = web_page + '</div> \n'
+web_page = web_page + '</div> \n'
+
+#Page two
+web_page = web_page + '<div class="phb" id="p2"> \n'
+web_page = web_page + '<h1 id="' + settlement_name + '">' + settlement_name + ' </h1> \n'
+web_page = web_page + '<div class="wide"><p><img src="' + "12344321.png" + '" style="width:700px"></p></div> \n'
+web_page = web_page + '<h3 id="background">Background</h3>'
+web_page = web_page + '<p>Add background flavor.</p>'
+web_page = web_page + '<div class="pageNumber"><p>1</p></div><p></p><p></p><div class="footnote">PAGE 1 | ' + settlement_name + '<p></p></div>'
+web_page = web_page + '</div> \n'
+
+
+#Page three
+web_page = web_page + '<div class="phb" id="p3"> \n'
+
+
+web_page = web_page + '<div class="pageNumber"><p>2</p></div><p></p><p></p><div class="footnote">PAGE 2 | ' + settlement_name + '<p></p></div>'
+web_page = web_page + '</div> \n'
+
+#footer
+web_page = web_page + '</div> \n'
+
+write_web_page(web_page, "12344321")
 
 
 #web_get_city(str(settlement_wards), str(randomseed), settlement_name)
 
-#web_paste_city
-
-# Using Chrome to access web
-# Open the website
-DRIVER = 'C:\Program Files (x86)\Google\chromedriver.exe'
-driver = webdriver.Chrome(DRIVER)
-driver.get('https://homebrewery.naturalcrit.com/new')
-ids = driver.find_elements_by_css_selector('div.codeEditor')
-for ii in ids:
-    #print ii.tag_name
-    print (ii)    # id name as string
-id_box = driver.find_element_by_css_selector('div.codeEditor')
-id_box.click()
-
-from selenium.webdriver.common.action_chains import ActionChains
-actions = ActionChains(driver)
-actions.send_keys('Fantasy City!')
-actions.perform()
-
-#send_keys('Fantasy City!')
-#driver.quit()
