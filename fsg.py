@@ -6,6 +6,7 @@
 # tavern generator
 # npc generator
 
+import time
 import random
 import string
 import xml.etree.ElementTree as ElementTree
@@ -124,25 +125,15 @@ def get_settlement_tavern(t_n, t_l):
     return xml_dict
 
 def web_get_city(size, seed, name):
-    DRIVER = 'C:\Program Files (x86)\Google\chromedriver.exe'
+    DRIVER = 'web/driver/chromedriver.exe'
     driver = webdriver.Chrome(DRIVER)
     driver.get('http://fantasycities.watabou.ru/?size=' + str(size) + '&seed=' + str(seed) + '&name=' + name)
-    screenshot = driver.save_screenshot('output/' + str(seed) + '.png')
+    time.sleep(8)
+    screenshot = driver.save_screenshot('web/' + str(seed) + '.png')
     driver.quit()
 
-def web_paste_city():
-    DRIVER = 'C:\Program Files (x86)\Google\chromedriver.exe'
-    driver = webdriver.Chrome(DRIVER)
-    driver.get('https://homebrewery.naturalcrit.com/new')
-    id_box = driver.find_element_by_css_selector('div.codeEditor')
-    id_box.click()
-    from selenium.webdriver.common.action_chains import ActionChains
-    actions = ActionChains(driver)
-    actions.send_keys('Fantasy City!')
-    actions.perform()
-
 def write_web_page(str, seed):
-    filename = "c:\/Users\/johnf\/Desktop\/homebrew\/" + seed + ".html"
+    filename = "web/" + seed + ".html"
     file = open(filename, "w")
     file.writelines(str)
     file.close()
@@ -157,7 +148,7 @@ industry_raw = weighted_element_list(xml_file_path, "./ENV/BIOME[@name='" + prim
 env_biome_topo_raw = "./ENV/BIOME[@name='" + primary_biome[0] + "']/TOPOGRAPHY[@name='" + primary_topography[0] + "']/RAW[@name='" + industry_raw[0] + "']"
 
 settlement_name = str(weighted_element_list(xml_file_path, env_biome_topo_raw + "/SIGN")[0])
-settlement_population = random.randint(300, 3000)
+settlement_population = random.randint(300, 30000)
 settlement_label = get_settlement_label(xml_file_path, "./STATS/LABEL", settlement_population)
 settlement_density = random.randint(3, 7)
 settlement_wealth = random.randint(1, 6)
@@ -175,82 +166,11 @@ settlement_tavern_num = (2 + settlement_population // 3000)
 settlement_tavern_names = count_unique_element_dict(xml_file_path, "./STATS/TAVERN_NAME", settlement_tavern_num)
 settlement_taverns = get_settlement_tavern(settlement_tavern_names, district_info)
 
-
-
-
-print("# " + settlement_name)
-print("\n")
-print("<div class='wide'>")
-print("<img src='https://i.imgur.com/TXNeTYQ.png' style='width:700px' />")
-print("</div>")
-print("\n")
-print("### Background")
-print("Add background flavor.")
-print("\n")
-print("\page")
-print("\n")
-print("## Settlement Features")
-print(
-    settlement_name + " is a " + settlement_label + " located in the " + primary_topography[0] + " region of the areas "
+settlement_features = (settlement_name + " is a " + settlement_label + " located in the " + primary_topography[0] + " region of the areas "
     + "greater " + primary_biome[0] + ".  The settlement seems to be " + settlement_age[0] + ".  " + settlement_name +
     " and the local surroundings are under the control of " + settlement_government[0] + ".")
-print("\n")
-print("#### Demographics")
-print("___")
-print("- **Name: **" + settlement_name)
-print("- **Real population: **" + str(settlement_population))
-print("- **Population: **" + string.capwords(settlement_label))
-print("- **Number by race: **")
-for x, y in settlement_races.items():
-    print(string.capwords(x) + " " + y[0] + "%,")
-print("- **Wealth: **" + str(settlement_wealth))
-print("- **Age: **" + string.capwords(settlement_age[0]))
-print("- **Alignment: **" + str(settlement_alignment))
-print("- **Government Type: **" + string.capwords(settlement_government[0]) + " - " + settlement_government[2])
-print("- **Settlement Trait: **" + settlement_trait[0])
-print("- **Number Of Wards: **" + str(settlement_wards))
-print("- **Number of Districts: ** " + str(district_number))
-print("\n")
-print("#### Industry and Economy")
-print("___")
-print("- **Primary Raw Materials: **" + string.capwords(industry_raw[0]))
-print("- **Shops of Note: **")
-for x in settlement_shops.keys():
-    if x == list(settlement_shops.keys())[-1]:
-        print(x + ".")
-    else:
-        print(x + ",")
-print("- **Number Of Inns/Taverns: **" + str(settlement_tavern_num))
-print("- **Inns/Taverns of Note: **")
-for x in settlement_tavern_names.keys():
-    if x == list(settlement_tavern_names.keys())[-1]:
-        print(x + ".")
-    else:
-        print(x + ",")
-print("\n")
 
-print("### Districts")
-for x, y in district_info.items():
-    print("##### " + x)
-    print(y[1])
-print("\n")
-
-for x, y in settlement_taverns.items():
-    print("## " + x)
-    print("#####  Location")
-    print(y[0])
-    print("##### Description")
-    print(y[1])
-    print("##### Innkeeper")
-    print(y[2])
-    print("##### Menu")
-    print("* " + y[3])
-    print("* " + y[4])
-    print("* " + y[5])
-    print("* " + y[6])
-    print("* " + y[7])
-    print("\n")
-
+page_number = 0
 
 web_page = ""
 
@@ -273,7 +193,7 @@ web_page = web_page + '<body> \n'
 web_page = web_page + '<main> \n'
 web_page = web_page + '<div> \n'
 
-#Page one
+#Page title
 
 web_page = web_page + '<div class="phb" id="p1"> \n'
 web_page = web_page + '<style> \n'
@@ -293,28 +213,89 @@ web_page = web_page + '<h5 id="a-mystical-settlement-in-a-fantastical-world">A m
 web_page = web_page + '</div> \n'
 web_page = web_page + '</div> \n'
 
-#Page two
+#Page one
+page_number += 1
 web_page = web_page + '<div class="phb" id="p2"> \n'
-web_page = web_page + '<h1 id="' + settlement_name + '">' + settlement_name + ' </h1> \n'
-web_page = web_page + '<div class="wide"><p><img src="' + "12344321.png" + '" style="width:700px"></p></div> \n'
+web_page = web_page + '<div class="wide"><p><img src="' + str(randomseed) + ".png" + '" style="width:700px"></p></div> \n'
 web_page = web_page + '<h3 id="background">Background</h3>'
 web_page = web_page + '<p>Add background flavor.</p>'
-web_page = web_page + '<div class="pageNumber"><p>1</p></div><p></p><p></p><div class="footnote">PAGE 1 | ' + settlement_name + '<p></p></div>'
+web_page = web_page + '<div class="pageNumber"><p>' + str(page_number) + '</p></div><p></p><p></p><div class="footnote">PAGE ' + str(page_number) + '| ' + settlement_name + '<p></p></div>'
 web_page = web_page + '</div> \n'
 
 
-#Page three
+#Page two
+page_number += 1
 web_page = web_page + '<div class="phb" id="p3"> \n'
+web_page = web_page + '<h2 id="settlement-features">Settlement Features</h2>'
+web_page = web_page + '<p>' + settlement_features + '</p>'
+web_page = web_page + '<h4 id="demographics">Demographics</h4>'
+web_page = web_page + '<hr>'
+web_page = web_page + '<ul>'
+web_page = web_page + '<li><strong>Name: </strong>' + settlement_name + '</li>'
+web_page = web_page + '<li><strong>Real population: </strong>' + str(settlement_population) + '</li>'
+web_page = web_page + '<li><strong>Population: </strong>'+ string.capwords(settlement_label) + '</li>'
+web_page = web_page + '<li><strong>Number by race: </strong>'
+for x, y in settlement_races.items():
+    web_page = web_page + string.capwords(x) + " " + y[0] + "%, "
+web_page = web_page + '</li>'
+web_page = web_page + '<li><strong>Wealth: </strong>' + str(settlement_wealth) + '</li>'
+web_page = web_page + '<li><strong>Age: </strong>' + str(settlement_wealth) + '</li>'
+web_page = web_page + '<li><strong>Alignment: </strong>' + str(settlement_alignment) + '</li>'
+web_page = web_page + "<li><strong>Government Type: </strong>"  + string.capwords(settlement_government[0]) + " - " + settlement_government[2] + "</li>"
+web_page = web_page + '<li><strong>Settlement Trait: </strong>' + settlement_trait[0] + '</li>'
+web_page = web_page + '<li><strong>Number Of Wards: </strong>' + str(settlement_wards) + '</li>'
+web_page = web_page + '<li><strong>Number of Districts: </strong>' + str(district_number) + '</li>'
+web_page = web_page + '</ul>'
+web_page = web_page + '<h4 id="industry-and-economy">Industry and Economy</h4>'
+web_page = web_page + '<hr>'
+web_page = web_page + '<ul>'
+web_page = web_page + '<li><strong>Primary Raw Materials: </strong>' + string.capwords(industry_raw[0]) + '</li>'
+web_page = web_page + '<li><strong>Shops of Note: </strong>'
+for x in settlement_shops.keys():
+    if x == list(settlement_shops.keys())[-1]:
+        web_page = web_page + x + "."
+    else:
+        web_page = web_page + x + ", "
+web_page = web_page + '</li>'
+web_page = web_page + '<li><strong>Number Of Inns/Taverns: </strong>2</li>'
+web_page = web_page + '<li><strong>Inns/Taverns of Note: </strong>'
+for x in settlement_tavern_names.keys():
+    if x == list(settlement_tavern_names.keys())[-1]:
+        web_page = web_page + x + "."
+    else:
+        web_page = web_page + x + ", "
+web_page = web_page + '</li>'
+web_page = web_page + '</ul>'
+web_page = web_page + '<h4 id="districts">Districts</h4>'
+for x, y in district_info.items():
+    web_page = web_page + '<h5 id="' + x + '">' + x + '</h5>'
+    web_page = web_page + '<p>' + y[1] + 'Get desc</p>'
+web_page = web_page + '<h3 id="districts">Taverns / Inns</h3>'
+for x, y in settlement_taverns.items():
+    web_page = web_page + '<h2 id="' + x + '">' + x + '</h2>'
+    web_page = web_page + '<h5 id="location">Location</h5>'
+    web_page = web_page + '<p>' + y[0] + '</p>'
+    web_page = web_page + '<h5 id="description">Description</h5>'
+    web_page = web_page + '<p>' + y[1] + '</p>'
+    web_page = web_page + '<h5 id="innkeeper">Innkeeper</h5>'
+    web_page = web_page + '<p>' + y[2] + '</p>'
+    web_page = web_page + '<h5 id="menu">Menu</h5>'
+    web_page = web_page + '<ul>'
+    web_page = web_page + '<li>' + y[3] + '</li>'
+    web_page = web_page + '<li>' + y[4] + '</li>'
+    web_page = web_page + '<li>' + y[5] + '</li>'
+    web_page = web_page + '<li>' + y[6] + '</li>'
+    web_page = web_page + '<li>' + y[7] + '</li>'
+    web_page = web_page + '</ul>'
+    web_page = web_page + '<hr>'
 
-
-web_page = web_page + '<div class="pageNumber"><p>2</p></div><p></p><p></p><div class="footnote">PAGE 2 | ' + settlement_name + '<p></p></div>'
-web_page = web_page + '</div> \n'
-
+web_page = web_page + '<div class="pageNumber"><p>' + str(page_number) + '</p></div><p></p><p></p><div class="footnote">PAGE ' + str(page_number) + ' | ' + settlement_name + '<p></p></div>'
+web_page = web_page + '</div>'
 #footer
-web_page = web_page + '</div> \n'
+web_page = web_page + '</div></main></body></html>'
 
-write_web_page(web_page, "12344321")
+write_web_page(web_page, str(randomseed))
 
 
-#web_get_city(str(settlement_wards), str(randomseed), settlement_name)
+web_get_city(str(settlement_wards), str(randomseed), settlement_name)
 
