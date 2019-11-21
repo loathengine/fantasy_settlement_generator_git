@@ -148,11 +148,12 @@ industry_raw = weighted_element_list(xml_file_path, "./ENV/BIOME[@name='" + prim
 env_biome_topo_raw = "./ENV/BIOME[@name='" + primary_biome[0] + "']/TOPOGRAPHY[@name='" + primary_topography[0] + "']/RAW[@name='" + industry_raw[0] + "']"
 
 settlement_name = str(weighted_element_list(xml_file_path, env_biome_topo_raw + "/SIGN")[0])
-settlement_population = random.randint(300, 30000)
+settlement_population = random.randint(300, 20000)
 settlement_label = get_settlement_label(xml_file_path, "./STATS/LABEL", settlement_population)
 settlement_density = random.randint(3, 7)
 settlement_wealth = random.randint(1, 6)
 settlement_age = weighted_element_list(xml_file_path, "./STATS/AGE")
+background_flavor = str(weighted_element_list(xml_file_path, "./STATS/FLAVOR")[2])
 settlement_alignment = random.randint(1, 6)
 settlement_government = weighted_element_list(xml_file_path, "./STATS/GOVERNMENT")
 settlement_trait = weighted_element_list(xml_file_path, "./STATS/TRAIT")
@@ -162,6 +163,7 @@ settlement_shops = get_settlement_shops(xml_file_path, env_biome_topo_raw + "/SH
 settlement_races = all_unique_element_dict(xml_file_path, "./STATS/RACE")
 district_number = 3 + (settlement_population // settlement_density) // 1000
 district_info = count_unique_element_dict(xml_file_path, env_biome_topo_raw + "/DISTRICT", district_number)
+district_trait = count_unique_element_dict(xml_file_path, "./STATS/DISTRICT_TRAIT", district_number)
 settlement_tavern_num = (2 + settlement_population // 3000)
 settlement_tavern_names = count_unique_element_dict(xml_file_path, "./STATS/TAVERN_NAME", settlement_tavern_num)
 settlement_taverns = get_settlement_tavern(settlement_tavern_names, district_info)
@@ -171,7 +173,7 @@ settlement_features = (settlement_name + " is a " + settlement_label + " located
     " and the local surroundings are under the control of " + settlement_government[0] + ".")
 
 page_number = 0
-
+page_iterator = 0
 web_page = ""
 
 web_page = web_page + '<!DOCTYPE html> \n'
@@ -217,8 +219,8 @@ web_page = web_page + '</div> \n'
 page_number += 1
 web_page = web_page + '<div class="phb" id="p2"> \n'
 web_page = web_page + '<div class="wide"><p><img src="' + str(randomseed) + ".png" + '" style="width:700px"></p></div> \n'
-web_page = web_page + '<h3 id="background">Background</h3>'
-web_page = web_page + '<p>Add background flavor.</p>'
+web_page = web_page + '<h3 id="background">Background Flavor</h3>'
+web_page = web_page + '<p>' + background_flavor + '</p>'
 web_page = web_page + '<div class="pageNumber"><p>' + str(page_number) + '</p></div><p></p><p></p><div class="footnote">PAGE ' + str(page_number) + '| ' + settlement_name + '<p></p></div>'
 web_page = web_page + '</div> \n'
 
@@ -267,9 +269,10 @@ for x in settlement_tavern_names.keys():
 web_page = web_page + '</li>'
 web_page = web_page + '</ul>'
 web_page = web_page + '<h4 id="districts">Districts</h4>'
-for x, y in district_info.items():
-    web_page = web_page + '<h5 id="' + x + '">' + x + '</h5>'
-    web_page = web_page + '<p>' + y[1] + 'Get desc</p>'
+for x, y in zip(district_info.items(), district_trait.items()):
+    web_page = web_page + '<h5 id="' + x[0] + '">' + x[0] + '</h5>'
+    z = y[1]
+    web_page = web_page + '<p>' + y[0] + ': ' + z[1] + '</p>'
 web_page = web_page + '<h3 id="districts">Taverns / Inns</h3>'
 for x, y in settlement_taverns.items():
     web_page = web_page + '<h2 id="' + x + '">' + x + '</h2>'
@@ -288,6 +291,13 @@ for x, y in settlement_taverns.items():
     web_page = web_page + '<li>' + y[7] + '</li>'
     web_page = web_page + '</ul>'
     web_page = web_page + '<hr>'
+    page_iterator += 1
+    if page_iterator == 3 or page_iterator == 9:
+        web_page = web_page + '<div class="pageNumber"><p>' + str(page_number) + '</p></div><p></p><p></p><div class="footnote">PAGE ' + str(page_number) + '| ' + settlement_name + '<p></p></div>'
+        web_page = web_page + '</div> \n'
+        web_page = web_page + '<div class="phb" id="p4"> \n'
+        page_number += 1
+
 
 web_page = web_page + '<div class="pageNumber"><p>' + str(page_number) + '</p></div><p></p><p></p><div class="footnote">PAGE ' + str(page_number) + ' | ' + settlement_name + '<p></p></div>'
 web_page = web_page + '</div>'

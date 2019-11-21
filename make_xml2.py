@@ -23,6 +23,7 @@ district_trait = import_csv('data/district_trait.txt')
 tavern_names = import_csv('data/tavern_names.txt')
 tavern_description = import_csv('data/tavern_description.txt')
 tavern_menu = import_csv('data/tavern_menu.txt')
+background_flavor = import_csv('data/background_flavor.txt')
 
 def write_xml(file):
     print('<?xml version="1.0" encoding="UTF-8"?>', file=file)
@@ -46,6 +47,8 @@ def write_xml(file):
     print('  </ENV>', file=file)
 
     print('  <STATS>', file=file)
+    for b_f in background_flavor:
+        print('    <FLAVOR name="' + str(b_f['key']) + '" weight="' + str(b_f['weight']) + '" desc="' + str(b_f['desc']) + '" />', file=file)
     for r_p in race_percentage:
         print('    <RACE name="' + str(r_p['key']) + '" weight="' + str(r_p['weight']) + '" desc="' + str(r_p['desc']) + '" />', file=file)
     for s_a in settle_age:
