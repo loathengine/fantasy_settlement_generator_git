@@ -125,8 +125,8 @@ def get_settlement_tavern(t_n, t_l):
     return xml_dict
 
 def web_get_city(size, seed, name):
-    DRIVER = 'web/driver/chromedriver.exe'
-    driver = webdriver.Chrome(DRIVER)
+    DRIVER = '/home/loathengine/PycharmProjects/fantasy_settlement_generator_git/web/driver'
+    driver = webdriver.Firefox(DRIVER)
     driver.get('http://fantasycities.watabou.ru/?size=' + str(size) + '&seed=' + str(seed) + '&name=' + name)
     time.sleep(8)
     screenshot = driver.save_screenshot('web/' + str(seed) + '.png')
