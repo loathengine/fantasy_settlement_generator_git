@@ -136,7 +136,7 @@ def web_get_city(size, seed, name):
 
 
 def write_web_page(str, seed):
-    filename = "web/cities" + seed + ".html"
+    filename = "web/cities/" + seed + ".html"
     file = open(filename, "w")
     file.writelines(str)
     file.close()
