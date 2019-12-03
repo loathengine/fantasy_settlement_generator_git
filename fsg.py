@@ -133,7 +133,7 @@ def web_get_city(size, seed, name):
     options.headless = True
     driver = webdriver.Firefox(options=options, executable_path='web/driver/geckodriver')
     driver.set_window_position(0, 0)
-    driver.set_window_size(1024, 1024)
+    driver.set_window_size(1024, 1098)
     driver.get('http://0.0.0.0:8000/MFCG.html?size=' + str(size) + '&seed=' + str(seed) + '&name=' + name)
     print("Headless Firefox Initialized")
     time.sleep(8)
