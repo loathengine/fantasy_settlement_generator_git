@@ -128,10 +128,10 @@ def get_settlement_tavern(t_n, t_l):
 def web_get_city(size, seed, name):
     from selenium import webdriver
     driver = webdriver.Firefox(executable_path='./web/driver/geckodriver')
-    driver.get(http://0.0.0.0:8000/MFCG.html?size=' + str(size) + '&seed=' + str(seed) + '&name=' + name)
+    driver.get('http://0.0.0.0:8000/MFCG.html?size=' + str(size) + '&seed=' + str(seed) + '&name=' + name)
 #    driver.get('http://fantasycities.watabou.ru/?size=' + str(size) + '&seed=' + str(seed) + '&name=' + name)
     time.sleep(8)
-    screenshot = driver.save_screenshot('web/' + str(seed) + '.png')
+    screenshot = driver.save_screenshot('web/cities/' + str(seed) + '.png')
     driver.quit()
 
 
@@ -189,10 +189,10 @@ web_page = web_page + '<!-- saved from url=(0065)https://homebrewery.naturalcrit
 web_page = web_page + '<html> \n'
 web_page = web_page + '   <head> \n'
 web_page = web_page + '      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> \n'
-web_page = web_page + '      <link href="./markup_files/font-awesome.min.css" rel="stylesheet"> \n'
-web_page = web_page + '      <link href="./markup_files/css" rel="stylesheet" type="text/css"> \n'
+web_page = web_page + '      <link href="/markup_files/font-awesome.min.css" rel="stylesheet"> \n'
+web_page = web_page + '      <link href="/markup_files/css" rel="stylesheet" type="text/css"> \n'
 web_page = web_page + '      <title>Fantasy Settlement Generator</title> \n'
-web_page = web_page + '      <link rel="stylesheet" type="text/css" href="./markup_files/bundle.css"> \n'
+web_page = web_page + '      <link rel="stylesheet" type="text/css" href="/markup_files/bundle.css"> \n'
 web_page = web_page + '      <style class="crddr-fonts" type="text/css">@import url(https://fonts.googleapis.com/css?family=Bitter:bold);</style> \n'
 web_page = web_page + '      <style class="crddr-fonts" type="text/css">@font-face {font-family: "Helvetica Neue For Number"; src: local("Helvetica Neue"); unicode-range: U+30-39; } \n'
 web_page = web_page + "         @font-face {font-family: 'anticon'; src: url('https://at.alicdn.com/t/font_148784_v4ggb6wrjmkotj4i.eot'); /* IE9*/ src: url('https://at.alicdn.com/t/font_148784_v4ggb6wrjmkotj4i.eot?#iefix') format('embedded-opentype'), /* chrome, firefox */ url('https://at.alicdn.com/t/font_148784_v4ggb6wrjmkotj4i.woff') format('woff'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('https://at.alicdn.com/t/font_148784_v4ggb6wrjmkotj4i.ttf') format('truetype'), /* iOS 4.1- */ url('https://at.alicdn.com/t/font_148784_v4ggb6wrjmkotj4i.svg#iconfont') format('svg'); } /* \n"
