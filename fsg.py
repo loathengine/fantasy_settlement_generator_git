@@ -10,11 +10,11 @@ import time
 import random
 import string
 import xml.etree.ElementTree as ElementTree
-from selenium import webdriver
 
 randomseed = random.randint(11111111, 99999999)
 
 random.seed(randomseed)
+
 
 def weighted_element_list(xml_file, element_root):
     """Takes a file and an element name and returns a weighted random result"""
@@ -124,13 +124,16 @@ def get_settlement_tavern(t_n, t_l):
                                  tavern_menu[1], tavern_menu[2], tavern_menu[3], tavern_menu[4]]
     return xml_dict
 
+
 def web_get_city(size, seed, name):
-    DRIVER = '/home/loathengine/PycharmProjects/fantasy_settlement_generator_git/web/driver'
-    driver = webdriver.Firefox(DRIVER)
-    driver.get('http://fantasycities.watabou.ru/?size=' + str(size) + '&seed=' + str(seed) + '&name=' + name)
+    from selenium import webdriver
+    driver = webdriver.Firefox(executable_path='./web/driver/geckodriver')
+    driver.get(http://0.0.0.0:8000/MFCG.html?size=' + str(size) + '&seed=' + str(seed) + '&name=' + name)
+#    driver.get('http://fantasycities.watabou.ru/?size=' + str(size) + '&seed=' + str(seed) + '&name=' + name)
     time.sleep(8)
     screenshot = driver.save_screenshot('web/' + str(seed) + '.png')
     driver.quit()
+
 
 def write_web_page(str, seed):
     filename = "web/" + seed + ".html"
@@ -138,14 +141,17 @@ def write_web_page(str, seed):
     file.writelines(str)
     file.close()
 
+
 xml_file_path = 'data/monolith.xml'
 
 primary_env = weighted_element_list(xml_file_path, "./ENV")
 primary_biome = weighted_element_list(xml_file_path, "./ENV/BIOME")
 primary_topography = weighted_element_list(xml_file_path, "./ENV/BIOME[@name='" + primary_biome[0] + "']/TOPOGRAPHY")
-industry_raw = weighted_element_list(xml_file_path, "./ENV/BIOME[@name='" + primary_biome[0] + "']/TOPOGRAPHY[@name='" + primary_topography[0] + "']/RAW")
+industry_raw = weighted_element_list(xml_file_path, "./ENV/BIOME[@name='" + primary_biome[0] + "']/TOPOGRAPHY[@name='" +
+                                     primary_topography[0] + "']/RAW")
 
-env_biome_topo_raw = "./ENV/BIOME[@name='" + primary_biome[0] + "']/TOPOGRAPHY[@name='" + primary_topography[0] + "']/RAW[@name='" + industry_raw[0] + "']"
+env_biome_topo_raw = "./ENV/BIOME[@name='" + primary_biome[0] + "']/TOPOGRAPHY[@name='" + primary_topography[
+    0] + "']/RAW[@name='" + industry_raw[0] + "']"
 
 settlement_name = str(weighted_element_list(xml_file_path, env_biome_topo_raw + "/SIGN")[0])
 settlement_population = random.randint(300, 20000)
@@ -168,9 +174,11 @@ settlement_tavern_num = (2 + settlement_population // 3000)
 settlement_tavern_names = count_unique_element_dict(xml_file_path, "./STATS/TAVERN_NAME", settlement_tavern_num)
 settlement_taverns = get_settlement_tavern(settlement_tavern_names, district_info)
 
-settlement_features = (settlement_name + " is a " + settlement_label + " located in the " + primary_topography[0] + " region of the areas "
-    + "greater " + primary_biome[0] + ".  The settlement seems to be " + settlement_age[0] + ".  " + settlement_name +
-    " and the local surroundings are under the control of " + settlement_government[0] + ".")
+settlement_features = (settlement_name + " is a " + settlement_label + " located in the " + primary_topography[
+    0] + " region of the areas "
+                       + "greater " + primary_biome[0] + ".  The settlement seems to be " + settlement_age[
+                           0] + ".  " + settlement_name +
+                       " and the local surroundings are under the control of " + settlement_government[0] + ".")
 
 page_number = 0
 page_iterator = 0
@@ -195,7 +203,7 @@ web_page = web_page + '<body> \n'
 web_page = web_page + '<main> \n'
 web_page = web_page + '<div> \n'
 
-#Page title
+# Page title
 
 web_page = web_page + '<div class="phb" id="p1"> \n'
 web_page = web_page + '<style> \n'
@@ -215,17 +223,19 @@ web_page = web_page + '<h5 id="a-mystical-settlement-in-a-fantastical-world">A m
 web_page = web_page + '</div> \n'
 web_page = web_page + '</div> \n'
 
-#Page one
+# Page one
 page_number += 1
 web_page = web_page + '<div class="phb" id="p2"> \n'
-web_page = web_page + '<div class="wide"><p><img src="' + str(randomseed) + ".png" + '" style="width:700px"></p></div> \n'
+web_page = web_page + '<div class="wide"><p><img src="' + str(
+    randomseed) + ".png" + '" style="width:700px"></p></div> \n'
 web_page = web_page + '<h3 id="background">Background Flavor</h3>'
 web_page = web_page + '<p>' + background_flavor + '</p>'
-web_page = web_page + '<div class="pageNumber"><p>' + str(page_number) + '</p></div><p></p><p></p><div class="footnote">PAGE ' + str(page_number) + '| ' + settlement_name + '<p></p></div>'
+web_page = web_page + '<div class="pageNumber"><p>' + str(
+    page_number) + '</p></div><p></p><p></p><div class="footnote">PAGE ' + str(
+    page_number) + '| ' + settlement_name + '<p></p></div>'
 web_page = web_page + '</div> \n'
 
-
-#Page two
+# Page two
 page_number += 1
 web_page = web_page + '<div class="phb" id="p3"> \n'
 web_page = web_page + '<h2 id="settlement-features">Settlement Features</h2>'
@@ -235,7 +245,7 @@ web_page = web_page + '<hr>'
 web_page = web_page + '<ul>'
 web_page = web_page + '<li><strong>Name: </strong>' + settlement_name + '</li>'
 web_page = web_page + '<li><strong>Real population: </strong>' + str(settlement_population) + '</li>'
-web_page = web_page + '<li><strong>Population: </strong>'+ string.capwords(settlement_label) + '</li>'
+web_page = web_page + '<li><strong>Population: </strong>' + string.capwords(settlement_label) + '</li>'
 web_page = web_page + '<li><strong>Number by race: </strong>'
 for x, y in settlement_races.items():
     web_page = web_page + string.capwords(x) + " " + y[0] + "%, "
@@ -243,7 +253,8 @@ web_page = web_page + '</li>'
 web_page = web_page + '<li><strong>Wealth: </strong>' + str(settlement_wealth) + '</li>'
 web_page = web_page + '<li><strong>Age: </strong>' + str(settlement_wealth) + '</li>'
 web_page = web_page + '<li><strong>Alignment: </strong>' + str(settlement_alignment) + '</li>'
-web_page = web_page + "<li><strong>Government Type: </strong>"  + string.capwords(settlement_government[0]) + " - " + settlement_government[2] + "</li>"
+web_page = web_page + "<li><strong>Government Type: </strong>" + string.capwords(settlement_government[0]) + " - " + \
+           settlement_government[2] + "</li>"
 web_page = web_page + '<li><strong>Settlement Trait: </strong>' + settlement_trait[0] + '</li>'
 web_page = web_page + '<li><strong>Number Of Wards: </strong>' + str(settlement_wards) + '</li>'
 web_page = web_page + '<li><strong>Number of Districts: </strong>' + str(district_number) + '</li>'
@@ -293,19 +304,20 @@ for x, y in settlement_taverns.items():
     web_page = web_page + '<hr>'
     page_iterator += 1
     if page_iterator == 3 or page_iterator == 9:
-        web_page = web_page + '<div class="pageNumber"><p>' + str(page_number) + '</p></div><p></p><p></p><div class="footnote">PAGE ' + str(page_number) + '| ' + settlement_name + '<p></p></div>'
+        web_page = web_page + '<div class="pageNumber"><p>' + str(
+            page_number) + '</p></div><p></p><p></p><div class="footnote">PAGE ' + str(
+            page_number) + '| ' + settlement_name + '<p></p></div>'
         web_page = web_page + '</div> \n'
         web_page = web_page + '<div class="phb" id="p4"> \n'
         page_number += 1
 
-
-web_page = web_page + '<div class="pageNumber"><p>' + str(page_number) + '</p></div><p></p><p></p><div class="footnote">PAGE ' + str(page_number) + ' | ' + settlement_name + '<p></p></div>'
+web_page = web_page + '<div class="pageNumber"><p>' + str(
+    page_number) + '</p></div><p></p><p></p><div class="footnote">PAGE ' + str(
+    page_number) + ' | ' + settlement_name + '<p></p></div>'
 web_page = web_page + '</div>'
-#footer
+# footer
 web_page = web_page + '</div></main></body></html>'
 
 write_web_page(web_page, str(randomseed))
 
-
 web_get_city(str(settlement_wards), str(randomseed), settlement_name)
-
