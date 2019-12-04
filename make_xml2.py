@@ -13,7 +13,7 @@ primary_topography = import_csv('data/primary_topography.txt')
 industry_raw = import_csv('data/industry_raw.txt')
 industry_shop = import_csv('data/industry_shop.txt')
 industry_services = import_csv('data/industry_services.txt')
-settlement_sign = import_csv('data/settlement_sign.txt')
+settlement_name = import_csv('data/settlement_name.txt')
 settlement_government = import_csv('data/settlement_government.txt')
 settlement_trait = import_csv('data/settlement_trait.txt')
 race_percentage = import_csv('data/race_percentage.txt')
@@ -35,8 +35,6 @@ def write_xml(file):
             print('      <TOPOGRAPHY name="' + str(p_t['key']) + '" weight="' + str(p_t['weight']) + '" desc="' + str(p_t['desc']) + '" >', file=file)
             for r_i in industry_raw:
                 print('        <RAW name="' + str(r_i['key']) + '" weight="' + str(r_i['weight']) + '" desc="' + str(r_i['desc']) + '" >', file=file)
-                for s_s in settlement_sign:
-                    print('          <SIGN name="' + str(s_s['key']) + '" weight="' + str(s_s['weight']) + '" desc="' + str(s_s['desc']) + '" />', file=file)
                 for i_s in industry_shop:
                     print('          <SHOP name="' + str(i_s['key']) + '" weight="' + str(i_s['weight']) + '" desc="' + str(i_s['desc']) + '" />', file=file)
                 for d_n in district_names:
@@ -47,6 +45,8 @@ def write_xml(file):
     print('  </ENV>', file=file)
 
     print('  <STATS>', file=file)
+    for s_s in settlement_name:
+        print('    <SETTLEMENT_NAME name="' + str(s_s['key']) + '" weight="' + str(s_s['weight']) + '" desc="' + str(s_s['desc']) + '" />', file=file)
     for b_f in background_flavor:
         print('    <FLAVOR name="' + str(b_f['key']) + '" weight="' + str(b_f['weight']) + '" desc="' + str(b_f['desc']) + '" />', file=file)
     for r_p in race_percentage:

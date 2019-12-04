@@ -221,3 +221,21 @@ JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383:
 JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
 * Can't use WebGL in headless mode (https://bugzil.la/1375585).
 1575414047058	Marionette	INFO	Stopped listening on port 43515
+1575476453397	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilef2WGtw"
+*** You are running in headless mode.
+1575476453886	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1575476453886	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1575476453886	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1575476453886	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1575476455155	Marionette	INFO	Listening on port 34747
+1575476455202	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1575476464118	Marionette	INFO	Stopped listening on port 34747

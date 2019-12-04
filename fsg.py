@@ -142,23 +142,19 @@ def web_get_city(size, seed, name):
 #    driver.get('http://fantasycities.watabou.ru/?size=' + str(size) + '&seed=' + str(seed) + '&name=' + name)
 
 
-def write_web_page(str, seed):
+def write_web_page(webout, seed):
     filename = "web/cities/" + seed + ".html"
     file = open(filename, "w")
-    file.writelines(str)
+    file.writelines(webout)
     file.close()
 
 
 xml_file_path = 'data/monolith.xml'
 
-primary_env = weighted_element_list(xml_file_path, "./ENV")
-primary_biome = weighted_element_list(xml_file_path, "./ENV/BIOME")
-primary_topography = weighted_element_list(xml_file_path, "./ENV/BIOME[@name='" + primary_biome[0] + "']/TOPOGRAPHY")
-industry_raw = weighted_element_list(xml_file_path, "./ENV/BIOME[@name='" + primary_biome[0] + "']/TOPOGRAPHY[@name='" +
-                                     primary_topography[0] + "']/RAW")
-
-env_biome_topo_raw = "./ENV/BIOME[@name='" + primary_biome[0] + "']/TOPOGRAPHY[@name='" + primary_topography[
-    0] + "']/RAW[@name='" + industry_raw[0] + "']"
+settlement_env = weighted_element_list(xml_file_path, "./ENV")
+settlement_env_biome = weighted_element_list(xml_file_path, "./ENV/BIOME")
+settlement_env_biome_topography = weighted_element_list(xml_file_path, "./ENV/BIOME[@name='" + settlement_env_biome[0] + "']/TOPOGRAPHY")
+settlement_env_biome_topography_raw = weighted_element_list(xml_file_path, "./ENV/BIOME[@name='" + settlement_env_biome[0] + "']/TOPOGRAPHY[@name='" + settlement_env_biome_topography[0] + "']/RAW")
 
 settlement_name = str(weighted_element_list(xml_file_path, env_biome_topo_raw + "/SIGN")[0])
 settlement_population = random.randint(300, 20000)
