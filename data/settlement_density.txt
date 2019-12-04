@@ -1,0 +1,11 @@
+key|weight|desc
+1|Inhospitable|1
+3|Desolate|3
+5|Arid|9
+10|Sparse|27
+20|Adequate|50
+40|Ample|50
+60|Abundant|27
+80|Fertile|9
+100|Plentiful|3
+120|Idyllic|1

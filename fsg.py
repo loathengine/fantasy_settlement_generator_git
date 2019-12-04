@@ -151,15 +151,27 @@ def write_web_page(webout, seed):
 
 xml_file_path = 'data/monolith.xml'
 
+
 settlement_env = weighted_element_list(xml_file_path, "./ENV")
 settlement_env_biome = weighted_element_list(xml_file_path, "./ENV/BIOME")
 settlement_env_biome_topography = weighted_element_list(xml_file_path, "./ENV/BIOME[@name='" + settlement_env_biome[0] + "']/TOPOGRAPHY")
 settlement_env_biome_topography_raw = weighted_element_list(xml_file_path, "./ENV/BIOME[@name='" + settlement_env_biome[0] + "']/TOPOGRAPHY[@name='" + settlement_env_biome_topography[0] + "']/RAW")
 
-settlement_name = str(weighted_element_list(xml_file_path, env_biome_topo_raw + "/SIGN")[0])
+env_biome_topo_raw = "./ENV/BIOME[@name='" + settlement_env_biome[0] + "']/TOPOGRAPHY[@name='" + settlement_env_biome_topography[
+    0] + "']/RAW[@name='" + settlement_env_biome_topography_raw[0] + "']"
+
 settlement_population = random.randint(300, 20000)
+settlement_shops_num = 3 + (settlement_population // 1500)
+settlement_shops = get_settlement_shops(xml_file_path, env_biome_topo_raw + "/SHOP", settlement_shops_num)
+
+settlement_density = weighted_element_list(xml_file_path, "./STATS/DENSITY")[0]
+settlement_district_number = 3 + (settlement_population // settlement_density) // 1000
+settlement_district_info = count_unique_element_dict(xml_file_path, env_biome_topo_raw + "/DISTRICT", settlement_district_number)
+
+
+
+settlement_name = str(weighted_element_list(xml_file_path, "./STATS/SETTLEMENT_NAME")[0])
 settlement_label = get_settlement_label(xml_file_path, "./STATS/LABEL", settlement_population)
-settlement_density = random.randint(3, 7)
 settlement_wealth = random.randint(1, 6)
 settlement_age = weighted_element_list(xml_file_path, "./STATS/AGE")
 background_flavor = str(weighted_element_list(xml_file_path, "./STATS/FLAVOR")[2])
@@ -167,19 +179,17 @@ settlement_alignment = random.randint(1, 6)
 settlement_government = weighted_element_list(xml_file_path, "./STATS/GOVERNMENT")
 settlement_trait = weighted_element_list(xml_file_path, "./STATS/TRAIT")
 settlement_wards = 6 + (settlement_population // settlement_density) // 100
-settlement_shops_num = 3 + (settlement_population // 1500)
-settlement_shops = get_settlement_shops(xml_file_path, env_biome_topo_raw + "/SHOP", settlement_shops_num)
+
 settlement_races = all_unique_element_dict(xml_file_path, "./STATS/RACE")
-district_number = 3 + (settlement_population // settlement_density) // 1000
-district_info = count_unique_element_dict(xml_file_path, env_biome_topo_raw + "/DISTRICT", district_number)
-district_trait = count_unique_element_dict(xml_file_path, "./STATS/DISTRICT_TRAIT", district_number)
+settlement_district_number = 3 + (settlement_population // settlement_density) // 1000
+settlement_district_trait = count_unique_element_dict(xml_file_path, "./STATS/DISTRICT_TRAIT", settlement_district_number)
 settlement_tavern_num = (2 + settlement_population // 3000)
 settlement_tavern_names = count_unique_element_dict(xml_file_path, "./STATS/TAVERN_NAME", settlement_tavern_num)
-settlement_taverns = get_settlement_tavern(settlement_tavern_names, district_info)
+settlement_taverns = get_settlement_tavern(settlement_tavern_names, settlement_district_info)
 
-settlement_features = (settlement_name + " is a " + settlement_label + " located in the " + primary_topography[
+settlement_features = (settlement_name + " is a " + settlement_label + " located in the " + settlement_env_biome_topography[
     0] + " region of the areas "
-                       + "greater " + primary_biome[0] + ".  The settlement seems to be " + settlement_age[
+                       + "greater " + settlement_env_biome[0] + ".  The settlement seems to be " + settlement_age[
                            0] + ".  " + settlement_name +
                        " and the local surroundings are under the control of " + settlement_government[0] + ".")
 
@@ -260,12 +270,12 @@ web_page = web_page + "<li><strong>Government Type: </strong>" + string.capwords
            settlement_government[2] + "</li>"
 web_page = web_page + '<li><strong>Settlement Trait: </strong>' + settlement_trait[0] + '</li>'
 web_page = web_page + '<li><strong>Number Of Wards: </strong>' + str(settlement_wards) + '</li>'
-web_page = web_page + '<li><strong>Number of Districts: </strong>' + str(district_number) + '</li>'
+web_page = web_page + '<li><strong>Number of Districts: </strong>' + str(settlement_district_number) + '</li>'
 web_page = web_page + '</ul>'
 web_page = web_page + '<h4 id="industry-and-economy">Industry and Economy</h4>'
 web_page = web_page + '<hr>'
 web_page = web_page + '<ul>'
-web_page = web_page + '<li><strong>Primary Raw Materials: </strong>' + string.capwords(industry_raw[0]) + '</li>'
+web_page = web_page + '<li><strong>Primary Raw Materials: </strong>' + string.capwords(settlement_env_biome_topography_raw[0]) + '</li>'
 web_page = web_page + '<li><strong>Shops of Note: </strong>'
 for x in settlement_shops.keys():
     if x == list(settlement_shops.keys())[-1]:
@@ -283,7 +293,7 @@ for x in settlement_tavern_names.keys():
 web_page = web_page + '</li>'
 web_page = web_page + '</ul>'
 web_page = web_page + '<h4 id="districts">Districts</h4>'
-for x, y in zip(district_info.items(), district_trait.items()):
+for x, y in zip(settlement_district_info.items(), settlement_district_trait.items()):
     web_page = web_page + '<h5 id="' + x[0] + '">' + x[0] + '</h5>'
     z = y[1]
     web_page = web_page + '<p>' + y[0] + ': ' + z[1] + '</p>'
@@ -323,4 +333,4 @@ web_page = web_page + '</div></main></body></html>'
 
 write_web_page(web_page, str(randomseed))
 
-web_get_city(str(settlement_wards), str(randomseed), settlement_name)
+#web_get_city(str(settlement_wards), str(randomseed), settlement_name)
