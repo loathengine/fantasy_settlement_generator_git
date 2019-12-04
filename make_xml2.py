@@ -24,6 +24,7 @@ tavern_names = import_csv('data/tavern_names.txt')
 tavern_description = import_csv('data/tavern_description.txt')
 tavern_menu = import_csv('data/tavern_menu.txt')
 background_flavor = import_csv('data/background_flavor.txt')
+settlement_density = import_csv('data/settlement_density.txt')
 
 def write_xml(file):
     print('<?xml version="1.0" encoding="UTF-8"?>', file=file)
@@ -67,6 +68,8 @@ def write_xml(file):
         print('    <TAVERN_NAME name="' + str(t_n['key']) + '" weight="' + str(t_n['weight']) + '" desc="' + str(t_n['desc']) + '" />', file=file)
     for s_l in size_label:
         print('    <LABEL name="' + str(s_l['key']) + '" ceiling="' + str(s_l['weight']) + '" desc="' + str(s_l['desc']) + '" />', file=file)
+    for s_d in settlement_density:
+        print('    <DENSITY name="' + str(s_d['key']) + '" weight="' + str(s_d['weight']) + '" desc="' + str(s_d['desc']) + '" />', file=file)
     print('  </STATS>', file=file)
 
     print('  <IND>', file=file)

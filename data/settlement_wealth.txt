@@ -1,0 +1,6 @@
+key|weight|desc
+Extravagant|1
+Wealthy|3
+Average|5
+Poor|3
+Slum|1

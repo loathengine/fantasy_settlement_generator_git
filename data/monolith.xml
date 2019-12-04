@@ -5937,6 +5937,16 @@
     <LABEL name="small city 5,001-10,000" ceiling="5001" desc="3" />
     <LABEL name="large city 10,001-25,000" ceiling="25001" desc="3" />
     <LABEL name="metropolis 25,000+" ceiling="25002" desc="3" />
+    <DENSITY name="1" weight="1" desc="Inhospitable" />
+    <DENSITY name="3" weight="3" desc="Desolate" />
+    <DENSITY name="5" weight="9" desc="Arid" />
+    <DENSITY name="10" weight="27" desc="Sparse" />
+    <DENSITY name="20" weight="50" desc="Adequate" />
+    <DENSITY name="40" weight="50" desc="Ample" />
+    <DENSITY name="60" weight="27" desc="Abundant" />
+    <DENSITY name="80" weight="9" desc="Fertile" />
+    <DENSITY name="100" weight="3" desc="Plentiful" />
+    <DENSITY name="120" weight="1" desc="Idyllic" />
   </STATS>
   <IND>
   </IND>

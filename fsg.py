@@ -128,7 +128,6 @@ def get_settlement_tavern(t_n, t_l):
 def web_get_city(size, seed, name):
     from selenium import webdriver
     from selenium.webdriver.firefox.options import Options
-
     options = Options()
     options.headless = True
     driver = webdriver.Firefox(options=options, executable_path='web/driver/geckodriver')
@@ -164,8 +163,8 @@ settlement_population = random.randint(300, 20000)
 settlement_shops_num = 3 + (settlement_population // 1500)
 settlement_shops = get_settlement_shops(xml_file_path, env_biome_topo_raw + "/SHOP", settlement_shops_num)
 
-settlement_density = weighted_element_list(xml_file_path, "./STATS/DENSITY")[0]
-settlement_district_number = 3 + (settlement_population // settlement_density) // 1000
+settlement_density = weighted_element_list(xml_file_path, "./STATS/DENSITY")[2]
+settlement_district_number = 3 + settlement_population // 1000
 settlement_district_info = count_unique_element_dict(xml_file_path, env_biome_topo_raw + "/DISTRICT", settlement_district_number)
 
 
@@ -178,10 +177,10 @@ background_flavor = str(weighted_element_list(xml_file_path, "./STATS/FLAVOR")[2
 settlement_alignment = random.randint(1, 6)
 settlement_government = weighted_element_list(xml_file_path, "./STATS/GOVERNMENT")
 settlement_trait = weighted_element_list(xml_file_path, "./STATS/TRAIT")
-settlement_wards = 6 + (settlement_population // settlement_density) // 100
+settlement_wards = 6 + settlement_population // 100
 
 settlement_races = all_unique_element_dict(xml_file_path, "./STATS/RACE")
-settlement_district_number = 3 + (settlement_population // settlement_density) // 1000
+
 settlement_district_trait = count_unique_element_dict(xml_file_path, "./STATS/DISTRICT_TRAIT", settlement_district_number)
 settlement_tavern_num = (2 + settlement_population // 3000)
 settlement_tavern_names = count_unique_element_dict(xml_file_path, "./STATS/TAVERN_NAME", settlement_tavern_num)
@@ -257,8 +256,9 @@ web_page = web_page + '<h4 id="demographics">Demographics</h4>'
 web_page = web_page + '<hr>'
 web_page = web_page + '<ul>'
 web_page = web_page + '<li><strong>Name: </strong>' + settlement_name + '</li>'
+web_page = web_page + '<li><strong>Size: </strong>' + string.capwords(settlement_label) + '</li>'
 web_page = web_page + '<li><strong>Real population: </strong>' + str(settlement_population) + '</li>'
-web_page = web_page + '<li><strong>Population: </strong>' + string.capwords(settlement_label) + '</li>'
+web_page = web_page + '<li><strong>Population Density: </strong>' + str(settlement_density) + '</li>'
 web_page = web_page + '<li><strong>Number by race: </strong>'
 for x, y in settlement_races.items():
     web_page = web_page + string.capwords(x) + " " + y[0] + "%, "
