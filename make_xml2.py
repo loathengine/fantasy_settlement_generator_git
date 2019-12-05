@@ -25,6 +25,8 @@ tavern_description = import_csv('data/tavern_description.txt')
 tavern_menu = import_csv('data/tavern_menu.txt')
 background_flavor = import_csv('data/background_flavor.txt')
 settlement_density = import_csv('data/settlement_density.txt')
+settlement_wealth = import_csv('data/settlement_wealth.txt')
+settlement_alignment = import_csv('data/settlement_alignment.txt')
 
 def write_xml(file):
     print('<?xml version="1.0" encoding="UTF-8"?>', file=file)
@@ -46,30 +48,34 @@ def write_xml(file):
     print('  </ENV>', file=file)
 
     print('  <STATS>', file=file)
-    for s_s in settlement_name:
-        print('    <SETTLEMENT_NAME name="' + str(s_s['key']) + '" weight="' + str(s_s['weight']) + '" desc="' + str(s_s['desc']) + '" />', file=file)
-    for b_f in background_flavor:
-        print('    <FLAVOR name="' + str(b_f['key']) + '" weight="' + str(b_f['weight']) + '" desc="' + str(b_f['desc']) + '" />', file=file)
-    for r_p in race_percentage:
-        print('    <RACE name="' + str(r_p['key']) + '" weight="' + str(r_p['weight']) + '" desc="' + str(r_p['desc']) + '" />', file=file)
-    for s_a in settle_age:
-        print('    <AGE name="' + str(s_a['key']) + '" weight="' + str(s_a['weight']) + '" desc="' + str(s_a['desc']) + '" />', file=file)
-    for s_g in settlement_government:
-        print('    <GOVERNMENT name="' + str(s_g['key']) + '" weight="' + str(s_g['weight']) + '" desc="' + str(s_g['desc']) + '" />', file=file)
-    for s_t in settlement_trait:
-        print('    <TRAIT name="' + str(s_t['key']) + '" weight="' + str(s_t['weight']) + '" desc="' + str(s_t['desc']) + '" />', file=file)
-    for d_t in district_trait:
-        print('    <DISTRICT_TRAIT name="' + str(d_t['key']) + '" weight="' + str(d_t['weight']) + '" desc="' + str(d_t['desc']) + '" />', file=file)
-    for t_m in tavern_menu:
-        print('    <TAVERN_MENU name="' + str(t_m['key']) + '" weight="' + str(t_m['weight']) + '" desc="' + str(t_m['desc']) + '" />', file=file)
-    for t_d in tavern_description:
-        print('    <TAVERN_DESC name="' + str(t_d['key']) + '" weight="' + str(t_d['weight']) + '" desc="' + str(t_d['desc']) + '" />', file=file)
-    for t_n in tavern_names:
-        print('    <TAVERN_NAME name="' + str(t_n['key']) + '" weight="' + str(t_n['weight']) + '" desc="' + str(t_n['desc']) + '" />', file=file)
-    for s_l in size_label:
-        print('    <LABEL name="' + str(s_l['key']) + '" ceiling="' + str(s_l['weight']) + '" desc="' + str(s_l['desc']) + '" />', file=file)
-    for s_d in settlement_density:
-        print('    <DENSITY name="' + str(s_d['key']) + '" weight="' + str(s_d['weight']) + '" desc="' + str(s_d['desc']) + '" />', file=file)
+    for x in settlement_name:
+        print('    <SETTLEMENT_NAME name="' + str(x['key']) + '" weight="' + str(x['weight']) + '" desc="' + str(x['desc']) + '" />', file=file)
+    for x in background_flavor:
+        print('    <FLAVOR name="' + str(x['key']) + '" weight="' + str(x['weight']) + '" desc="' + str(x['desc']) + '" />', file=file)
+    for x in race_percentage:
+        print('    <RACE name="' + str(x['key']) + '" weight="' + str(x['weight']) + '" desc="' + str(x['desc']) + '" />', file=file)
+    for x in settle_age:
+        print('    <AGE name="' + str(x['key']) + '" weight="' + str(x['weight']) + '" desc="' + str(x['desc']) + '" />', file=file)
+    for x in settlement_government:
+        print('    <GOVERNMENT name="' + str(x['key']) + '" weight="' + str(x['weight']) + '" desc="' + str(x['desc']) + '" />', file=file)
+    for x in settlement_trait:
+        print('    <TRAIT name="' + str(x['key']) + '" weight="' + str(x['weight']) + '" desc="' + str(x['desc']) + '" />', file=file)
+    for x in district_trait:
+        print('    <DISTRICT_TRAIT name="' + str(x['key']) + '" weight="' + str(x['weight']) + '" desc="' + str(x['desc']) + '" />', file=file)
+    for x in tavern_menu:
+        print('    <TAVERN_MENU name="' + str(x['key']) + '" weight="' + str(x['weight']) + '" desc="' + str(x['desc']) + '" />', file=file)
+    for x in tavern_description:
+        print('    <TAVERN_DESC name="' + str(x['key']) + '" weight="' + str(x['weight']) + '" desc="' + str(x['desc']) + '" />', file=file)
+    for x in tavern_names:
+        print('    <TAVERN_NAME name="' + str(x['key']) + '" weight="' + str(x['weight']) + '" desc="' + str(x['desc']) + '" />', file=file)
+    for x in size_label:
+        print('    <LABEL name="' + str(x['key']) + '" ceiling="' + str(x['weight']) + '" desc="' + str(x['desc']) + '" />', file=file)
+    for x in settlement_density:
+        print('    <DENSITY name="' + str(x['key']) + '" weight="' + str(x['weight']) + '" desc="' + str(x['desc']) + '" />', file=file)
+    for x in settlement_wealth:
+        print('    <WEALTH name="' + str(x['key']) + '" weight="' + str(x['weight']) + '" desc="' + str(x['desc']) + '" />', file=file)
+    for x in settlement_alignment:
+        print('    <ALIGNMENT name="' + str(x['key']) + '" weight="' + str(x['weight']) + '" desc="' + str(x['desc']) + '" />', file=file)
     print('  </STATS>', file=file)
 
     print('  <IND>', file=file)

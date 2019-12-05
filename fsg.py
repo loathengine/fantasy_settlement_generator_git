@@ -171,10 +171,10 @@ settlement_district_info = count_unique_element_dict(xml_file_path, env_biome_to
 
 settlement_name = str(weighted_element_list(xml_file_path, "./STATS/SETTLEMENT_NAME")[0])
 settlement_label = get_settlement_label(xml_file_path, "./STATS/LABEL", settlement_population)
-settlement_wealth = random.randint(1, 6)
+settlement_wealth = weighted_element_list(xml_file_path, "./STATS/WEALTH")
 settlement_age = weighted_element_list(xml_file_path, "./STATS/AGE")
 background_flavor = str(weighted_element_list(xml_file_path, "./STATS/FLAVOR")[2])
-settlement_alignment = random.randint(1, 6)
+settlement_alignment = weighted_element_list(xml_file_path, "./STATS/ALIGNMENT")
 settlement_government = weighted_element_list(xml_file_path, "./STATS/GOVERNMENT")
 settlement_trait = weighted_element_list(xml_file_path, "./STATS/TRAIT")
 settlement_wards = 6 + settlement_population // 100
@@ -259,13 +259,14 @@ web_page = web_page + '<li><strong>Name: </strong>' + settlement_name + '</li>'
 web_page = web_page + '<li><strong>Size: </strong>' + string.capwords(settlement_label) + '</li>'
 web_page = web_page + '<li><strong>Real population: </strong>' + str(settlement_population) + '</li>'
 web_page = web_page + '<li><strong>Population Density: </strong>' + str(settlement_density) + '</li>'
+web_page = web_page + '<li><strong>Wealth: </strong>' + str(settlement_density) + '</li>'
 web_page = web_page + '<li><strong>Number by race: </strong>'
 for x, y in settlement_races.items():
     web_page = web_page + string.capwords(x) + " " + y[0] + "%, "
 web_page = web_page + '</li>'
-web_page = web_page + '<li><strong>Wealth: </strong>' + str(settlement_wealth) + '</li>'
-web_page = web_page + '<li><strong>Age: </strong>' + str(settlement_wealth) + '</li>'
-web_page = web_page + '<li><strong>Alignment: </strong>' + str(settlement_alignment) + '</li>'
+web_page = web_page + '<li><strong>Wealth: </strong>' + str(settlement_wealth[2]) + '</li>'
+web_page = web_page + '<li><strong>Age: </strong>' + str(settlement_age[2]) + '</li>'
+web_page = web_page + '<li><strong>Alignment: </strong>' + str(settlement_alignment[2]) + '</li>'
 web_page = web_page + "<li><strong>Government Type: </strong>" + string.capwords(settlement_government[0]) + " - " + \
            settlement_government[2] + "</li>"
 web_page = web_page + '<li><strong>Settlement Trait: </strong>' + settlement_trait[0] + '</li>'
