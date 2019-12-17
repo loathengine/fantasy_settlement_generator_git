@@ -9,6 +9,7 @@
 import time
 import random
 import string
+import numpy
 import xml.etree.ElementTree as ElementTree
 
 randomseed = random.randint(11111111, 99999999)
@@ -159,7 +160,7 @@ settlement_env_biome_topography_raw = weighted_element_list(xml_file_path, "./EN
 env_biome_topo_raw = "./ENV/BIOME[@name='" + settlement_env_biome[0] + "']/TOPOGRAPHY[@name='" + settlement_env_biome_topography[
     0] + "']/RAW[@name='" + settlement_env_biome_topography_raw[0] + "']"
 
-settlement_population = random.randint(300, 20000)
+settlement_population = int(abs(numpy.random.normal(loc = 0, scale = 4000)))
 settlement_shops_num = 3 + (settlement_population // 1500)
 settlement_shops = get_settlement_shops(xml_file_path, env_biome_topo_raw + "/SHOP", settlement_shops_num)
 

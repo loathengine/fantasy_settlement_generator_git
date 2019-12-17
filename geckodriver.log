@@ -239,3 +239,95 @@ JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383:
 JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
 * Can't use WebGL in headless mode (https://bugzil.la/1375585).
 1575476464118	Marionette	INFO	Stopped listening on port 34747
+1575992647845	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileZoZbx6"
+*** You are running in headless mode.
+1575992648130	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1575992648131	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1575992648131	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1575992648131	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1575992649336	Marionette	INFO	Listening on port 44649
+1575992649352	Marionette	WARN	TLS certificate errors will be ignored for this session
+1575992657578	Marionette	INFO	Stopped listening on port 44649
+1575992781184	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileN1FXUs"
+*** You are running in headless mode.
+1575992781462	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1575992781462	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1575992781463	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1575992781463	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1575992782671	Marionette	INFO	Listening on port 40611
+1575992782691	Marionette	WARN	TLS certificate errors will be ignored for this session
+1575992790893	Marionette	INFO	Stopped listening on port 40611
+1575992823819	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileHyVCj5"
+*** You are running in headless mode.
+1575992824097	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1575992824097	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1575992824097	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1575992824097	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1575992825303	Marionette	INFO	Listening on port 35249
+1575992825324	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 65638: NS_ERROR_FAILURE
+1575992842671	Marionette	INFO	Stopped listening on port 35249
+1575992853175	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiled2ucHw"
+*** You are running in headless mode.
+1575992853456	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1575992853456	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1575992853456	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1575992853456	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1575992854586	Marionette	INFO	Listening on port 37483
+1575992854679	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 65638: NS_ERROR_FAILURE
+1575992873282	Marionette	INFO	Stopped listening on port 37483
+1575992937958	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileREg1rY"
+*** You are running in headless mode.
+1575992938264	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1575992938264	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1575992938264	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1575992938264	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1575992939405	Marionette	INFO	Listening on port 43919
+1575992939462	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1575992948233	Marionette	INFO	Stopped listening on port 43919
+1575993184112	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilejA1vLe"
+*** You are running in headless mode.
+1575993184388	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1575993184388	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1575993184388	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1575993184388	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1575993185624	Marionette	INFO	Listening on port 40347
+1575993185716	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://0.0.0.0:8000/MFCG_files/TownGenerator.js, line 30383: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1575993194572	Marionette	INFO	Stopped listening on port 40347
