@@ -173,11 +173,11 @@ settlement_tavern_num = (2 + settlement_population // 3000)
 
 settlement_density = weighted_element_list(xml_file_path, "./STATS/DENSITY")[2]
 settlement_district_info = count_unique_element_dict(xml_file_path, env_biome_topo_raw + "/DISTRICT", settlement_district_number)
-settlement_name = str(weighted_element_list(xml_file_path, "./STATS/SETTLEMENT_NAME")[0])
+settlement_name = weighted_element_list(xml_file_path, "./STATS/SETTLEMENT_NAME")[0]
 settlement_label = get_settlement_label(xml_file_path, "./STATS/LABEL", settlement_population)
 settlement_wealth = weighted_element_list(xml_file_path, "./STATS/WEALTH")
 settlement_age = weighted_element_list(xml_file_path, "./STATS/AGE")
-background_flavor = str(weighted_element_list(xml_file_path, "./STATS/FLAVOR")[2])
+background_flavor = weighted_element_list(xml_file_path, "./STATS/FLAVOR")[2]
 settlement_alignment = weighted_element_list(xml_file_path, "./STATS/ALIGNMENT")
 settlement_government = weighted_element_list(xml_file_path, "./STATS/GOVERNMENT")
 settlement_trait = weighted_element_list(xml_file_path, "./STATS/TRAIT")
