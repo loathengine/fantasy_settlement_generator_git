@@ -12,7 +12,7 @@ import string
 import numpy
 import xml.etree.ElementTree as ElementTree
 
-randomseed = random.randint(11111111, 99999999)
+randomseed = random.randint(10000000, 99999999)
 
 random.seed(randomseed)
 
@@ -160,16 +160,19 @@ settlement_env_biome_topography_raw = weighted_element_list(xml_file_path, "./EN
 env_biome_topo_raw = "./ENV/BIOME[@name='" + settlement_env_biome[0] + "']/TOPOGRAPHY[@name='" + settlement_env_biome_topography[
     0] + "']/RAW[@name='" + settlement_env_biome_topography_raw[0] + "']"
 
+
+
 settlement_population = int(abs(numpy.random.normal(loc = 0, scale = 4000)))
-settlement_shops_num = 3 + (settlement_population // 1500)
+settlement_shops_num = 1 + (settlement_population // 1500)
 settlement_shops = get_settlement_shops(xml_file_path, env_biome_topo_raw + "/SHOP", settlement_shops_num)
+settlement_district_number = 1 + (settlement_population // 1000)
+settlement_wards = 6 + settlement_population // 100
+settlement_tavern_num = (2 + settlement_population // 3000)
+
+
 
 settlement_density = weighted_element_list(xml_file_path, "./STATS/DENSITY")[2]
-settlement_district_number = 3 + settlement_population // 1000
 settlement_district_info = count_unique_element_dict(xml_file_path, env_biome_topo_raw + "/DISTRICT", settlement_district_number)
-
-
-
 settlement_name = str(weighted_element_list(xml_file_path, "./STATS/SETTLEMENT_NAME")[0])
 settlement_label = get_settlement_label(xml_file_path, "./STATS/LABEL", settlement_population)
 settlement_wealth = weighted_element_list(xml_file_path, "./STATS/WEALTH")
@@ -178,12 +181,8 @@ background_flavor = str(weighted_element_list(xml_file_path, "./STATS/FLAVOR")[2
 settlement_alignment = weighted_element_list(xml_file_path, "./STATS/ALIGNMENT")
 settlement_government = weighted_element_list(xml_file_path, "./STATS/GOVERNMENT")
 settlement_trait = weighted_element_list(xml_file_path, "./STATS/TRAIT")
-settlement_wards = 6 + settlement_population // 100
-
 settlement_races = all_unique_element_dict(xml_file_path, "./STATS/RACE")
-
 settlement_district_trait = count_unique_element_dict(xml_file_path, "./STATS/DISTRICT_TRAIT", settlement_district_number)
-settlement_tavern_num = (2 + settlement_population // 3000)
 settlement_tavern_names = count_unique_element_dict(xml_file_path, "./STATS/TAVERN_NAME", settlement_tavern_num)
 settlement_taverns = get_settlement_tavern(settlement_tavern_names, settlement_district_info)
 
