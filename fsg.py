@@ -12,8 +12,8 @@ import string
 import numpy
 import xml.etree.ElementTree as ElementTree
 
-randomseed = random.randint(10000000, 99999999)
-
+#randomseed = random.randint(10000000, 99999999)
+randomseed = 37433863
 random.seed(randomseed)
 
 
@@ -259,13 +259,12 @@ web_page = web_page + '<li><strong>Name: </strong>' + settlement_name + '</li>'
 web_page = web_page + '<li><strong>Size: </strong>' + string.capwords(settlement_label) + '</li>'
 web_page = web_page + '<li><strong>Real population: </strong>' + str(settlement_population) + '</li>'
 web_page = web_page + '<li><strong>Population Density: </strong>' + str(settlement_density) + '</li>'
-web_page = web_page + '<li><strong>Wealth: </strong>' + str(settlement_density) + '</li>'
 web_page = web_page + '<li><strong>Number by race: </strong>'
 for x, y in settlement_races.items():
     web_page = web_page + string.capwords(x) + " " + y[0] + "%, "
 web_page = web_page + '</li>'
 web_page = web_page + '<li><strong>Wealth: </strong>' + str(settlement_wealth[2]) + '</li>'
-web_page = web_page + '<li><strong>Age: </strong>' + str(settlement_age[2]) + '</li>'
+web_page = web_page + '<li><strong>Age: </strong>' + string.capwords(settlement_age[0]) + '</li>'
 web_page = web_page + '<li><strong>Alignment: </strong>' + str(settlement_alignment[2]) + '</li>'
 web_page = web_page + "<li><strong>Government Type: </strong>" + string.capwords(settlement_government[0]) + " - " + \
            settlement_government[2] + "</li>"
