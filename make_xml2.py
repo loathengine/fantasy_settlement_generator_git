@@ -27,6 +27,7 @@ background_flavor = import_csv('data/background_flavor.txt')
 settlement_density = import_csv('data/settlement_density.txt')
 settlement_wealth = import_csv('data/settlement_wealth.txt')
 settlement_alignment = import_csv('data/settlement_alignment.txt')
+npc_names = import_csv('data/npc_names.txt')
 
 def write_xml(file):
     print('<?xml version="1.0" encoding="UTF-8"?>', file=file)
@@ -76,6 +77,8 @@ def write_xml(file):
         print('    <WEALTH name="' + str(x['key']) + '" weight="' + str(x['weight']) + '" desc="' + str(x['desc']) + '" />', file=file)
     for x in settlement_alignment:
         print('    <ALIGNMENT name="' + str(x['key']) + '" weight="' + str(x['weight']) + '" desc="' + str(x['desc']) + '" />', file=file)
+    for x in npc_names:
+        print('    <NPC_NAMES name="' + str(x['key']) + '" weight="' + str(x['weight']) + '" desc="' + str(x['desc']) + '" />', file=file)
     print('  </STATS>', file=file)
 
     print('  <IND>', file=file)

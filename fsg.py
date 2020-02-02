@@ -109,7 +109,8 @@ def get_settlement_label(xml_file, element_root, settlement_pop):
 
 
 def npc_generator():
-    return "Bob"
+    npc_names = weighted_element_list(xml_file_path, "./STATS/NPC_NAMES")
+    return npc_names[0]
 
 
 def get_settlement_tavern(t_n, t_l):
@@ -333,4 +334,4 @@ web_page = web_page + '</div></main></body></html>'
 
 write_web_page(web_page, str(randomseed))
 
-#web_get_city(str(settlement_wards), str(randomseed), settlement_name)
+web_get_city(str(settlement_wards), str(randomseed), settlement_name)
